@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Downloads | Victor Omale Ojogbane</title>
+
+  <meta name="description"
+        content="Documents, resources and public information from the official website of Victor Omale Ojogbane.">
+
+  <meta name="theme-color" content="#087a3d">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f6f8f7;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      background: #087a3d;
+      color: white;
+      padding: 16px 6%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 12px;
+      font-weight: 400;
+      color: #d8f5e4;
+      margin-top: 2px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    nav a {
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 9px 11px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: white;
+      color: #087a3d;
+    }
+
+    .menu-btn {
+      display: none;
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      background:
+        linear-gradient(
+          rgba(0, 76, 38, 0.88),
+          rgba(0, 76, 38, 0.88)
+        ),
+        url("https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg");
+
+      background-size: cover;
+      background-position: center;
+
+      min-height: 420px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+      color: white;
+
+      padding: 70px 20px;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 6vw, 68px);
+      line-height: 1.1;
+      margin-bottom: 20px;
+      font-weight: 900;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: auto;
+      font-size: 18px;
+      color: #e8f7ef;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: #ffffff;
+      color: #087a3d;
+      padding: 8px 18px;
+      border-radius: 30px;
+      font-weight: 800;
+      font-size: 13px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* =========================
+       MAIN
+    ========================= */
+
+    main {
+      max-width: 1200px;
+      margin: auto;
+      padding: 70px 6%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      color: #087a3d;
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      max-width: 700px;
+      margin: auto;
+      color: #666;
+    }
+
+    /* =========================
+       DOWNLOAD CARDS
+    ========================= */
+
+    .downloads-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .download-card {
+      background: white;
+      border-radius: 16px;
+      padding: 30px;
+      border: 1px solid #e5e5e5;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+      transition: 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .download-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    }
+
+    .icon {
+      width: 65px;
+      height: 65px;
+      background: #e8f7ef;
+      color: #087a3d;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    .download-card h3 {
+      color: #111;
+      font-size: 21px;
+      margin-bottom: 10px;
+    }
+
+    .download-card p {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 25px;
+      flex-grow: 1;
+    }
+
+    .view-btn {
+      display: inline-block;
+      background: #087a3d;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 7px;
+      text-align: center;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .view-btn:hover {
+      background: #055b2d;
+    }
+
+    /* =========================
+       DOCUMENT CENTRE
+    ========================= */
+
+    .document-centre {
+      margin-top: 70px;
+      background: #087a3d;
+      color: white;
+      padding: 45px;
+      border-radius: 20px;
+    }
+
+    .document-centre h2 {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .document-centre p {
+      color: #e4f5eb;
+      max-width: 800px;
+      margin-bottom: 30px;
+    }
+
+    .document-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .document-item {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 10px;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .document-item strong {
+      font-size: 15px;
+    }
+
+    .document-item a {
+      background: white;
+      color: #087a3d;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    /* =========================
+       NOTICE
+    ========================= */
+
+    .notice {
+      margin-top: 45px;
+      padding: 25px;
+      border-left: 5px solid #087a3d;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    }
+
+    .notice h3 {
+      color: #087a3d;
+      margin-bottom: 8px;
+    }
+
+    .notice p {
+      color: #666;
+      font-size: 14px;
+    }
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta {
+      margin-top: 70px;
+      text-align: center;
+      background: #111;
+      color: white;
+      padding: 55px 25px;
+      border-radius: 20px;
+    }
+
+    .cta h2 {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .cta p {
+      color: #ddd;
+      max-width: 650px;
+      margin: 0 auto 25px;
+    }
+
+    .cta a {
+      display: inline-block;
+      background: #087a3d;
+      color: white;
+      padding: 13px 25px;
+      border-radius: 7px;
+      font-weight: 700;
+    }
+
+    .cta a:hover {
+      background: #0a964b;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #050505;
+      color: white;
+      padding: 50px 6% 25px;
+      margin-top: 0;
+    }
+
+    .footer-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    .footer-brand h2 {
+      color: #35c875;
+      margin-bottom: 10px;
+    }
+
+    .footer-brand p {
+      color: #bbb;
+      font-size: 14px;
+      max-width: 450px;
+    }
+
+    .footer-column h3 {
+      margin-bottom: 15px;
+      font-size: 17px;
+    }
+
+    .footer-column a {
+      display: block;
+      color: #bbb;
+      font-size: 14px;
+      margin-bottom: 8px;
+      transition: 0.3s;
+    }
+
+    .footer-column a:hover {
+      color: #35c875;
+    }
+
+    .copyright {
+      max-width: 1200px;
+      margin: 35px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid #222;
+      text-align: center;
+      color: #888;
+      font-size: 13px;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      .downloads-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+    }
+
+    @media (max-width: 700px) {
+
+      header {
+        padding: 14px 5%;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #087a3d;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 15px 5%;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      nav a {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+      }
+
+      .hero {
+        min-height: 360px;
+        padding: 60px 20px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      main {
+        padding: 55px 5%;
+      }
+
+      .downloads-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .document-centre {
+        padding: 30px 20px;
+      }
+
+      .document-list {
+        grid-template-columns: 1fr;
+      }
+
+      .document-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .document-item a {
+        width: 100%;
+        text-align: center;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
+  <header>
+
+    <div class="nav-container">
+
+      <a href="index.html" class="logo">
+        VICTOR OMALE OJOGBANE
+        <span>House of Representatives Candidate • Idah Federal Constituency</span>
+      </a>
+
+      <button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">
+        ☰
+      </button>
+
+      <nav id="mainNav">
+
+        <a href="index.html">Home</a>
+
+        <a href="about.html">About</a>
+
+        <a href="agenda.html">7-Point Agenda</a>
+
+        <a href="mission.html">Mission & Vision</a>
+
+        <a href="news.html">News</a>
+
+        <a href="gallery.html">Gallery</a>
+
+        <a href="media.html">Media</a>
+
+        <a href="resources.html">Resources</a>
+
+        <a href="downloads.html" class="active">Downloads</a>
+
+        <a href="contact.html">Contact</a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <span class="hero-badge">
+        Resources Centre
+      </span>
+
+      <h1>Documents & Downloads</h1>
+
+      <p>
+        Access public information, development priorities,
+        candidate information and other materials available
+        through this website.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       MAIN CONTENT
+  ========================= -->
+
+  <main>
+
+    <div class="section-title">
+
+      <h2>Available Resources</h2>
+
+      <p>
+        Explore the website's key information and documents.
+        Additional downloadable files can be added here as they become available.
+      </p>
+
+    </div>
+
+
+    <div class="downloads-grid">
+
+      <!-- AGENDA -->
+
+      <div class="download-card">
+
+        <div class="icon">
+          📋
+        </div>
+
+        <h3>7-Point Agenda</h3>
+
+        <p>
+          View the seven development priorities covering
+          education, youth empowerment, agriculture,
+          infrastructure, healthcare, governance and community development.
+        </p>
+
+        <a href="agenda.html" class="view-btn">
+          View Agenda →
+        </a>
+
+      </div>
+
+
+      <!-- MISSION -->
+
+      <div class="download-card">
+
+        <div class="icon">
+          🎯
+        </div>
+
+        <h3>Mission & Vision</h3>
+
+        <p>
+          Read the mission, vision and development focus
+          presented on this website.
+        </p>
+
+        <a href="mission.html" class="view-btn">
+          View Mission →
+        </a>
+
+      </div>
+
+
+      <!-- ABOUT -->
+
+      <div class="download-card">
+
+        <div class="icon">
+          👤
+        </div>
+
+        <h3>Candidate Profile</h3>
+
+        <p>
+          Access the available public information about
+          Victor Omale Ojogbane and his candidacy.
+        </p>
+
+        <a href="about.html" class="view-btn">
+          View Profile →
+        </a>
+
+      </div>
+
+
+      <!-- RESOURCES -->
+
+      <div class="download-card">
+
+        <div class="icon">
+          📚
+        </div>
+
+        <h3>Resources Centre</h3>
+
+        <p>
+          Browse the wider collection of information,
+          pages and reference materials available on the website.
+        </p>
+
+        <a href="resources.html" class="view-btn">
+          View Resources →
+        </a>
+
+      </div>
+
+
+      <!-- MEDIA -->
+
+      <div class="download-card">
+
+        <div class="icon">
+          🎥
+        </div>
+
+        <h3>Media Centre</h3>
+
+        <p>
+          Access available videos, photographs and other
+          media materials published on the website.
+        </p>
+
+        <a href="media.html" class="view-btn">
+          Open Media →
+        </a>
+
+      </div>
+
+
+      <!-- NEWS -->
+
+      <div class="download-card">
+
+        <div class="icon">
+          📰
+        </div>
+
+        <h3>News & Updates</h3>
+
+        <p>
+          Read published news, announcements and public
+          updates available through the website.
+        </p>
+
+        <a href="news.html" class="view-btn">
+          View News →
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- =========================
+         DOCUMENT CENTRE
+    ========================= -->
+
+    <section class="document-centre">
+
+      <h2>Document Centre</h2>
+
+      <p>
+        This section is reserved for official documents that
+        may be made available for public access. When PDF or
+        other downloadable files are added, their links can be
+        placed here.
+      </p>
+
+
+      <div class="document-list">
+
+        <div class="document-item">
+
+          <strong>
+            7-Point Development Agenda
+          </strong>
+
+          <a href="agenda.html">
+            View
+          </a>
+
+        </div>
+
+
+        <div class="document-item">
+
+          <strong>
+            Mission & Vision
+          </strong>
+
+          <a href="mission.html">
+            View
+          </a>
+
+        </div>
+
+
+        <div class="document-item">
+
+          <strong>
+            Candidate Profile
+          </strong>
+
+          <a href="about.html">
+            View
+          </a>
+
+        </div>
+
+
+        <div class="document-item">
+
+          <strong>
+            Website Resources
+          </strong>
+
+          <a href="resources.html">
+            View
+          </a>
+
+        </div>
+
+
+        <div class="document-item">
+
+          <strong>
+            News & Public Updates
+          </strong>
+
+          <a href="news.html">
+            View
+          </a>
+
+        </div>
+
+
+        <div class="document-item">
+
+          <strong>
+            Media Centre
+          </strong>
+
+          <a href="media.html">
+            View
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         NOTICE
+    ========================= -->
+
+    <div class="notice">
+
+      <h3>About Downloads</h3>
+
+      <p>
+        This page currently provides links to information
+        published on the website. Actual PDF, Word or other
+        downloadable documents can be added later by placing
+        the files in the website repository and linking them
+        from this page.
+      </p>
+
+    </div>
+
+
+    <!-- =========================
+         CTA
+    ========================= -->
+
+    <section class="cta">
+
+      <h2>Need More Information?</h2>
+
+      <p>
+        Visit the contact page for available contact details
+        and general enquiries.
+      </p>
+
+      <a href="contact.html">
+        Contact Us →
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+
+        <h2>Victor Omale Ojogbane</h2>
+
+        <p>
+          House of Representatives Candidate,
+          Idah Federal Constituency, Kogi State, Nigeria.
+        </p>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h3>Quick Links</h3>
+
+        <a href="index.html">Home</a>
+
+        <a href="about.html">About</a>
+
+        <a href="agenda.html">7-Point Agenda</a>
+
+        <a href="mission.html">Mission & Vision</a>
+
+        <a href="downloads.html">Downloads</a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h3>Information</h3>
+
+        <a href="news.html">News</a>
+
+        <a href="gallery.html">Gallery</a>
+
+        <a href="media.html">Media</a>
+
+        <a href="resources.html">Resources</a>
+
+        <a href="contact.html">Contact</a>
+
+      </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+      © 2026 Victor Omale Ojogbane.
+      All rights reserved.
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
+
+  <script>
+
+    function toggleMenu() {
+
+      const nav = document.getElementById("mainNav");
+
+      nav.classList.toggle("show");
+
+    }
+
+
+    document.querySelectorAll("#mainNav a").forEach(link => {
+
+      link.addEventListener("click", () => {
+
+        document.getElementById("mainNav").classList.remove("show");
+
+      });
+
+    });
+
+  </script>
+
+</body>
+</html>
