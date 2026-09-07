@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Feedback & Suggestions | Victor Omale Ojogbane</title>
+
+  <meta name="description" content="Feedback and suggestions page for Victor Omale Ojogbane.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #f5f7f6;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #064d2c;
+      color: white;
+      padding: 15px 6%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 12px;
+      color: #d7f5df;
+      margin-top: 2px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 18px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #b9e8c8;
+    }
+
+    .menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0,70,40,.85), rgba(0,70,40,.85)),
+                  url("https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg")
+                  center/cover;
+      min-height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 50px 20px;
+    }
+
+    .hero h1 {
+      font-size: 44px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 18px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 750px;
+      margin: 0 auto 40px;
+    }
+
+    .intro h2 {
+      color: #064d2c;
+      margin-bottom: 12px;
+      font-size: 30px;
+    }
+
+    .feedback-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 30px;
+      align-items: stretch;
+    }
+
+    .info-card,
+    .form-card {
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    }
+
+    .info-card h3,
+    .form-card h3 {
+      color: #064d2c;
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+
+    .info-card p {
+      margin-bottom: 18px;
+      color: #555;
+    }
+
+    .info-item {
+      padding: 15px 0;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .info-item:last-child {
+      border-bottom: none;
+    }
+
+    .info-item strong {
+      display: block;
+      color: #064d2c;
+      margin-bottom: 4px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 7px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 18px;
+      font-size: 15px;
+      outline: none;
+      transition: .3s;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #064d2c;
+      box-shadow: 0 0 0 2px rgba(6,77,44,.1);
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .btn {
+      display: inline-block;
+      width: 100%;
+      padding: 14px;
+      background: #064d2c;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    .btn:hover {
+      background: #043b22;
+    }
+
+    .notice {
+      margin-top: 35px;
+      background: #e8f5ec;
+      border-left: 5px solid #064d2c;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .notice strong {
+      color: #064d2c;
+    }
+
+    .links {
+      margin-top: 45px;
+      text-align: center;
+    }
+
+    .links h3 {
+      color: #064d2c;
+      margin-bottom: 20px;
+    }
+
+    .quick-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .quick-links a {
+      text-decoration: none;
+      background: #064d2c;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 25px;
+      font-size: 14px;
+      transition: .3s;
+    }
+
+    .quick-links a:hover {
+      background: #222;
+    }
+
+    footer {
+      background: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 35px 20px;
+      margin-top: 70px;
+    }
+
+    footer h3 {
+      color: white;
+      margin-bottom: 8px;
+    }
+
+    footer p {
+      font-size: 14px;
+      margin: 5px 0;
+    }
+
+    footer a {
+      color: #b9e8c8;
+      text-decoration: none;
+    }
+
+    @media (max-width: 850px) {
+      .feedback-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #064d2c;
+        display: none;
+        padding: 20px;
+      }
+
+      nav.active {
+        display: block;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .hero {
+        min-height: 260px;
+      }
+
+      .hero h1 {
+        font-size: 29px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .container {
+        margin: 40px auto;
+      }
+
+      .info-card,
+      .form-card {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+
+    <div class="logo">
+      VICTOR OMALE OJOGBANE
+      <span>House of Representatives Candidate</span>
+    </div>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <nav id="mainNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="agenda.html">Agenda</a></li>
+        <li><a href="mission.html">Mission & Vision</a></li>
+        <li><a href="governance.html">Governance</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
+
+
+<section class="hero">
+  <div>
+    <h1>Feedback & Suggestions</h1>
+    <p>
+      Share your comments, suggestions, questions or observations
+      about the information presented on this website.
+    </p>
+  </div>
+</section>
+
+
+<section class="container">
+
+  <div class="intro">
+    <h2>Your Voice Matters</h2>
+    <p>
+      Feedback can help identify areas that need clarification,
+      correction or improvement. Please use the form below to
+      share your thoughts.
+    </p>
+  </div>
+
+
+  <div class="feedback-wrapper">
+
+    <div class="info-card">
+
+      <h3>Feedback Centre</h3>
+
+      <p>
+        Visitors may use this page to provide general feedback
+        concerning the website, published information and
+        development priorities.
+      </p>
+
+      <div class="info-item">
+        <strong>Candidate</strong>
+        Victor Omale Ojogbane
+      </div>
+
+      <div class="info-item">
+        <strong>Political Platform</strong>
+        All Progressives Congress (APC)
+      </div>
+
+      <div class="info-item">
+        <strong>Position</strong>
+        House of Representatives Candidate
+      </div>
+
+      <div class="info-item">
+        <strong>Constituency</strong>
+        Idah Federal Constituency
+      </div>
+
+      <div class="info-item">
+        <strong>Phone</strong>
+        <a href="tel:+2348036131193">
+          +234 803 613 1193
+        </a>
+      </div>
+
+    </div>
+
+
+    <div class="form-card">
+
+      <h3>Send Your Feedback</h3>
+
+      <!--
+        This is a static GitHub Pages form.
+        To receive submissions automatically,
+        connect it to Formspree, Netlify Forms,
+        Google Forms, or another form service.
+      -->
+
+      <form action="#" method="post"
+            onsubmit="showMessage(event)">
+
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+          required
+        >
+
+        <label for="category">Feedback Type</label>
+
+        <select id="category" name="category" required>
+          <option value="">Select an option</option>
+          <option>Website Feedback</option>
+          <option>Suggestion</option>
+          <option>Question</option>
+          <option>Correction</option>
+          <option>General Comment</option>
+        </select>
+
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email address"
+        >
+
+        <label for="message">Your Message</label>
+
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Write your feedback or suggestion here..."
+          required
+        ></textarea>
+
+        <button type="submit" class="btn">
+          Submit Feedback
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <div class="notice">
+    <strong>Important:</strong>
+    This page currently provides the visual feedback form only.
+    Because GitHub Pages is a static hosting service, a form
+    processing service will need to be connected before submitted
+    messages can be delivered automatically.
+  </div>
+
+
+  <div class="links">
+
+    <h3>Explore More</h3>
+
+    <div class="quick-links">
+      <a href="about.html">About</a>
+      <a href="agenda.html">7-Point Agenda</a>
+      <a href="mission.html">Mission & Vision</a>
+      <a href="governance.html">Governance</a>
+      <a href="news.html">News</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="media.html">Media</a>
+      <a href="resources.html">Resources</a>
+      <a href="downloads.html">Downloads</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<footer>
+
+  <h3>VICTOR OMALE OJOGBANE</h3>
+
+  <p>
+    APC • House of Representatives Candidate
+  </p>
+
+  <p>
+    Idah Federal Constituency, Kogi State, Nigeria
+  </p>
+
+  <p>
+    Phone:
+    <a href="tel:+2348036131193">
+      +234 803 613 1193
+    </a>
+  </p>
+
+  <p style="margin-top:15px;">
+    © 2026 Victor Omale Ojogbane. All rights reserved.
+  </p>
+
+</footer>
+
+
+<script>
+
+  function toggleMenu() {
+    document.getElementById("mainNav").classList.toggle("active");
+  }
+
+  function showMessage(event) {
+    event.preventDefault();
+
+    alert(
+      "Thank you for your feedback. " +
+      "The form is currently a demonstration form. " +
+      "Connect a form-processing service to receive submissions."
+    );
+  }
+
+</script>
+
+</body>
+</html>
