@@ -4,28 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>News Centre | Victor Omale Ojogbane</title>
+  <title>News & Updates | Victor Omale Ojogbane</title>
 
-  <meta name="description"
-        content="Latest news, updates and public information from Victor Omale Ojogbane.">
+  <meta name="description" content="Latest news, updates and announcements from Victor Omale Ojogbane.">
 
   <meta name="theme-color" content="#087f23">
-  <link rel="manifest" href="manifest.json">
 
-  <link rel="icon"
-        href="https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg"
-        type="image/jpeg">
+  <link rel="icon" href="https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg">
+  <link rel="manifest" href="manifest.json">
 
   <style>
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #f5f7f5;
+      background: #f5f7f6;
       color: #222;
       line-height: 1.6;
     }
@@ -33,68 +30,67 @@
     header {
       background: #087f23;
       color: white;
+      padding: 15px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-    }
-
-    .nav-container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 15px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
     }
 
     .logo {
-      font-size: 20px;
-      font-weight: bold;
-      text-decoration: none;
-      color: white;
-    }
-
-    .logo span {
-      display: block;
-      font-size: 12px;
-      font-weight: normal;
-      opacity: 0.9;
-    }
-
-    nav ul {
-      list-style: none;
       display: flex;
-      gap: 18px;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid white;
+    }
+
+    .logo h2 {
+      font-size: 18px;
+    }
+
+    nav {
+      display: flex;
+      gap: 16px;
+      align-items: center;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      font-size: 14px;
       font-weight: bold;
+      font-size: 14px;
     }
 
-    nav a:hover,
-    nav a.active {
-      color: #d9ffdf;
+    nav a:hover {
+      text-decoration: underline;
     }
 
     .menu-btn {
       display: none;
-      background: none;
-      border: none;
+      background: transparent;
+      border: 2px solid white;
       color: white;
-      font-size: 28px;
+      font-size: 21px;
+      padding: 6px 10px;
+      border-radius: 6px;
       cursor: pointer;
     }
 
     .hero {
-      background: linear-gradient(rgba(0,0,0,.65), rgba(0,80,20,.7)),
-      url("https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg");
-      background-size: cover;
-      background-position: center;
-      min-height: 330px;
+      min-height: 340px;
+      background:
+        linear-gradient(rgba(0,70,20,.84), rgba(0,70,20,.84)),
+        url("https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg")
+        center/cover;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -104,31 +100,74 @@
     }
 
     .hero h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
+      font-size: 46px;
+      margin-bottom: 12px;
     }
 
     .hero p {
-      font-size: 18px;
-      max-width: 700px;
+      max-width: 750px;
       margin: auto;
+      font-size: 18px;
     }
 
     .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 60px 20px;
+      width: 92%;
+      max-width: 1150px;
+      margin: 50px auto;
+    }
+
+    /* ADMIN BAR */
+
+    .admin-bar {
+      background: white;
+      border-left: 5px solid #087f23;
+      padding: 20px 22px;
+      border-radius: 10px;
+      margin-bottom: 45px;
+      box-shadow: 0 4px 15px rgba(0,0,0,.08);
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .admin-bar h3 {
+      color: #087f23;
+      margin-bottom: 5px;
+    }
+
+    .admin-bar p {
+      color: #666;
+      font-size: 14px;
+    }
+
+    .update-btn {
+      display: inline-block;
+      background: #087f23;
+      color: white;
+      text-decoration: none;
+      padding: 13px 20px;
+      border-radius: 7px;
+      font-weight: bold;
+      white-space: nowrap;
+      transition: .3s;
+    }
+
+    .update-btn:hover {
+      background: #055c19;
+      transform: translateY(-2px);
     }
 
     .section-title {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 35px;
     }
 
     .section-title h2 {
       color: #087f23;
-      font-size: 34px;
-      margin-bottom: 10px;
+      font-size: 32px;
+      margin-bottom: 8px;
     }
 
     .section-title p {
@@ -140,277 +179,328 @@
     .news-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
+      gap: 25px;
     }
 
     .news-card {
       background: white;
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
-      transition: 0.3s ease;
+      box-shadow: 0 5px 18px rgba(0,0,0,.08);
+      transition: .3s;
     }
 
     .news-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.13);
+      transform: translateY(-5px);
     }
 
-    .news-image {
+    .news-card img {
       width: 100%;
-      height: 220px;
+      height: 210px;
       object-fit: cover;
       display: block;
     }
 
     .news-content {
-      padding: 22px;
-    }
-
-    .news-meta {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      margin-bottom: 12px;
-      font-size: 12px;
+      padding: 20px;
     }
 
     .category {
+      display: inline-block;
+      background: #e8f5eb;
       color: #087f23;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 12px;
       font-weight: bold;
-      text-transform: uppercase;
+      margin-bottom: 9px;
     }
 
     .date {
-      color: #777;
+      color: #087f23;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 8px;
     }
 
     .news-content h3 {
-      font-size: 21px;
-      color: #111;
-      margin-bottom: 12px;
-      line-height: 1.3;
+      font-size: 20px;
+      margin-bottom: 10px;
     }
 
     .news-content p {
       color: #666;
       font-size: 14px;
-      margin-bottom: 18px;
+      margin-bottom: 15px;
     }
 
     .read-more {
-      display: inline-block;
-      background: #087f23;
-      color: white;
+      color: #087f23;
       text-decoration: none;
-      padding: 10px 17px;
-      border-radius: 6px;
-      font-size: 13px;
       font-weight: bold;
     }
 
     .read-more:hover {
-      background: #055c19;
+      text-decoration: underline;
     }
 
-    /* ADD NEWS BOX */
+    /* UPDATE CENTRE */
 
-    .add-news {
-      margin-top: 60px;
+    .update-centre {
+      margin-top: 55px;
       background: #087f23;
       color: white;
       padding: 35px;
-      border-radius: 12px;
+      border-radius: 14px;
       text-align: center;
     }
 
-    .add-news h2 {
+    .update-centre h2 {
       margin-bottom: 10px;
     }
 
-    .add-news p {
-      max-width: 700px;
+    .update-centre p {
+      max-width: 760px;
       margin: auto;
-      opacity: .95;
     }
 
-    /* FOOTER */
+    /* CONTACT */
+
+    .contact-box {
+      margin-top: 40px;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,.07);
+    }
+
+    .contact-box h2 {
+      color: #087f23;
+      margin-bottom: 10px;
+    }
+
+    .contact-box a {
+      color: #087f23;
+      font-weight: bold;
+      text-decoration: none;
+    }
 
     footer {
       background: #111;
       color: white;
-      padding: 40px 20px 20px;
+      padding: 35px 20px;
+      text-align: center;
+      margin-top: 60px;
     }
 
-    .footer-container {
-      max-width: 1200px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-    }
-
-    footer h3 {
-      color: #36b957;
-      margin-bottom: 12px;
-    }
-
-    footer p,
-    footer a {
+    footer p {
       color: #bbb;
       font-size: 14px;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      color: white;
-    }
-
-    .copyright {
-      border-top: 1px solid #333;
-      margin-top: 30px;
-      padding-top: 20px;
-      text-align: center;
-      color: #888;
-      font-size: 13px;
+      margin: 5px;
     }
 
     /* MOBILE */
 
-    @media (max-width: 900px) {
-      .news-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+    @media (max-width: 950px) {
 
-      .footer-container {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media (max-width: 650px) {
-      .menu-btn {
-        display: block;
-      }
-
-      nav ul {
+      nav {
         display: none;
         position: absolute;
-        top: 65px;
+        top: 80px;
         left: 0;
-        width: 100%;
+        right: 0;
         background: #087f23;
         flex-direction: column;
         padding: 20px;
       }
 
-      nav ul.show {
+      nav.active {
         display: flex;
       }
 
+      .menu-btn {
+        display: block;
+      }
+
+      .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 650px) {
+
       .hero h1 {
-        font-size: 36px;
+        font-size: 34px;
       }
 
       .hero p {
         font-size: 16px;
       }
 
+      .admin-bar {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .update-btn {
+        width: 100%;
+        text-align: center;
+      }
+
       .news-grid {
         grid-template-columns: 1fr;
       }
 
-      .footer-container {
-        grid-template-columns: 1fr;
+      .container {
+        width: 94%;
       }
     }
+
   </style>
 </head>
 
 <body>
 
 <header>
-  <div class="nav-container">
 
-    <a href="index.html" class="logo">
-      VICTOR OMALE OJOGBANE
-      <span>House of Representatives Candidate</span>
-    </a>
+  <div class="logo">
 
-    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <img
+      src="https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg"
+      alt="Victor Omale Ojogbane"
+    >
 
-    <nav>
-      <ul id="navMenu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="agenda.html">7-Point Agenda</a></li>
-        <li><a href="mission.html">Mission & Vision</a></li>
-        <li><a href="governance.html">Governance</a></li>
-        <li><a href="news.html" class="active">News</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="media.html">Media</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <h2>Victor Omale Ojogbane</h2>
 
   </div>
+
+  <button
+    class="menu-btn"
+    onclick="toggleMenu()"
+    aria-label="Open menu"
+  >
+    ☰
+  </button>
+
+  <nav id="navMenu">
+
+    <a href="index.html">Home</a>
+
+    <a href="about.html">About</a>
+
+    <a href="agenda.html">Agenda</a>
+
+    <a href="mission.html">Mission & Vision</a>
+
+    <a href="news.html">News</a>
+
+    <a href="gallery.html">Gallery</a>
+
+    <a href="media.html">Media</a>
+
+    <a href="contact.html">Contact</a>
+
+  </nav>
+
 </header>
 
 
 <!-- HERO -->
 
 <section class="hero">
+
   <div>
-    <h1>News Centre</h1>
+
+    <h1>News & Updates</h1>
+
     <p>
-      Latest news, updates, activities and public information.
+      Latest news, announcements, activities and development updates
+      from Victor Omale Ojogbane.
     </p>
+
   </div>
+
 </section>
 
 
-<!-- NEWS -->
+<main class="container">
 
-<section class="container">
 
-  <div class="section-title">
-    <h2>Latest News & Updates</h2>
-    <p>Stay informed with the latest information and activities.</p>
+  <!-- ADMIN UPDATE BUTTON -->
+
+  <div class="admin-bar">
+
+    <div>
+
+      <h3>News Administration</h3>
+
+      <p>
+        Prepare and add new stories using the News Admin Centre.
+      </p>
+
+    </div>
+
+    <a
+      href="admin-news.html"
+      class="update-btn"
+    >
+      🔐 Update News
+    </a>
+
   </div>
 
+
+  <!-- NEWS TITLE -->
+
+  <div class="section-title">
+
+    <h2>Latest News</h2>
+
+    <p>
+      Stay informed with the latest updates and announcements.
+    </p>
+
+  </div>
+
+
+  <!-- NEWS GRID -->
 
   <div class="news-grid">
 
 
-    <!-- =========================
-         NEWS 1
-         COPY THIS BOX TO ADD NEWS
-         ========================= -->
+    <!-- NEWS 1 -->
 
     <article class="news-card">
 
       <img
         src="https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg"
         alt="Victor Omale Ojogbane"
-        class="news-image"
       >
 
       <div class="news-content">
 
-        <div class="news-meta">
-          <span class="category">Announcement</span>
-          <span class="date">September 7, 2026</span>
+        <span class="category">
+          News
+        </span>
+
+        <div class="date">
+          September 2026
         </div>
 
         <h3>
-          Victor Omale Ojogbane News & Updates
+          Victor Omale Ojogbane News Update
         </h3>
 
         <p>
-          Latest information, activities and public updates will be
-          published here as they become available.
+          Latest information and updates concerning activities,
+          engagements and development priorities.
         </p>
 
-        <a href="#" class="read-more">
+        <a
+          href="about.html"
+          class="read-more"
+        >
           Read More →
         </a>
 
@@ -419,35 +509,38 @@
     </article>
 
 
-    <!-- =========================
-         NEWS 2
-         ========================= -->
+    <!-- NEWS 2 -->
 
     <article class="news-card">
 
       <img
         src="https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg"
-        alt="Community Development"
-        class="news-image"
+        alt="Community engagement"
       >
 
       <div class="news-content">
 
-        <div class="news-meta">
-          <span class="category">Development</span>
-          <span class="date">Date to be announced</span>
+        <span class="category">
+          Community
+        </span>
+
+        <div class="date">
+          September 2026
         </div>
 
         <h3>
-          Community Development Updates
+          Community Development & Engagement
         </h3>
 
         <p>
-          Information concerning community development priorities,
-          infrastructure and basic amenities can be published here.
+          Information and updates on community engagement,
+          stakeholder discussions and development priorities.
         </p>
 
-        <a href="#" class="read-more">
+        <a
+          href="mission.html"
+          class="read-more"
+        >
           Read More →
         </a>
 
@@ -456,146 +549,38 @@
     </article>
 
 
-    <!-- =========================
-         NEWS 3
-         ========================= -->
+    <!-- NEWS 3 -->
 
     <article class="news-card">
 
       <img
         src="https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg"
-        alt="Youth Empowerment"
-        class="news-image"
+        alt="Seven Point Development Agenda"
       >
 
       <div class="news-content">
 
-        <div class="news-meta">
-          <span class="category">Youth</span>
-          <span class="date">Date to be announced</span>
+        <span class="category">
+          Development
+        </span>
+
+        <div class="date">
+          September 2026
         </div>
 
         <h3>
-          Youth Empowerment & Opportunities
+          Seven-Point Development Agenda
         </h3>
 
         <p>
-          Updates about youth development, skills acquisition,
-          entrepreneurship and related opportunities can be shared here.
+          Explore the seven-point agenda covering education,
+          youth empowerment, agriculture, infrastructure and more.
         </p>
 
-        <a href="#" class="read-more">
-          Read More →
-        </a>
-
-      </div>
-
-    </article>
-
-
-    <!-- =========================
-         NEWS 4
-         ========================= -->
-
-    <article class="news-card">
-
-      <img
-        src="https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg"
-        alt="Education"
-        class="news-image"
-      >
-
-      <div class="news-content">
-
-        <div class="news-meta">
-          <span class="category">Education</span>
-          <span class="date">Date to be announced</span>
-        </div>
-
-        <h3>
-          Education & Human Capital Development
-        </h3>
-
-        <p>
-          Education-related information, programmes and opportunities
-          can be published in this section.
-        </p>
-
-        <a href="#" class="read-more">
-          Read More →
-        </a>
-
-      </div>
-
-    </article>
-
-
-    <!-- =========================
-         NEWS 5
-         ========================= -->
-
-    <article class="news-card">
-
-      <img
-        src="https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg"
-        alt="Agriculture"
-        class="news-image"
-      >
-
-      <div class="news-content">
-
-        <div class="news-meta">
-          <span class="category">Agriculture</span>
-          <span class="date">Date to be announced</span>
-        </div>
-
-        <h3>
-          Agriculture & Rural Development
-        </h3>
-
-        <p>
-          Updates concerning agriculture, fisheries, rural economic
-          development and related activities can be published here.
-        </p>
-
-        <a href="#" class="read-more">
-          Read More →
-        </a>
-
-      </div>
-
-    </article>
-
-
-    <!-- =========================
-         NEWS 6
-         ========================= -->
-
-    <article class="news-card">
-
-      <img
-        src="https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg"
-        alt="Healthcare"
-        class="news-image"
-      >
-
-      <div class="news-content">
-
-        <div class="news-meta">
-          <span class="category">Healthcare</span>
-          <span class="date">Date to be announced</span>
-        </div>
-
-        <h3>
-          Healthcare & Social Development
-        </h3>
-
-        <p>
-          Healthcare, social development and community wellbeing
-          updates can be published in this section.
-        </p>
-
-        <a href="#" class="read-more">
+        <a
+          href="agenda.html"
+          class="read-more"
+        >
           Read More →
         </a>
 
@@ -607,81 +592,85 @@
   </div>
 
 
-  <!-- ADD NEWS INFORMATION -->
+  <!-- NEWS UPDATE CENTRE -->
 
-  <div class="add-news">
+  <section class="update-centre">
 
-    <h2>News & Public Information</h2>
+    <h2>
+      News Update Centre
+    </h2>
 
     <p>
-      This page is designed for regular updates. New news items,
-      announcements, activities, photographs and public information
-      can be added to the News Centre whenever necessary.
+      To prepare a new news story, use the
+      <strong>🔐 Update News</strong> button above.
+      Enter the headline, date, image, category and description,
+      then generate the news code for your website.
     </p>
 
-  </div>
-
-</section>
+  </section>
 
 
-<!-- FOOTER -->
+  <!-- CONTACT -->
+
+  <section class="contact-box">
+
+    <h2>
+      News & Media Enquiries
+    </h2>
+
+    <p>
+      For official enquiries and information, contact:
+    </p>
+
+    <p style="margin-top:10px;">
+      <strong>
+        Victor Omale Ojogbane
+      </strong>
+    </p>
+
+    <p>
+      Phone:
+      <a href="tel:+2348036131193">
+        +234 803 613 1193
+      </a>
+    </p>
+
+    <p style="margin-top:15px;">
+
+      <a href="contact.html">
+        Contact Page →
+      </a>
+
+    </p>
+
+  </section>
+
+</main>
+
 
 <footer>
 
-  <div class="footer-container">
+  <p>
+    © 2026 Victor Omale Ojogbane.
+  </p>
 
-    <div>
-      <h3>Victor Omale Ojogbane</h3>
-
-      <p>
-        House of Representatives Candidate
-        for Idah Federal Constituency, Kogi State.
-      </p>
-    </div>
-
-
-    <div>
-      <h3>Quick Links</h3>
-
-      <p><a href="about.html">About</a></p>
-      <p><a href="agenda.html">7-Point Agenda</a></p>
-      <p><a href="mission.html">Mission & Vision</a></p>
-      <p><a href="news.html">News</a></p>
-      <p><a href="gallery.html">Gallery</a></p>
-    </div>
-
-
-    <div>
-      <h3>Contact</h3>
-
-      <p>Phone: +234 803 613 1193</p>
-
-      <p>
-        Idah Federal Constituency,
-        Kogi State, Nigeria.
-      </p>
-
-      <p>
-        <a href="contact.html">Contact Page →</a>
-      </p>
-
-    </div>
-
-  </div>
-
-
-  <div class="copyright">
-    © 2026 Victor Omale Ojogbane. All Rights Reserved.
-  </div>
+  <p>
+    House of Representatives Candidate · Idah Federal Constituency · Kogi State
+  </p>
 
 </footer>
 
 
 <script>
 
-  function toggleMenu() {
-    document.getElementById("navMenu").classList.toggle("show");
-  }
+function toggleMenu() {
+
+  const menu =
+    document.getElementById("navMenu");
+
+  menu.classList.toggle("active");
+
+}
 
 </script>
 
