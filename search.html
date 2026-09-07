@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Search | Victor Omale Ojogbane</title>
+
+  <meta name="description"
+        content="Search the official website of Victor Omale Ojogbane for information, agenda, programmes, news, media and constituency development.">
+
+  <meta name="theme-color" content="#0b3d2e">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7f5;
+      color: #111;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* =========================
+       HEADER
+    ========================== */
+
+    header {
+      background: #0b3d2e;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 16px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: .4px;
+      color: white;
+      white-space: nowrap;
+    }
+
+    .logo span {
+      color: #d4af37;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      transition: .3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #d4af37;
+    }
+
+    .menu-btn {
+      display: none;
+      border: none;
+      background: transparent;
+      color: white;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .search-hero {
+      background:
+        linear-gradient(rgba(11,61,46,.94), rgba(11,61,46,.94)),
+        url("https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg")
+        center/cover no-repeat;
+
+      color: white;
+      text-align: center;
+      padding: 75px 20px 90px;
+    }
+
+    .search-hero .small-title {
+      color: #d4af37;
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    .search-hero h1 {
+      font-size: clamp(35px, 6vw, 58px);
+      margin-bottom: 15px;
+      line-height: 1.1;
+    }
+
+    .search-hero p {
+      max-width: 680px;
+      margin: auto;
+      color: #e5ece8;
+      font-size: 17px;
+    }
+
+    /* =========================
+       SEARCH AREA
+    ========================== */
+
+    .search-section {
+      max-width: 1000px;
+      margin: -45px auto 70px;
+      padding: 0 20px;
+      position: relative;
+      z-index: 5;
+    }
+
+    .search-card {
+      background: white;
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 12px 35px rgba(0,0,0,.12);
+    }
+
+    .search-form {
+      display: flex;
+      gap: 12px;
+    }
+
+    .search-input-wrap {
+      flex: 1;
+      position: relative;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 21px;
+      color: #777;
+    }
+
+    #searchInput {
+      width: 100%;
+      height: 58px;
+      border: 2px solid #e0e5e2;
+      border-radius: 12px;
+      padding: 0 50px;
+      font-size: 16px;
+      outline: none;
+      transition: .3s;
+    }
+
+    #searchInput:focus {
+      border-color: #0b3d2e;
+      box-shadow: 0 0 0 4px rgba(11,61,46,.08);
+    }
+
+    .clear-btn {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      border: none;
+      background: transparent;
+      color: #777;
+      font-size: 20px;
+      cursor: pointer;
+      display: none;
+    }
+
+    .search-button {
+      height: 58px;
+      border: none;
+      border-radius: 12px;
+      background: #0b3d2e;
+      color: white;
+      padding: 0 28px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    .search-button:hover {
+      background: #082f24;
+      transform: translateY(-1px);
+    }
+
+    .search-help {
+      margin-top: 13px;
+      font-size: 13px;
+      color: #777;
+    }
+
+    /* =========================
+       RESULTS
+    ========================== */
+
+    .results-area {
+      max-width: 1000px;
+      margin: 0 auto 80px;
+      padding: 0 20px;
+    }
+
+    .results-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .results-header h2 {
+      font-size: 23px;
+      color: #0b3d2e;
+    }
+
+    #resultCount {
+      color: #777;
+      font-size: 14px;
+    }
+
+    .result-card {
+      background: white;
+      border-radius: 14px;
+      padding: 22px;
+      margin-bottom: 15px;
+      border-left: 4px solid #0b3d2e;
+      box-shadow: 0 5px 18px rgba(0,0,0,.06);
+      transition: .3s;
+    }
+
+    .result-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 9px 25px rgba(0,0,0,.1);
+    }
+
+    .result-category {
+      display: inline-block;
+      background: #e8f1ed;
+      color: #0b3d2e;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 5px 10px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      margin-bottom: 9px;
+    }
+
+    .result-card h3 {
+      font-size: 21px;
+      margin-bottom: 7px;
+    }
+
+    .result-card h3 a {
+      color: #111;
+    }
+
+    .result-card h3 a:hover {
+      color: #0b3d2e;
+    }
+
+    .result-card p {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+
+    .result-link {
+      color: #0b3d2e;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .highlight {
+      background: #fff0a8;
+      padding: 1px 3px;
+      border-radius: 3px;
+    }
+
+    /* =========================
+       EMPTY STATE
+    ========================== */
+
+    .empty-state {
+      background: white;
+      border-radius: 15px;
+      padding: 50px 25px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,.06);
+    }
+
+    .empty-icon {
+      font-size: 55px;
+      margin-bottom: 15px;
+    }
+
+    .empty-state h3 {
+      color: #0b3d2e;
+      margin-bottom: 8px;
+      font-size: 24px;
+    }
+
+    .empty-state p {
+      color: #777;
+      max-width: 550px;
+      margin: auto;
+    }
+
+    /* =========================
+       POPULAR SEARCHES
+    ========================== */
+
+    .popular {
+      margin-top: 35px;
+      text-align: center;
+    }
+
+    .popular h3 {
+      font-size: 16px;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .popular-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .popular-buttons button {
+      background: white;
+      border: 1px solid #d8dedb;
+      color: #0b3d2e;
+      padding: 9px 15px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: .3s;
+    }
+
+    .popular-buttons button:hover {
+      background: #0b3d2e;
+      color: white;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      background: #111;
+      color: #bbb;
+      padding: 45px 20px 20px;
+    }
+
+    .footer-container {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 35px;
+    }
+
+    footer h3 {
+      color: white;
+      margin-bottom: 15px;
+      font-size: 17px;
+    }
+
+    footer p {
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    footer a {
+      display: block;
+      color: #bbb;
+      font-size: 14px;
+      margin-bottom: 8px;
+      transition: .3s;
+    }
+
+    footer a:hover {
+      color: #d4af37;
+    }
+
+    .copyright {
+      border-top: 1px solid #333;
+      margin-top: 35px;
+      padding-top: 18px;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 850px) {
+
+      nav {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: #0b3d2e;
+        display: none;
+        flex-direction: column;
+        padding: 20px;
+        gap: 17px;
+        box-shadow: 0 8px 20px rgba(0,0,0,.15);
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .footer-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .nav-container {
+        padding: 14px 18px;
+      }
+
+      .logo {
+        font-size: 15px;
+      }
+
+      .search-hero {
+        padding: 55px 18px 75px;
+      }
+
+      .search-hero p {
+        font-size: 15px;
+      }
+
+      .search-section {
+        margin-top: -35px;
+      }
+
+      .search-card {
+        padding: 18px;
+      }
+
+      .search-form {
+        flex-direction: column;
+      }
+
+      .search-button {
+        width: 100%;
+      }
+
+      .results-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .result-card {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+    <div class="nav-container">
+
+      <a href="index.html" class="logo">
+        VICTOR <span>OMALE</span> OJOGBANE
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+        ☰
+      </button>
+
+      <nav id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="agenda.html">Agenda</a>
+        <a href="mission.html">Mission</a>
+        <a href="news.html">News</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="media.html">Media</a>
+        <a href="partners.html">Partners</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+        <a href="search.html" class="active">Search</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+
+  <section class="search-hero">
+
+    <div class="small-title">
+      Website Search
+    </div>
+
+    <h1>Find What You Need</h1>
+
+    <p>
+      Search this website for information about Victor Omale Ojogbane,
+      the 7-Point Agenda, mission and vision, news, media, gallery and
+      constituency development priorities.
+    </p>
+
+  </section>
+
+
+  <!-- SEARCH BOX -->
+
+  <section class="search-section">
+
+    <div class="search-card">
+
+      <form class="search-form" id="searchForm">
+
+        <div class="search-input-wrap">
+
+          <span class="search-icon">⌕</span>
+
+          <input
+            type="search"
+            id="searchInput"
+            placeholder="Search the website..."
+            autocomplete="off"
+            aria-label="Search website"
+          >
+
+          <button
+            type="button"
+            class="clear-btn"
+            id="clearBtn"
+            aria-label="Clear search">
+            ×
+          </button>
+
+        </div>
+
+        <button type="submit" class="search-button">
+          Search
+        </button>
+
+      </form>
+
+      <div class="search-help">
+        Try keywords such as <strong>education</strong>,
+        <strong>youth</strong>, <strong>healthcare</strong>,
+        <strong>agenda</strong>, <strong>agriculture</strong> or
+        <strong>infrastructure</strong>.
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- RESULTS -->
+
+  <main class="results-area">
+
+    <div class="results-header">
+
+      <h2 id="resultsTitle">
+        Website Pages
+      </h2>
+
+      <span id="resultCount">
+        Showing all pages
+      </span>
+
+    </div>
+
+    <div id="resultsContainer"></div>
+
+    <!-- POPULAR SEARCHES -->
+
+    <div class="popular">
+
+      <h3>Popular Searches</h3>
+
+      <div class="popular-buttons">
+
+        <button data-search="7-point agenda">
+          7-Point Agenda
+        </button>
+
+        <button data-search="education">
+          Education
+        </button>
+
+        <button data-search="youth">
+          Youth Empowerment
+        </button>
+
+        <button data-search="agriculture">
+          Agriculture
+        </button>
+
+        <button data-search="healthcare">
+          Healthcare
+        </button>
+
+        <button data-search="infrastructure">
+          Infrastructure
+        </button>
+
+        <button data-search="contact">
+          Contact
+        </button>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="footer-container">
+
+      <div>
+        <h3>Victor Omale Ojogbane</h3>
+
+        <p>
+          House of Representatives Candidate for
+          Idah Federal Constituency.
+        </p>
+
+        <p style="margin-top:10px;">
+          Idah Federal Constituency, Kogi State, Nigeria.
+        </p>
+      </div>
+
+
+      <div>
+
+        <h3>Quick Links</h3>
+
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="agenda.html">7-Point Agenda</a>
+        <a href="mission.html">Mission & Vision</a>
+        <a href="news.html">News</a>
+        <a href="gallery.html">Gallery</a>
+
+      </div>
+
+
+      <div>
+
+        <h3>More</h3>
+
+        <a href="media.html">Media Centre</a>
+        <a href="partners.html">Partners</a>
+        <a href="faq.html">FAQ</a>
+        <a href="resources.html">Resources</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+
+      </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+      © 2026 Victor Omale Ojogbane.
+      All Rights Reserved.
+
+    </div>
+
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
+
+  <script>
+
+    /* =========================
+       WEBSITE SEARCH DATABASE
+    ========================== */
+
+    const pages = [
+
+      {
+        title: "Home",
+        url: "index.html",
+        category: "Home",
+        description:
+          "Official website of Victor Omale Ojogbane. Learn about his vision, priorities, constituency focus and development agenda."
+      },
+
+      {
+        title: "About Victor Omale Ojogbane",
+        url: "about.html",
+        category: "About",
+        description:
+          "Information about Victor Omale Ojogbane, APC House of Representatives Candidate for Idah Federal Constituency."
+      },
+
+      {
+        title: "7-Point Agenda",
+        url: "agenda.html",
+        category: "Agenda",
+        description:
+          "Education and human capital development, youth empowerment, agriculture, infrastructure, healthcare, good governance, accountability, community development, security and unity."
+      },
+
+      {
+        title: "Mission & Vision",
+        url: "mission.html",
+        category: "Mission",
+        description:
+          "Development priorities covering roads, clean water, education, healthcare, markets, women empowerment and youth empowerment."
+      },
+
+      {
+        title: "News",
+        url: "news.html",
+        category: "News",
+        description:
+          "Latest news, updates and development-related information concerning Victor Omale Ojogbane and Idah Federal Constituency."
+      },
+
+      {
+        title: "Gallery",
+        url: "gallery.html",
+        category: "Gallery",
+        description:
+          "Photo gallery featuring official, community, development and empowerment-related images."
+      },
+
+      {
+        title: "Media Centre",
+        url: "media.html",
+        category: "Media",
+        description:
+          "Videos, photographs and media materials relating to Victor Omale Ojogbane and constituency activities."
+      },
+
+      {
+        title: "Partners",
+        url: "partners.html",
+        category: "Partnership",
+        description:
+          "Information about potential collaboration with community organisations, public institutions, civil society, women-led groups, youth organisations and private sector partners."
+      },
+
+      {
+        title: "Frequently Asked Questions",
+        url: "faq.html",
+        category: "FAQ",
+        description:
+          "Frequently asked questions about Victor Omale Ojogbane, the website, development priorities, agenda and constituency representation."
+      },
+
+      {
+        title: "Resources Centre",
+        url: "resources.html",
+        category: "Resources",
+        description:
+          "Useful website resources including the agenda, mission and vision, news, media, gallery, FAQ and constituency information."
+      },
+
+      {
+        title: "Contact",
+        url: "contact.html",
+        category: "Contact",
+        description:
+          "Contact information for Victor Omale Ojogbane including phone and constituency location."
+      },
+
+      {
+        title: "Sitemap",
+        url: "sitemap.html",
+        category: "Website",
+        description:
+          "Complete directory of pages available on the Victor Omale Ojogbane website."
+      },
+
+      {
+        title: "Privacy Policy",
+        url: "privacy.html",
+        category: "Legal",
+        description:
+          "Privacy information and policies governing the use of this website."
+      },
+
+      {
+        title: "Terms & Conditions",
+        url: "terms.html",
+        category: "Legal",
+        description:
+          "Terms and conditions governing the use of this website."
+      }
+
+    ];
+
+
+    /* =========================
+       ELEMENTS
+    ========================== */
+
+    const searchForm =
+      document.getElementById("searchForm");
+
+    const searchInput =
+      document.getElementById("searchInput");
+
+    const clearBtn =
+      document.getElementById("clearBtn");
+
+    const resultsContainer =
+      document.getElementById("resultsContainer");
+
+    const resultsTitle =
+      document.getElementById("resultsTitle");
+
+    const resultCount =
+      document.getElementById("resultCount");
+
+
+    /* =========================
+       ESCAPE HTML
+    ========================== */
+
+    function escapeHTML(text) {
+
+      return text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+
+    }
+
+
+    /* =========================
+       HIGHLIGHT SEARCH WORD
+    ========================== */
+
+    function highlight(text, query) {
+
+      const safeText =
+        escapeHTML(text);
+
+      if (!query) {
+        return safeText;
+      }
+
+      const words =
+        query
+          .split(/\s+/)
+          .filter(word => word.length > 1)
+          .map(word =>
+            word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+          );
+
+      if (!words.length) {
+        return safeText;
+      }
+
+      const regex =
+        new RegExp(
+          "(" + words.join("|") + ")",
+          "gi"
+        );
+
+      return safeText.replace(
+        regex,
+        '<span class="highlight">$1</span>'
+      );
+
+    }
+
+
+    /* =========================
+       SEARCH FUNCTION
+    ========================== */
+
+    function searchSite(query) {
+
+      query =
+        query.trim().toLowerCase();
+
+      if (!query) {
+
+        showAllPages();
+
+        return;
+      }
+
+
+      const terms =
+        query
+          .split(/\s+/)
+          .filter(Boolean);
+
+
+      const results =
+        pages
+          .map(page => {
+
+            const searchable =
+              (
+                page.title +
+                " " +
+                page.category +
+                " " +
+                page.description
+              ).toLowerCase();
+
+            let score = 0;
+
+            terms.forEach(term => {
+
+              if (page.title.toLowerCase().includes(term)) {
+                score += 5;
+              }
+
+              if (page.category.toLowerCase().includes(term)) {
+                score += 3;
+              }
+
+              if (page.description.toLowerCase().includes(term)) {
+                score += 1;
+              }
+
+            });
+
+            return {
+              page,
+              score
+            };
+
+          })
+
+          .filter(item => item.score > 0)
+
+          .sort((a, b) =>
+            b.score - a.score
+          );
+
+
+      displayResults(
+        results.map(item => item.page),
+        query
+      );
+
+    }
+
+
+    /* =========================
+       DISPLAY RESULTS
+    ========================== */
+
+    function displayResults(results, query) {
+
+      resultsContainer.innerHTML = "";
+
+      resultsTitle.textContent =
+        query
+          ? "Search Results"
+          : "Website Pages";
+
+
+      if (query) {
+
+        resultCount.textContent =
+          results.length +
+          (results.length === 1
+            ? " result found"
+            : " results found");
+
+      } else {
+
+        resultCount.textContent =
+          "Showing all pages";
+
+      }
+
+
+      if (!results.length) {
+
+        resultsContainer.innerHTML = `
+
+          <div class="empty-state">
+
+            <div class="empty-icon">
+              🔍
+            </div>
+
+            <h3>No Results Found</h3>
+
+            <p>
+              We couldn't find a page matching
+              <strong>${escapeHTML(query)}</strong>.
+              Try another keyword such as
+              education, agriculture, youth,
+              healthcare or infrastructure.
+            </p>
+
+          </div>
+
+        `;
+
+        return;
+      }
+
+
+      results.forEach(page => {
+
+        const card =
+          document.createElement("article");
+
+        card.className =
+          "result-card";
+
+
+        const highlightedTitle =
+          query
+            ? highlight(page.title, query)
+            : escapeHTML(page.title);
+
+
+        const highlightedDescription =
+          query
+            ? highlight(page.description, query)
+            : escapeHTML(page.description);
+
+
+        card.innerHTML = `
+
+          <div class="result-category">
+            ${escapeHTML(page.category)}
+          </div>
+
+          <h3>
+            <a href="${page.url}">
+              ${highlightedTitle}
+            </a>
+          </h3>
+
+          <p>
+            ${highlightedDescription}
+          </p>
+
+          <a
+            href="${page.url}"
+            class="result-link">
+            Visit Page →
+          </a>
+
+        `;
+
+
+        resultsContainer.appendChild(card);
+
+      });
+
+    }
+
+
+    /* =========================
+       SHOW ALL PAGES
+    ========================== */
+
+    function showAllPages() {
+
+      displayResults(
+        pages,
+        ""
+      );
+
+    }
+
+
+    /* =========================
+       FORM SUBMIT
+    ========================== */
+
+    searchForm.addEventListener(
+      "submit",
+      function(event) {
+
+        event.preventDefault();
+
+        searchSite(
+          searchInput.value
+        );
+
+        history.replaceState(
+          null,
+          "",
+          "search.html?q=" +
+          encodeURIComponent(
+            searchInput.value
+          )
+        );
+
+      }
+    );
+
+
+    /* =========================
+       LIVE SEARCH
+    ========================== */
+
+    searchInput.addEventListener(
+      "input",
+      function() {
+
+        if (this.value.trim()) {
+
+          clearBtn.style.display =
+            "block";
+
+        } else {
+
+          clearBtn.style.display =
+            "none";
+
+        }
+
+        searchSite(this.value);
+
+      }
+    );
+
+
+    /* =========================
+       CLEAR SEARCH
+    ========================== */
+
+    clearBtn.addEventListener(
+      "click",
+      function() {
+
+        searchInput.value = "";
+
+        clearBtn.style.display =
+          "none";
+
+        history.replaceState(
+          null,
+          "",
+          "search.html"
+        );
+
+        showAllPages();
+
+        searchInput.focus();
+
+      }
+    );
+
+
+    /* =========================
+       POPULAR SEARCH BUTTONS
+    ========================== */
+
+    document
+      .querySelectorAll(
+        ".popular-buttons button"
+      )
+      .forEach(button => {
+
+        button.addEventListener(
+          "click",
+          function() {
+
+            const query =
+              this.dataset.search;
+
+            searchInput.value =
+              query;
+
+            clearBtn.style.display =
+              "block";
+
+            searchSite(query);
+
+            history.replaceState(
+              null,
+              "",
+              "search.html?q=" +
+              encodeURIComponent(query)
+            );
+
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth"
+            });
+
+          }
+        );
+
+      });
+
+
+    /* =========================
+       MOBILE MENU
+    ========================== */
+
+    const menuBtn =
+      document.getElementById("menuBtn");
+
+    const mainNav =
+      document.getElementById("mainNav");
+
+    menuBtn.addEventListener(
+      "click",
+      function() {
+
+        mainNav.classList.toggle("show");
+
+      }
+    );
+
+
+    /* =========================
+       LOAD SEARCH FROM URL
+    ========================== */
+
+    const urlParams =
+      new URLSearchParams(
+        window.location.search
+      );
+
+    const initialQuery =
+      urlParams.get("q");
+
+
+    if (initialQuery) {
+
+      searchInput.value =
+        initialQuery;
+
+      clearBtn.style.display =
+        "block";
+
+      searchSite(initialQuery);
+
+    } else {
+
+      showAllPages();
+
+    }
+
+  </script>
+
+</body>
+</html>
