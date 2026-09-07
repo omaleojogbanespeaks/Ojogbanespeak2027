@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>News Admin Centre | Victor Omale Ojogbane</title>
+
+  <meta name="theme-color" content="#087f23">
+
+  <link rel="icon" href="https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f7f5;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #087f23;
+      color: white;
+      padding: 15px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid white;
+    }
+
+    .brand h2 {
+      font-size: 18px;
+    }
+
+    .back-btn {
+      color: white;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,.7);
+      padding: 9px 14px;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .back-btn:hover {
+      background: white;
+      color: #087f23;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0,70,20,.88), rgba(0,70,20,.88)),
+        url("https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg") center/cover;
+      color: white;
+      text-align: center;
+      padding: 55px 20px;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1000px;
+      margin: 40px auto;
+    }
+
+    .notice {
+      background: #fff8df;
+      border-left: 5px solid #d49b00;
+      padding: 18px;
+      margin-bottom: 25px;
+      border-radius: 8px;
+    }
+
+    .notice strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .admin-card {
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    }
+
+    .admin-card h2 {
+      color: #087f23;
+      margin-bottom: 25px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 7px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #ccc;
+      border-radius: 7px;
+      font-size: 15px;
+      font-family: inherit;
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #087f23;
+      box-shadow: 0 0 0 2px rgba(8,127,35,.1);
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 25px;
+    }
+
+    button {
+      border: none;
+      cursor: pointer;
+      padding: 13px 20px;
+      border-radius: 7px;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    .generate {
+      background: #087f23;
+      color: white;
+    }
+
+    .generate:hover {
+      background: #055c19;
+    }
+
+    .clear {
+      background: #222;
+      color: white;
+    }
+
+    .copy {
+      background: #0b6e8e;
+      color: white;
+    }
+
+    .output-section {
+      margin-top: 30px;
+      display: none;
+    }
+
+    .output-section h2 {
+      color: #087f23;
+      margin-bottom: 12px;
+    }
+
+    #generatedCode {
+      width: 100%;
+      min-height: 300px;
+      background: #111;
+      color: #f2f2f2;
+      font-family: Consolas, monospace;
+      font-size: 13px;
+      padding: 18px;
+      border-radius: 8px;
+    }
+
+    .preview {
+      margin-top: 35px;
+    }
+
+    .preview h2 {
+      color: #087f23;
+      margin-bottom: 15px;
+    }
+
+    .preview-box {
+      background: #f4f7f5;
+      padding: 25px;
+      border-radius: 10px;
+    }
+
+    .news-preview {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 18px rgba(0,0,0,.08);
+      max-width: 500px;
+    }
+
+    .news-preview img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .preview-content {
+      padding: 20px;
+    }
+
+    .category {
+      display: inline-block;
+      background: #e8f5eb;
+      color: #087f23;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .preview-date {
+      color: #087f23;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .preview-content h3 {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    .preview-content p {
+      color: #666;
+    }
+
+    .instructions {
+      margin-top: 35px;
+      background: #087f23;
+      color: white;
+      padding: 28px;
+      border-radius: 12px;
+    }
+
+    .instructions h2 {
+      margin-bottom: 15px;
+    }
+
+    .instructions ol {
+      padding-left: 22px;
+    }
+
+    .instructions li {
+      margin-bottom: 9px;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 50px;
+    }
+
+    footer p {
+      color: #bbb;
+      font-size: 14px;
+      margin: 5px;
+    }
+
+    @media (max-width: 650px) {
+
+      .hero h1 {
+        font-size: 30px;
+      }
+
+      .admin-card {
+        padding: 20px;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      button {
+        width: 100%;
+      }
+
+      .back-btn {
+        font-size: 13px;
+      }
+
+      .brand h2 {
+        font-size: 14px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="brand">
+
+    <img
+      src="https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg"
+      alt="Victor Omale Ojogbane"
+    >
+
+    <h2>Victor Omale Ojogbane</h2>
+
+  </div>
+
+  <a href="news.html" class="back-btn">
+    ← View News
+  </a>
+
+</header>
+
+
+<section class="hero">
+
+  <h1>News Admin Centre</h1>
+
+  <p>
+    Create and prepare news updates for the official website.
+  </p>
+
+</section>
+
+
+<main class="container">
+
+
+  <div class="notice">
+
+    <strong>Important:</strong>
+
+    This page helps you generate a news card. After generating
+    the code, copy it and add it to your <strong>news.html</strong>
+    file before publishing the updated page on GitHub Pages.
+
+  </div>
+
+
+  <section class="admin-card">
+
+    <h2>➕ Add New News</h2>
+
+
+    <form id="newsForm">
+
+
+      <div class="form-group">
+
+        <label for="headline">
+          News Headline
+        </label>
+
+        <input
+          type="text"
+          id="headline"
+          placeholder="Enter news headline"
+          required
+        >
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="date">
+          News Date
+        </label>
+
+        <input
+          type="date"
+          id="date"
+          required
+        >
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="image">
+          News Image URL
+        </label>
+
+        <input
+          type="url"
+          id="image"
+          placeholder="https://example.com/image.jpg"
+          required
+        >
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="category">
+          News Category
+        </label>
+
+        <select id="category">
+
+          <option value="News">News</option>
+
+          <option value="Community">
+            Community
+          </option>
+
+          <option value="Education">
+            Education
+          </option>
+
+          <option value="Youth Empowerment">
+            Youth Empowerment
+          </option>
+
+          <option value="Agriculture">
+            Agriculture
+          </option>
+
+          <option value="Healthcare">
+            Healthcare
+          </option>
+
+          <option value="Infrastructure">
+            Infrastructure
+          </option>
+
+          <option value="Governance">
+            Governance
+          </option>
+
+          <option value="Announcement">
+            Announcement
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="description">
+          Short Description
+        </label>
+
+        <textarea
+          id="description"
+          placeholder="Write a short description of the news..."
+          required
+        ></textarea>
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="link">
+          Read More Link
+        </label>
+
+        <input
+          type="text"
+          id="link"
+          value="about.html"
+          placeholder="about.html"
+        >
+
+      </div>
+
+
+      <div class="buttons">
+
+        <button
+          type="button"
+          class="generate"
+          onclick="generateNews()"
+        >
+          📝 Generate News Code
+        </button>
+
+
+        <button
+          type="button"
+          class="clear"
+          onclick="clearForm()"
+        >
+          🗑 Clear Form
+        </button>
+
+      </div>
+
+    </form>
+
+
+    <section
+      class="output-section"
+      id="outputSection"
+    >
+
+      <h2>
+        Generated News Code
+      </h2>
+
+      <textarea
+        id="generatedCode"
+        readonly
+      ></textarea>
+
+
+      <div class="buttons">
+
+        <button
+          type="button"
+          class="copy"
+          onclick="copyCode()"
+        >
+          📋 Copy News Code
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <section class="preview">
+
+      <h2>
+        👁 News Preview
+      </h2>
+
+      <div class="preview-box">
+
+        <div
+          id="previewContent"
+        >
+
+          Fill in the form above and click
+          <strong>Generate News Code</strong>
+          to see your news preview.
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </section>
+
+
+  <section class="instructions">
+
+    <h2>
+      📌 How to Publish Your News
+    </h2>
+
+    <ol>
+
+      <li>
+        Fill in the news headline.
+      </li>
+
+      <li>
+        Select the date.
+      </li>
+
+      <li>
+        Paste the URL of your news picture.
+      </li>
+
+      <li>
+        Select the news category.
+      </li>
+
+      <li>
+        Write your short description.
+      </li>
+
+      <li>
+        Click <strong>Generate News Code</strong>.
+      </li>
+
+      <li>
+        Click <strong>Copy News Code</strong>.
+      </li>
+
+      <li>
+        Open <strong>news.html</strong> in GitHub.
+      </li>
+
+      <li>
+        Paste the generated news card inside the
+        <strong>news-grid</strong> section.
+      </li>
+
+      <li>
+        Save/commit the changes.
+      </li>
+
+      <li>
+        Your new news story will appear on the website.
+      </li>
+
+    </ol>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  <p>
+    © 2026 Victor Omale Ojogbane.
+  </p>
+
+  <p>
+    News Administration Centre · Idah Federal Constituency
+  </p>
+
+</footer>
+
+
+<script>
+
+function escapeHTML(value) {
+
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+
+}
+
+
+function formatDate(dateValue) {
+
+  if (!dateValue) {
+    return "";
+  }
+
+  const date = new Date(dateValue + "T00:00:00");
+
+  return date.toLocaleDateString(
+    "en-US",
+    {
+      year: "numeric",
+      month: "long",
+      day: "numeric"
+    }
+  );
+
+}
+
+
+function generateNews() {
+
+  const headline =
+    document.getElementById("headline").value.trim();
+
+  const date =
+    document.getElementById("date").value;
+
+  const image =
+    document.getElementById("image").value.trim();
+
+  const category =
+    document.getElementById("category").value;
+
+  const description =
+    document.getElementById("description").value.trim();
+
+  const link =
+    document.getElementById("link").value.trim()
+    || "about.html";
+
+
+  if (
+    !headline ||
+    !date ||
+    !image ||
+    !description
+  ) {
+
+    alert(
+      "Please complete all required fields."
+    );
+
+    return;
+
+  }
+
+
+  const safeHeadline =
+    escapeHTML(headline);
+
+  const safeDate =
+    escapeHTML(formatDate(date));
+
+  const safeImage =
+    escapeHTML(image);
+
+  const safeCategory =
+    escapeHTML(category);
+
+  const safeDescription =
+    escapeHTML(description);
+
+  const safeLink =
+    escapeHTML(link);
+
+
+  const code = `
+
+<!-- NEWS CARD -->
+
+<article class="news-card">
+
+  <img
+    src="${safeImage}"
+    alt="${safeHeadline}"
+  >
+
+  <div class="news-content">
+
+    <span class="category">
+      ${safeCategory}
+    </span>
+
+    <div class="date">
+      ${safeDate}
+    </div>
+
+    <h3>
+      ${safeHeadline}
+    </h3>
+
+    <p>
+      ${safeDescription}
+    </p>
+
+    <a
+      href="${safeLink}"
+      class="read-more"
+    >
+      Read More →
+    </a>
+
+  </div>
+
+</article>
+
+`;
+
+
+  document.getElementById(
+    "generatedCode"
+  ).value = code.trim();
+
+
+  document.getElementById(
+    "outputSection"
+  ).style.display = "block";
+
+
+  document.getElementById(
+    "previewContent"
+  ).innerHTML = `
+
+    <article class="news-preview">
+
+      <img
+        src="${safeImage}"
+        alt="${safeHeadline}"
+        onerror="this.src='https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg'"
+      >
+
+      <div class="preview-content">
+
+        <span class="category">
+          ${safeCategory}
+        </span>
+
+        <div class="preview-date">
+          ${safeDate}
+        </div>
+
+        <h3>
+          ${safeHeadline}
+        </h3>
+
+        <p>
+          ${safeDescription}
+        </p>
+
+      </div>
+
+    </article>
+
+  `;
+
+}
+
+
+function copyCode() {
+
+  const code =
+    document.getElementById(
+      "generatedCode"
+    );
+
+  code.select();
+
+  code.setSelectionRange(
+    0,
+    99999
+  );
+
+  navigator.clipboard.writeText(
+    code.value
+  ).then(function() {
+
+    alert(
+      "News code copied successfully!"
+    );
+
+  }).catch(function() {
+
+    document.execCommand("copy");
+
+    alert(
+      "News code copied successfully!"
+    );
+
+  });
+
+}
+
+
+function clearForm() {
+
+  document.getElementById(
+    "newsForm"
+  ).reset();
+
+  document.getElementById(
+    "outputSection"
+  ).style.display = "none";
+
+  document.getElementById(
+    "generatedCode"
+  ).value = "";
+
+  document.getElementById(
+    "previewContent"
+  ).innerHTML =
+    "Fill in the form above and click <strong>Generate News Code</strong> to see your news preview.";
+
+}
+
+</script>
+
+</body>
+</html>
