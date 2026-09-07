@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mission & Vision | Omale Victor Ojogbane</title>
+
+  <meta name="description"
+        content="Mission and vision of Omale Victor Ojogbane for the Idah Federal Constituency.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7f5;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #0b5d1e;
+      color: white;
+      padding: 18px 7%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 21px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .logo span {
+      color: #d4af37;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 22px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #d4af37;
+    }
+
+    .menu-btn {
+      display: none;
+      font-size: 27px;
+      cursor: pointer;
+    }
+
+    .hero {
+      min-height: 350px;
+      background:
+        linear-gradient(rgba(0,70,20,0.82), rgba(0,70,20,0.82)),
+        url("https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg")
+        center/cover no-repeat;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 40px 20px;
+    }
+
+    .hero h1 {
+      font-size: 46px;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 750px;
+      margin: auto;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1150px;
+      margin: 60px auto;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .intro h2 {
+      color: #0b5d1e;
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .intro p {
+      max-width: 800px;
+      margin: auto;
+      color: #666;
+    }
+
+    .mission-box {
+      background: #0b5d1e;
+      color: white;
+      padding: 45px 30px;
+      border-radius: 15px;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .mission-box h2 {
+      color: #d4af37;
+      margin-bottom: 15px;
+      font-size: 30px;
+    }
+
+    .mission-box p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 17px;
+    }
+
+    .vision-box {
+      background: white;
+      padding: 35px;
+      border-radius: 15px;
+      text-align: center;
+      margin-bottom: 55px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      border-top: 5px solid #d4af37;
+    }
+
+    .vision-box h2 {
+      color: #0b5d1e;
+      margin-bottom: 12px;
+      font-size: 30px;
+    }
+
+    .vision-box p {
+      max-width: 850px;
+      margin: auto;
+      color: #555;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+      color: #0b5d1e;
+      font-size: 30px;
+    }
+
+    .section-title p {
+      color: #777;
+      margin-top: 8px;
+    }
+
+    .development-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    .development-card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .development-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .development-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-content {
+      padding: 25px;
+    }
+
+    .card-content h3 {
+      color: #0b5d1e;
+      font-size: 23px;
+      margin-bottom: 10px;
+    }
+
+    .card-content p {
+      color: #555;
+    }
+
+    .priority {
+      margin-top: 55px;
+      background: #fff;
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    }
+
+    .priority h2 {
+      text-align: center;
+      color: #0b5d1e;
+      margin-bottom: 25px;
+    }
+
+    .priority ul {
+      max-width: 800px;
+      margin: auto;
+      list-style: none;
+    }
+
+    .priority li {
+      padding: 13px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .priority li::before {
+      content: "✓";
+      color: #0b5d1e;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    footer {
+      background: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 60px;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    .footer-links {
+      margin-top: 12px;
+    }
+
+    .footer-links a {
+      color: #aaa;
+      text-decoration: none;
+      margin: 0 8px;
+      font-size: 13px;
+    }
+
+    .footer-links a:hover {
+      color: #d4af37;
+    }
+
+    @media (max-width: 800px) {
+
+      nav ul {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #0b5d1e;
+        flex-direction: column;
+        padding: 20px;
+        gap: 18px;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .development-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 35px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav-container">
+
+    <div class="logo">
+      OMALE <span>VICTOR OJOGBANE</span>
+    </div>
+
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+    <nav>
+      <ul id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="agenda.html">Agenda</a></li>
+        <li><a href="mission.html" class="active">Mission</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
+
+
+<section class="hero">
+  <div>
+    <h1>Mission & Vision</h1>
+    <p>
+      Building stronger communities through responsible
+      representation, development and opportunity.
+    </p>
+  </div>
+</section>
+
+
+<main class="container">
+
+  <section class="intro">
+    <h2>A Vision for Community Development</h2>
+    <p>
+      Our focus is on issues that directly affect the daily lives,
+      opportunities and wellbeing of people across the Idah Federal
+      Constituency.
+    </p>
+  </section>
+
+
+  <!-- MISSION -->
+
+  <section class="mission-box">
+
+    <h2>Our Mission</h2>
+
+    <p>
+      To promote responsible representation, community development,
+      inclusive opportunities and constructive engagement on issues
+      affecting the people of the Idah Federal Constituency.
+    </p>
+
+  </section>
+
+
+  <!-- VISION -->
+
+  <section class="vision-box">
+
+    <h2>Our Vision</h2>
+
+    <p>
+      To contribute to a constituency where communities have access
+      to essential infrastructure, quality education, healthcare,
+      economic opportunities and meaningful participation in
+      development.
+    </p>
+
+  </section>
+
+
+  <!-- DEVELOPMENT AREAS -->
+
+  <section>
+
+    <div class="section-title">
+      <h2>Our Development Priorities</h2>
+
+      <p>
+        Key areas of community infrastructure and empowerment.
+      </p>
+    </div>
+
+
+    <div class="development-grid">
+
+
+      <!-- ROAD -->
+
+      <article class="development-card">
+
+        <img
+          src="ROAD-PICTURE-HERE.jpg"
+          alt="Road infrastructure and community development"
+          loading="lazy"
+        >
+
+        <div class="card-content">
+
+          <h3>Road Infrastructure</h3>
+
+          <p>
+            Supporting attention to roads and transportation
+            infrastructure that connect communities and facilitate
+            movement, commerce and access to essential services.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- BOREHOLE -->
+
+      <article class="development-card">
+
+        <img
+          src="BOREHOLE-PICTURE-HERE.jpg"
+          alt="Borehole and clean water project"
+          loading="lazy"
+        >
+
+        <div class="card-content">
+
+          <h3>Water & Boreholes</h3>
+
+          <p>
+            Supporting access to clean and reliable water through
+            community-focused water infrastructure and borehole
+            initiatives.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- SCHOOL -->
+
+      <article class="development-card">
+
+        <img
+          src="SCHOOL-PICTURE-HERE.jpg"
+          alt="School and education infrastructure"
+          loading="lazy"
+        >
+
+        <div class="card-content">
+
+          <h3>Education</h3>
+
+          <p>
+            Promoting improved educational opportunities and
+            supporting initiatives that help children and young
+            people gain knowledge and useful skills.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- HEALTHCARE -->
+
+      <article class="development-card">
+
+        <img
+          src="HEALTHCARE-PICTURE-HERE.jpg"
+          alt="Healthcare and community health services"
+          loading="lazy"
+        >
+
+        <div class="card-content">
+
+          <h3>Healthcare</h3>
+
+          <p>
+            Giving attention to healthcare needs and initiatives
+            that can improve access to essential health services
+            within communities.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- MARKET -->
+
+      <article class="development-card">
+
+        <img
+          src="MARKET-PICTURE-HERE.jpg"
+          alt="Market and local economic activity"
+          loading="lazy"
+        >
+
+        <div class="card-content">
+
+          <h3>Markets & Local Economy</h3>
+
+          <p>
+            Supporting local commerce, markets and economic activity
+            that provide opportunities for traders, farmers,
+            artisans and small businesses.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- WOMEN -->
+
+      <article class="development-card">
+
+        <img
+          src="WOMEN-EMPOWERMENT-PICTURE-HERE.jpg"
+          alt="Women empowerment and skills development"
+          loading="lazy"
+        >
+
+        <div class="card-content">
+
+          <h3>Women Empowerment</h3>
+
+          <p>
+            Promoting opportunities for women through skills
+            development, entrepreneurship, economic participation
+            and community engagement.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- YOUTH -->
+
+      <article class="development-card">
+
+        <img
+          src="YOUTH-EMPOWERMENT-PICTURE-HERE.jpg"
+          alt="Youth empowerment and development"
+          loading="lazy"
+        >
+
+        <div class="card-content">
+
+          <h3>Youth Empowerment</h3>
+
+          <p>
+            Supporting young people through skills development,
+            entrepreneurship, education and opportunities for
+            constructive participation in community development.
+          </p>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- PRIORITIES -->
+
+  <section class="priority">
+
+    <h2>Key Areas of Focus</h2>
+
+    <ul>
+
+      <li>Improved road and transportation infrastructure</li>
+
+      <li>Access to clean and reliable water</li>
+
+      <li>Education and skills development</li>
+
+      <li>Accessible healthcare services</li>
+
+      <li>Market and local economic development</li>
+
+      <li>Women empowerment and economic participation</li>
+
+      <li>Youth empowerment and skills development</li>
+
+      <li>Inclusive community engagement</li>
+
+      <li>Responsible and accountable representation</li>
+
+    </ul>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  <p>
+    © 2026 <strong>Omale Victor Ojogbane</strong>.
+    All Rights Reserved.
+  </p>
+
+  <div class="footer-links">
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms & Conditions</a>
+  </div>
+
+</footer>
+
+
+<script>
+
+  function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("show");
+  }
+
+</script>
+
+</body>
+</html>
