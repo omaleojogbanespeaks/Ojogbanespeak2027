@@ -4,10 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>News & Updates | Omale Victor Ojogbane</title>
+  <title>News Centre | Victor Omale Ojogbane</title>
 
   <meta name="description"
-        content="News and updates concerning Omale Victor Ojogbane and public engagements within Idah Federal Constituency.">
+        content="Latest news, updates and public information from Victor Omale Ojogbane.">
+
+  <meta name="theme-color" content="#087f23">
+  <link rel="manifest" href="manifest.json">
+
+  <link rel="icon"
+        href="https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg"
+        type="image/jpeg">
 
   <style>
     * {
@@ -18,138 +25,135 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #f5f7f6;
+      background: #f5f7f5;
       color: #222;
       line-height: 1.6;
     }
 
-    /* HEADER */
     header {
-      background: #006b3c;
+      background: #087f23;
       color: white;
-      padding: 15px 6%;
       position: sticky;
       top: 0;
       z-index: 1000;
       box-shadow: 0 2px 10px rgba(0,0,0,0.15);
     }
 
-    .nav {
+    .nav-container {
       max-width: 1200px;
       margin: auto;
+      padding: 15px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
     .logo {
-      font-size: 19px;
+      font-size: 20px;
       font-weight: bold;
-      line-height: 1.2;
+      text-decoration: none;
+      color: white;
     }
 
     .logo span {
       display: block;
       font-size: 12px;
-      color: #d9f5e5;
-      margin-top: 4px;
       font-weight: normal;
+      opacity: 0.9;
     }
 
     nav ul {
-      display: flex;
       list-style: none;
-      gap: 20px;
+      display: flex;
+      gap: 18px;
     }
 
-    nav ul li a {
+    nav a {
       color: white;
       text-decoration: none;
       font-size: 14px;
       font-weight: bold;
-      transition: 0.3s;
     }
 
-    nav ul li a:hover,
-    nav ul li a.active {
-      color: #ffd700;
+    nav a:hover,
+    nav a.active {
+      color: #d9ffdf;
     }
 
-    .menu-toggle {
+    .menu-btn {
       display: none;
+      background: none;
+      border: none;
+      color: white;
       font-size: 28px;
       cursor: pointer;
     }
 
-    /* HERO */
     .hero {
-      min-height: 320px;
-      background:
-        linear-gradient(rgba(0,70,40,0.86), rgba(0,70,40,0.86)),
-        url("https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg")
-        center/cover no-repeat;
-
+      background: linear-gradient(rgba(0,0,0,.65), rgba(0,80,20,.7)),
+      url("https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg");
+      background-size: cover;
+      background-position: center;
+      min-height: 330px;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       color: white;
-      padding: 50px 20px;
+      padding: 40px 20px;
     }
 
     .hero h1 {
-      font-size: 45px;
-      margin-bottom: 12px;
+      font-size: 48px;
+      margin-bottom: 10px;
     }
 
     .hero p {
       font-size: 18px;
-      max-width: 720px;
-      margin: auto;
-    }
-
-    /* NEWS SECTION */
-    .news-section {
-      max-width: 1200px;
-      margin: auto;
-      padding: 65px 6%;
-    }
-
-    .section-heading {
-      text-align: center;
-      margin-bottom: 45px;
-    }
-
-    .section-heading h2 {
-      color: #006b3c;
-      font-size: 34px;
-      margin-bottom: 10px;
-    }
-
-    .section-heading p {
-      color: #666;
       max-width: 700px;
       margin: auto;
     }
 
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      color: #087f23;
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #666;
+    }
+
     /* NEWS GRID */
+
     .news-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
+      gap: 28px;
     }
 
     .news-card {
       background: white;
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.09);
-      transition: 0.3s;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+      transition: 0.3s ease;
     }
 
     .news-card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 9px 25px rgba(0,0,0,0.14);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.13);
     }
 
     .news-image {
@@ -163,218 +167,160 @@
       padding: 22px;
     }
 
-    .date {
-      display: inline-block;
-      color: #006b3c;
+    .news-meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 12px;
       font-size: 12px;
+    }
+
+    .category {
+      color: #087f23;
       font-weight: bold;
-      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .date {
+      color: #777;
     }
 
     .news-content h3 {
-      font-size: 20px;
-      color: #222;
-      margin-bottom: 10px;
+      font-size: 21px;
+      color: #111;
+      margin-bottom: 12px;
+      line-height: 1.3;
     }
 
     .news-content p {
       color: #666;
       font-size: 14px;
-      margin-bottom: 15px;
+      margin-bottom: 18px;
     }
 
     .read-more {
-      color: #006b3c;
+      display: inline-block;
+      background: #087f23;
+      color: white;
       text-decoration: none;
-      font-size: 14px;
+      padding: 10px 17px;
+      border-radius: 6px;
+      font-size: 13px;
       font-weight: bold;
     }
 
     .read-more:hover {
-      color: #111;
+      background: #055c19;
     }
 
-    /* FEATURED NEWS */
-    .featured {
-      background: white;
-      margin-bottom: 45px;
-      border-radius: 14px;
-      overflow: hidden;
-      display: grid;
-      grid-template-columns: 1.1fr 1fr;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.10);
-    }
+    /* ADD NEWS BOX */
 
-    .featured img {
-      width: 100%;
-      height: 100%;
-      min-height: 350px;
-      object-fit: cover;
-    }
-
-    .featured-content {
-      padding: 45px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .featured-content .label {
-      color: #006b3c;
-      font-weight: bold;
-      text-transform: uppercase;
-      font-size: 13px;
-      margin-bottom: 10px;
-    }
-
-    .featured-content h2 {
-      font-size: 31px;
-      margin-bottom: 15px;
-    }
-
-    .featured-content p {
-      color: #666;
-      margin-bottom: 20px;
-    }
-
-    .button {
-      display: inline-block;
-      background: #006b3c;
+    .add-news {
+      margin-top: 60px;
+      background: #087f23;
       color: white;
-      text-decoration: none;
-      padding: 12px 22px;
-      border-radius: 5px;
-      font-weight: bold;
-      width: fit-content;
-    }
-
-    .button:hover {
-      background: #004d2c;
-    }
-
-    /* CTA */
-    .cta {
-      background: #006b3c;
-      color: white;
+      padding: 35px;
+      border-radius: 12px;
       text-align: center;
-      padding: 55px 20px;
     }
 
-    .cta h2 {
-      font-size: 30px;
+    .add-news h2 {
       margin-bottom: 10px;
     }
 
-    .cta p {
+    .add-news p {
       max-width: 700px;
-      margin: 0 auto 20px;
-    }
-
-    .cta a {
-      display: inline-block;
-      background: white;
-      color: #006b3c;
-      text-decoration: none;
-      padding: 12px 25px;
-      border-radius: 5px;
-      font-weight: bold;
+      margin: auto;
+      opacity: .95;
     }
 
     /* FOOTER */
+
     footer {
       background: #111;
-      color: #ccc;
-      text-align: center;
-      padding: 30px 20px;
+      color: white;
+      padding: 40px 20px 20px;
     }
 
-    footer strong {
+    .footer-container {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    footer h3 {
+      color: #36b957;
+      margin-bottom: 12px;
+    }
+
+    footer p,
+    footer a {
+      color: #bbb;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    footer a:hover {
       color: white;
     }
 
-    .footer-links {
-      margin-top: 15px;
-    }
-
-    .footer-links a {
-      color: #ccc;
-      text-decoration: none;
-      margin: 0 7px;
+    .copyright {
+      border-top: 1px solid #333;
+      margin-top: 30px;
+      padding-top: 20px;
+      text-align: center;
+      color: #888;
       font-size: 13px;
     }
 
-    .footer-links a:hover {
-      color: #ffd700;
-    }
+    /* MOBILE */
 
-    /* RESPONSIVE */
     @media (max-width: 900px) {
-
-      .menu-toggle {
-        display: block;
-      }
-
-      nav {
-        display: none;
-        position: absolute;
-        left: 0;
-        top: 70px;
-        width: 100%;
-        background: #006b3c;
-        padding: 20px;
-      }
-
-      nav.show {
-        display: block;
-      }
-
-      nav ul {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-      }
-
       .news-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .featured {
-        grid-template-columns: 1fr;
-      }
-
-      .featured img {
-        min-height: 280px;
+      .footer-container {
+        grid-template-columns: 1fr 1fr;
       }
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 650px) {
+      .menu-btn {
+        display: block;
+      }
 
-      .hero {
-        min-height: 260px;
+      nav ul {
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background: #087f23;
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      nav ul.show {
+        display: flex;
       }
 
       .hero h1 {
-        font-size: 32px;
+        font-size: 36px;
       }
 
       .hero p {
-        font-size: 15px;
+        font-size: 16px;
       }
 
       .news-grid {
         grid-template-columns: 1fr;
       }
 
-      .featured-content {
-        padding: 30px 22px;
-      }
-
-      .featured-content h2 {
-        font-size: 25px;
-      }
-
-      .news-section {
-        padding: 45px 5%;
+      .footer-container {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -382,23 +328,23 @@
 
 <body>
 
-<!-- HEADER -->
 <header>
-  <div class="nav">
+  <div class="nav-container">
 
-    <div class="logo">
-      OMALE VICTOR OJOGBANE
-      <span>APC • House of Representatives Candidate</span>
-    </div>
+    <a href="index.html" class="logo">
+      VICTOR OMALE OJOGBANE
+      <span>House of Representatives Candidate</span>
+    </a>
 
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
-    <nav id="mainNav">
-      <ul>
+    <nav>
+      <ul id="navMenu">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="agenda.html">Agenda</a></li>
-        <li><a href="mission.html">Mission</a></li>
+        <li><a href="agenda.html">7-Point Agenda</a></li>
+        <li><a href="mission.html">Mission & Vision</a></li>
+        <li><a href="governance.html">Governance</a></li>
         <li><a href="news.html" class="active">News</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="media.html">Media</a></li>
@@ -411,96 +357,60 @@
 
 
 <!-- HERO -->
+
 <section class="hero">
-
   <div>
-    <h1>News & Updates</h1>
-
+    <h1>News Centre</h1>
     <p>
-      Latest public information, activities, engagements and
-      updates relating to Omale Victor Ojogbane.
+      Latest news, updates, activities and public information.
     </p>
   </div>
-
 </section>
 
 
 <!-- NEWS -->
-<section class="news-section">
 
-  <div class="section-heading">
+<section class="container">
 
-    <h2>Latest News</h2>
-
-    <p>
-      Stay informed about activities, public engagements and
-      community-focused discussions.
-    </p>
-
+  <div class="section-title">
+    <h2>Latest News & Updates</h2>
+    <p>Stay informed with the latest information and activities.</p>
   </div>
 
 
-  <!-- FEATURED NEWS -->
-  <article class="featured">
-
-    <img
-      src="https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg"
-      alt="Omale Victor Ojogbane">
-
-    <div class="featured-content">
-
-      <div class="label">
-        Featured Update
-      </div>
-
-      <h2>
-        Omale Victor Ojogbane: Public Engagement and Community Focus
-      </h2>
-
-      <p>
-        Omale Victor Ojogbane is from Unale, Ibaji Local Government
-        Area of Kogi State and is the APC House of Representatives
-        Candidate for Idah Federal Constituency.
-      </p>
-
-      <a href="about.html" class="button">
-        Read Profile
-      </a>
-
-    </div>
-
-  </article>
-
-
-  <!-- NEWS GRID -->
   <div class="news-grid">
 
 
-    <!-- NEWS 1 -->
+    <!-- =========================
+         NEWS 1
+         COPY THIS BOX TO ADD NEWS
+         ========================= -->
+
     <article class="news-card">
 
       <img
+        src="https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg"
+        alt="Victor Omale Ojogbane"
         class="news-image"
-        src="ROAD-PICTURE-HERE.jpg"
-        alt="Community Infrastructure">
+      >
 
       <div class="news-content">
 
-        <span class="date">
-          COMMUNITY DEVELOPMENT
-        </span>
+        <div class="news-meta">
+          <span class="category">Announcement</span>
+          <span class="date">September 7, 2026</span>
+        </div>
 
         <h3>
-          Focus on Community Infrastructure
+          Victor Omale Ojogbane News & Updates
         </h3>
 
         <p>
-          Infrastructure remains an important area of discussion,
-          including roads and other facilities that support local
-          communities.
+          Latest information, activities and public updates will be
+          published here as they become available.
         </p>
 
-        <a href="mission.html" class="read-more">
+        <a href="#" class="read-more">
           Read More →
         </a>
 
@@ -509,31 +419,35 @@
     </article>
 
 
-    <!-- NEWS 2 -->
+    <!-- =========================
+         NEWS 2
+         ========================= -->
+
     <article class="news-card">
 
       <img
+        src="https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg"
+        alt="Community Development"
         class="news-image"
-        src="SCHOOL-PICTURE-HERE.jpg"
-        alt="Education">
+      >
 
       <div class="news-content">
 
-        <span class="date">
-          EDUCATION
-        </span>
+        <div class="news-meta">
+          <span class="category">Development</span>
+          <span class="date">Date to be announced</span>
+        </div>
 
         <h3>
-          Education and Human Capital Development
+          Community Development Updates
         </h3>
 
         <p>
-          Education and skills development are highlighted as
-          important areas for strengthening opportunities for
-          young people and communities.
+          Information concerning community development priorities,
+          infrastructure and basic amenities can be published here.
         </p>
 
-        <a href="agenda.html" class="read-more">
+        <a href="#" class="read-more">
           Read More →
         </a>
 
@@ -542,30 +456,35 @@
     </article>
 
 
-    <!-- NEWS 3 -->
+    <!-- =========================
+         NEWS 3
+         ========================= -->
+
     <article class="news-card">
 
       <img
+        src="https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg"
+        alt="Youth Empowerment"
         class="news-image"
-        src="HEALTHCARE-PICTURE-HERE.jpg"
-        alt="Healthcare">
+      >
 
       <div class="news-content">
 
-        <span class="date">
-          HEALTHCARE
-        </span>
+        <div class="news-meta">
+          <span class="category">Youth</span>
+          <span class="date">Date to be announced</span>
+        </div>
 
         <h3>
-          Healthcare and Community Wellbeing
+          Youth Empowerment & Opportunities
         </h3>
 
         <p>
-          Access to healthcare and community wellbeing remain
-          important subjects in discussions about local development.
+          Updates about youth development, skills acquisition,
+          entrepreneurship and related opportunities can be shared here.
         </p>
 
-        <a href="mission.html" class="read-more">
+        <a href="#" class="read-more">
           Read More →
         </a>
 
@@ -574,30 +493,35 @@
     </article>
 
 
-    <!-- NEWS 4 -->
+    <!-- =========================
+         NEWS 4
+         ========================= -->
+
     <article class="news-card">
 
       <img
+        src="https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg"
+        alt="Education"
         class="news-image"
-        src="MARKET-PICTURE-HERE.jpg"
-        alt="Market">
+      >
 
       <div class="news-content">
 
-        <span class="date">
-          LOCAL ECONOMY
-        </span>
+        <div class="news-meta">
+          <span class="category">Education</span>
+          <span class="date">Date to be announced</span>
+        </div>
 
         <h3>
-          Supporting Local Economic Activities
+          Education & Human Capital Development
         </h3>
 
         <p>
-          Markets and local businesses play an important role in
-          the economic life of communities across the constituency.
+          Education-related information, programmes and opportunities
+          can be published in this section.
         </p>
 
-        <a href="mission.html" class="read-more">
+        <a href="#" class="read-more">
           Read More →
         </a>
 
@@ -606,30 +530,35 @@
     </article>
 
 
-    <!-- NEWS 5 -->
+    <!-- =========================
+         NEWS 5
+         ========================= -->
+
     <article class="news-card">
 
       <img
+        src="https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg"
+        alt="Agriculture"
         class="news-image"
-        src="WOMEN-EMPOWERMENT-PICTURE-HERE.jpg"
-        alt="Women Empowerment">
+      >
 
       <div class="news-content">
 
-        <span class="date">
-          WOMEN
-        </span>
+        <div class="news-meta">
+          <span class="category">Agriculture</span>
+          <span class="date">Date to be announced</span>
+        </div>
 
         <h3>
-          Women Participation and Empowerment
+          Agriculture & Rural Development
         </h3>
 
         <p>
-          Women's participation in economic and community activities
-          is an important part of inclusive development.
+          Updates concerning agriculture, fisheries, rural economic
+          development and related activities can be published here.
         </p>
 
-        <a href="mission.html" class="read-more">
+        <a href="#" class="read-more">
           Read More →
         </a>
 
@@ -638,80 +567,111 @@
     </article>
 
 
-    <!-- NEWS 6 -->
+    <!-- =========================
+         NEWS 6
+         ========================= -->
+
     <article class="news-card">
 
       <img
+        src="https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg"
+        alt="Healthcare"
         class="news-image"
-        src="YOUTH-EMPOWERMENT-PICTURE-HERE.jpg"
-        alt="Youth Empowerment">
+      >
 
       <div class="news-content">
 
-        <span class="date">
-          YOUTH
-        </span>
+        <div class="news-meta">
+          <span class="category">Healthcare</span>
+          <span class="date">Date to be announced</span>
+        </div>
 
         <h3>
-          Youth Development and Opportunities
+          Healthcare & Social Development
         </h3>
 
         <p>
-          Youth development, skills and opportunities remain key
-          subjects for discussion within the constituency.
+          Healthcare, social development and community wellbeing
+          updates can be published in this section.
         </p>
 
-        <a href="agenda.html" class="read-more">
+        <a href="#" class="read-more">
           Read More →
         </a>
 
       </div>
 
     </article>
+
 
   </div>
 
-</section>
 
+  <!-- ADD NEWS INFORMATION -->
 
-<!-- CTA -->
-<section class="cta">
+  <div class="add-news">
 
-  <h2>Stay Connected</h2>
+    <h2>News & Public Information</h2>
 
-  <p>
-    For enquiries, public engagements and additional information,
-    visit the contact page.
-  </p>
+    <p>
+      This page is designed for regular updates. New news items,
+      announcements, activities, photographs and public information
+      can be added to the News Centre whenever necessary.
+    </p>
 
-  <a href="contact.html">
-    Contact Us
-  </a>
+  </div>
 
 </section>
 
 
 <!-- FOOTER -->
+
 <footer>
 
-  <p>
-    © 2026 <strong>Omale Victor Ojogbane</strong>.
-    All Rights Reserved.
-  </p>
+  <div class="footer-container">
 
-  <div class="footer-links">
+    <div>
+      <h3>Victor Omale Ojogbane</h3>
 
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="agenda.html">Agenda</a>
-    <a href="mission.html">Mission</a>
-    <a href="news.html">News</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="media.html">Media</a>
-    <a href="contact.html">Contact</a>
-    <a href="privacy.html">Privacy</a>
-    <a href="terms.html">Terms</a>
+      <p>
+        House of Representatives Candidate
+        for Idah Federal Constituency, Kogi State.
+      </p>
+    </div>
 
+
+    <div>
+      <h3>Quick Links</h3>
+
+      <p><a href="about.html">About</a></p>
+      <p><a href="agenda.html">7-Point Agenda</a></p>
+      <p><a href="mission.html">Mission & Vision</a></p>
+      <p><a href="news.html">News</a></p>
+      <p><a href="gallery.html">Gallery</a></p>
+    </div>
+
+
+    <div>
+      <h3>Contact</h3>
+
+      <p>Phone: +234 803 613 1193</p>
+
+      <p>
+        Idah Federal Constituency,
+        Kogi State, Nigeria.
+      </p>
+
+      <p>
+        <a href="contact.html">Contact Page →</a>
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="copyright">
+    © 2026 Victor Omale Ojogbane. All Rights Reserved.
   </div>
 
 </footer>
@@ -720,7 +680,7 @@
 <script>
 
   function toggleMenu() {
-    document.getElementById("mainNav").classList.toggle("show");
+    document.getElementById("navMenu").classList.toggle("show");
   }
 
 </script>
