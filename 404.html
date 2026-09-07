@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Page Not Found | Victor Omale Ojogbane</title>
+
+  <meta name="description" content="The page you are looking for could not be found.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7f5;
+      color: #111;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: #0b3d2e;
+      color: white;
+      padding: 18px 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    .logo span {
+      color: #d4af37;
+    }
+
+    .home-link {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      border: 1px solid rgba(255,255,255,0.5);
+      padding: 9px 16px;
+      border-radius: 25px;
+      transition: 0.3s;
+    }
+
+    .home-link:hover {
+      background: white;
+      color: #0b3d2e;
+    }
+
+    .error-section {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    .error-box {
+      max-width: 700px;
+      width: 100%;
+    }
+
+    .error-number {
+      font-size: clamp(90px, 20vw, 190px);
+      line-height: 0.9;
+      font-weight: 900;
+      color: #0b3d2e;
+      letter-spacing: -8px;
+      margin-bottom: 20px;
+    }
+
+    .error-box h1 {
+      font-size: clamp(28px, 5vw, 46px);
+      margin-bottom: 15px;
+      color: #111;
+    }
+
+    .error-box p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: #555;
+      max-width: 580px;
+      margin: 0 auto 30px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #0b3d2e;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #082f24;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 2px solid #0b3d2e;
+      color: #0b3d2e;
+      background: white;
+    }
+
+    .btn-secondary:hover {
+      background: #0b3d2e;
+      color: white;
+    }
+
+    .quick-links {
+      margin-top: 45px;
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .quick-links a {
+      color: #0b3d2e;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .quick-links a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 22px 15px;
+      font-size: 14px;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+
+      header {
+        padding: 16px 5%;
+      }
+
+      .logo {
+        font-size: 16px;
+      }
+
+      .home-link {
+        padding: 8px 13px;
+        font-size: 14px;
+      }
+
+      .error-section {
+        padding: 50px 20px;
+      }
+
+      .error-number {
+        letter-spacing: -4px;
+      }
+
+      .error-box p {
+        font-size: 15px;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 280px;
+      }
+
+      .quick-links {
+        gap: 12px;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      VICTOR <span>OMALE</span> OJOGBANE
+    </div>
+
+    <a href="index.html" class="home-link">
+      Home
+    </a>
+  </header>
+
+
+  <main class="error-section">
+
+    <div class="error-box">
+
+      <div class="error-number">404</div>
+
+      <h1>Page Not Found</h1>
+
+      <p>
+        Sorry, the page you are looking for may have been moved,
+        removed, or the web address may be incorrect.
+      </p>
+
+      <div class="buttons">
+
+        <a href="index.html" class="btn btn-primary">
+          Back to Home
+        </a>
+
+        <a href="contact.html" class="btn btn-secondary">
+          Contact Us
+        </a>
+
+      </div>
+
+      <div class="quick-links">
+
+        <a href="about.html">About</a>
+
+        <a href="agenda.html">7-Point Agenda</a>
+
+        <a href="mission.html">Mission & Vision</a>
+
+        <a href="gallery.html">Gallery</a>
+
+        <a href="news.html">News</a>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <footer>
+    © 2026 <strong>Victor Omale Ojogbane</strong>.
+    All Rights Reserved.
+  </footer>
+
+</body>
+</html>
