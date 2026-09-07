@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Accessibility | Victor Omale Ojogbane</title>
+
+  <meta name="description"
+        content="Accessibility information for the official website of Victor Omale Ojogbane, House of Representatives Candidate for Idah Federal Constituency.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      color: #222;
+      background: #f7f9f7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* HEADER */
+    header {
+      background: #064d2c;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+
+    .logo span {
+      display: block;
+      color: #d7f5df;
+      font-size: 12px;
+      font-weight: normal;
+      margin-top: 4px;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 8px 5px;
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #b8efc8;
+    }
+
+    .menu-btn {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+      border: none;
+      background: none;
+      color: white;
+    }
+
+    /* HERO */
+    .hero {
+      background:
+        linear-gradient(rgba(0, 63, 35, 0.88), rgba(0, 35, 20, 0.88)),
+        url("https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg")
+        center/cover no-repeat;
+
+      min-height: 330px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 50px 20px;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h1 {
+      font-size: 46px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: auto;
+      color: #e5f8eb;
+    }
+
+    /* MAIN */
+    .container {
+      max-width: 1050px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    .intro {
+      background: white;
+      padding: 35px;
+      border-radius: 15px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+      margin-bottom: 30px;
+    }
+
+    .intro h2 {
+      color: #064d2c;
+      margin-bottom: 15px;
+      font-size: 28px;
+    }
+
+    .section {
+      background: white;
+      padding: 30px;
+      margin-bottom: 25px;
+      border-radius: 14px;
+      border-left: 5px solid #087a43;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+    }
+
+    .section h2 {
+      color: #064d2c;
+      margin-bottom: 12px;
+      font-size: 24px;
+    }
+
+    .section h3 {
+      color: #087a43;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    .section p {
+      margin-bottom: 12px;
+    }
+
+    .section ul {
+      padding-left: 25px;
+      margin-bottom: 10px;
+    }
+
+    .section li {
+      margin-bottom: 8px;
+    }
+
+    .highlight {
+      background: #eaf7ee;
+      border: 1px solid #c8e8d2;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 18px;
+    }
+
+    .highlight strong {
+      color: #064d2c;
+    }
+
+    /* CONTACT CTA */
+    .cta {
+      background: #064d2c;
+      color: white;
+      text-align: center;
+      padding: 50px 25px;
+      margin-top: 30px;
+      border-radius: 15px;
+    }
+
+    .cta h2 {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .cta p {
+      max-width: 650px;
+      margin: 0 auto 25px;
+      color: #e4f5e9;
+    }
+
+    .btn {
+      display: inline-block;
+      background: white;
+      color: #064d2c;
+      padding: 13px 25px;
+      border-radius: 7px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #d8f4df;
+      transform: translateY(-2px);
+    }
+
+    /* FOOTER */
+    footer {
+      background: #111;
+      color: #ccc;
+      padding: 40px 20px 20px;
+      margin-top: 50px;
+    }
+
+    .footer-container {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 35px;
+    }
+
+    footer h3 {
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    footer p {
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    footer ul {
+      list-style: none;
+    }
+
+    footer li {
+      margin-bottom: 8px;
+    }
+
+    footer a {
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    .copyright {
+      border-top: 1px solid #333;
+      margin-top: 30px;
+      padding-top: 18px;
+      text-align: center;
+      font-size: 13px;
+      color: #999;
+    }
+
+    /* MOBILE */
+    @media (max-width: 850px) {
+
+      .menu-btn {
+        display: block;
+      }
+
+      nav {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: #064d2c;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        gap: 5px;
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      nav a {
+        width: 100%;
+        padding: 12px 5px;
+        border-bottom: 1px solid rgba(255,255,255,0.12);
+      }
+
+      .hero {
+        min-height: 280px;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .container {
+        padding: 40px 15px;
+      }
+
+      .intro,
+      .section {
+        padding: 24px 20px;
+      }
+
+      .footer-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .logo {
+        font-size: 15px;
+      }
+
+      .logo span {
+        font-size: 10px;
+      }
+
+      .hero h1 {
+        font-size: 29px;
+      }
+
+      .section h2 {
+        font-size: 21px;
+      }
+
+      .cta h2 {
+        font-size: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="nav-container">
+
+      <a href="index.html" class="logo">
+        VICTOR OMALE OJOGBANE
+        <span>House of Representatives Candidate</span>
+      </a>
+
+      <button class="menu-btn" onclick="toggleMenu()" aria-label="Open navigation menu">
+        ☰
+      </button>
+
+      <nav id="mainNav">
+
+        <a href="index.html">Home</a>
+
+        <a href="about.html">About</a>
+
+        <a href="agenda.html">7-Point Agenda</a>
+
+        <a href="mission.html">Mission & Vision</a>
+
+        <a href="news.html">News</a>
+
+        <a href="gallery.html">Gallery</a>
+
+        <a href="media.html">Media</a>
+
+        <a href="resources.html">Resources</a>
+
+        <a href="press.html">Press</a>
+
+        <a href="contact.html">Contact</a>
+
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h1>Accessibility</h1>
+
+      <p>
+        Our commitment to making this website clear, usable and accessible
+        to as many visitors as possible.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTENT -->
+  <main class="container">
+
+    <section class="intro">
+
+      <h2>Our Accessibility Commitment</h2>
+
+      <p>
+        This website is designed to provide information about Victor Omale
+        Ojogbane and the development priorities presented on this platform
+        in a clear and accessible format.
+      </p>
+
+      <p>
+        We aim to make the website usable across different devices,
+        including mobile phones, tablets and desktop computers.
+      </p>
+
+    </section>
+
+
+    <section class="section">
+
+      <h2>Website Accessibility Features</h2>
+
+      <p>
+        The website includes features intended to make navigation and
+        information access easier.
+      </p>
+
+      <ul>
+
+        <li>Responsive design for mobile phones, tablets and computers.</li>
+
+        <li>Clear navigation menus across the website.</li>
+
+        <li>Readable typography and appropriate spacing.</li>
+
+        <li>Descriptive headings and structured content.</li>
+
+        <li>Text-based information alongside visual content where appropriate.</li>
+
+        <li>Keyboard-friendly links and interactive elements where possible.</li>
+
+        <li>Clear contrast between text and background areas.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section class="section">
+
+      <h2>Images and Alternative Text</h2>
+
+      <p>
+        Images used throughout the website are intended to support the
+        information presented on each page.
+      </p>
+
+      <p>
+        Where appropriate, images include alternative text to help visitors
+        who use screen-reading technology understand the purpose or subject
+        of an image.
+      </p>
+
+    </section>
+
+
+    <section class="section">
+
+      <h2>Navigation</h2>
+
+      <p>
+        The website uses a consistent navigation structure to help visitors
+        move between the main sections of the site.
+      </p>
+
+      <p>
+        Important information can also be accessed through the Resources,
+        Search, Sitemap and Contact pages.
+      </p>
+
+      <div class="highlight">
+
+        <strong>Helpful pages:</strong>
+
+        <br><br>
+
+        <a href="search.html">Search the Website</a><br>
+
+        <a href="sitemap.html">View Site Map</a><br>
+
+        <a href="resources.html">Resources Centre</a><br>
+
+        <a href="contact.html">Contact Page</a>
+
+      </div>
+
+    </section>
+
+
+    <section class="section">
+
+      <h2>Using the Website on Mobile Devices</h2>
+
+      <p>
+        The website has been designed to adapt to smaller screens. On
+        mobile devices, the main navigation can be opened using the menu
+        button at the top of the page.
+      </p>
+
+      <p>
+        Visitors can use normal touch gestures such as scrolling, tapping
+        links and opening navigation menus.
+      </p>
+
+    </section>
+
+
+    <section class="section">
+
+      <h2>Feedback and Accessibility Issues</h2>
+
+      <p>
+        If you experience difficulty accessing information or using any
+        part of this website, please contact us so the issue can be reviewed.
+      </p>
+
+      <p>
+        When reporting an accessibility issue, it is helpful to include the
+        page where the problem occurred and a short description of what
+        happened.
+      </p>
+
+      <div class="highlight">
+
+        <strong>Contact:</strong><br>
+
+        Phone: +234 803 613 1193<br>
+
+        Location: Idah Federal Constituency, Kogi State, Nigeria
+
+      </div>
+
+    </section>
+
+
+    <section class="section">
+
+      <h2>Continuous Improvement</h2>
+
+      <p>
+        Website accessibility is an ongoing process. We will continue to
+        review the website and improve its structure, readability,
+        navigation and usability where practical.
+      </p>
+
+      <p>
+        Suggestions from visitors can help identify areas where the website
+        can be made easier to use.
+      </p>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="cta">
+
+      <h2>Need Assistance?</h2>
+
+      <p>
+        If you have difficulty finding information on this website,
+        please use the contact page for assistance.
+      </p>
+
+      <a href="contact.html" class="btn">
+        Contact Us
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-container">
+
+      <div>
+
+        <h3>Victor Omale Ojogbane</h3>
+
+        <p>
+          House of Representatives Candidate for
+          Idah Federal Constituency.
+        </p>
+
+        <p style="margin-top:10px;">
+          Unale, Ibaji Local Government Area,
+          Kogi State, Nigeria.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>Quick Links</h3>
+
+        <ul>
+
+          <li><a href="index.html">Home</a></li>
+
+          <li><a href="about.html">About</a></li>
+
+          <li><a href="agenda.html">7-Point Agenda</a></li>
+
+          <li><a href="mission.html">Mission & Vision</a></li>
+
+          <li><a href="news.html">News</a></li>
+
+          <li><a href="gallery.html">Gallery</a></li>
+
+        </ul>
+
+      </div>
+
+
+      <div>
+
+        <h3>Information</h3>
+
+        <ul>
+
+          <li><a href="resources.html">Resources</a></li>
+
+          <li><a href="downloads.html">Downloads</a></li>
+
+          <li><a href="press.html">Press Centre</a></li>
+
+          <li><a href="faq.html">FAQ</a></li>
+
+          <li><a href="privacy.html">Privacy Policy</a></li>
+
+          <li><a href="terms.html">Terms</a></li>
+
+          <li><a href="accessibility.html">Accessibility</a></li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+      © 2026 Victor Omale Ojogbane. All Rights Reserved.
+
+    </div>
+
+  </footer>
+
+
+  <!-- MOBILE MENU SCRIPT -->
+  <script>
+
+    function toggleMenu() {
+
+      const nav = document.getElementById("mainNav");
+
+      nav.classList.toggle("show");
+
+    }
+
+    document.querySelectorAll("#mainNav a").forEach(function(link) {
+
+      link.addEventListener("click", function() {
+
+        document.getElementById("mainNav").classList.remove("show");
+
+      });
+
+    });
+
+  </script>
+
+</body>
+</html>
