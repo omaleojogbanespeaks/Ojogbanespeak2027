@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Press Centre | Victor Omale Ojogbane</title>
+
+  <meta name="description"
+        content="Press Centre and media information for Victor Omale Ojogbane, House of Representatives Candidate for Idah Federal Constituency.">
+
+  <meta name="theme-color" content="#087a3d">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f6f8f7;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* HEADER */
+
+    header {
+      background: #087a3d;
+      color: white;
+      padding: 16px 6%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: .5px;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 12px;
+      font-weight: 400;
+      color: #d8f5e4;
+      margin-top: 2px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    nav a {
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 9px 10px;
+      border-radius: 6px;
+      transition: .3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: white;
+      color: #087a3d;
+    }
+
+    .menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 420px;
+      background:
+        linear-gradient(
+          rgba(0,70,35,.88),
+          rgba(0,70,35,.88)
+        ),
+        url("https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg");
+
+      background-size: cover;
+      background-position: center;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+      color: white;
+      padding: 70px 20px;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: white;
+      color: #087a3d;
+      padding: 8px 18px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(40px, 6vw, 68px);
+      line-height: 1.1;
+      margin-bottom: 20px;
+      font-weight: 900;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: auto;
+      font-size: 18px;
+      color: #e5f5ec;
+    }
+
+    /* MAIN */
+
+    main {
+      max-width: 1200px;
+      margin: auto;
+      padding: 70px 6%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      color: #087a3d;
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      max-width: 700px;
+      margin: auto;
+      color: #666;
+    }
+
+    /* PRESS CARDS */
+
+    .press-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .press-card {
+      background: white;
+      border-radius: 16px;
+      padding: 30px;
+      border: 1px solid #e5e5e5;
+      box-shadow: 0 8px 25px rgba(0,0,0,.06);
+      transition: .3s;
+    }
+
+    .press-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 35px rgba(0,0,0,.12);
+    }
+
+    .press-icon {
+      width: 65px;
+      height: 65px;
+      border-radius: 15px;
+      background: #e8f7ef;
+      color: #087a3d;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    .press-card h3 {
+      font-size: 21px;
+      margin-bottom: 10px;
+      color: #111;
+    }
+
+    .press-card p {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .press-btn {
+      display: inline-block;
+      padding: 11px 18px;
+      background: #087a3d;
+      color: white;
+      border-radius: 7px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .press-btn:hover {
+      background: #055b2d;
+    }
+
+    /* FEATURED PRESS */
+
+    .featured {
+      margin-top: 70px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      background: white;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0,0,0,.06);
+    }
+
+    .featured-image img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      border-radius: 15px;
+      display: block;
+    }
+
+    .featured-content .label {
+      display: inline-block;
+      color: #087a3d;
+      font-weight: 800;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+
+    .featured-content h2 {
+      font-size: 34px;
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+
+    .featured-content p {
+      color: #666;
+      margin-bottom: 18px;
+    }
+
+    /* PRESS RELEASES */
+
+    .releases {
+      margin-top: 70px;
+    }
+
+    .release-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .release {
+      background: white;
+      border: 1px solid #e6e6e6;
+      border-radius: 12px;
+      padding: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+      box-shadow: 0 5px 18px rgba(0,0,0,.04);
+    }
+
+    .release-info h3 {
+      color: #111;
+      margin-bottom: 7px;
+      font-size: 18px;
+    }
+
+    .release-info p {
+      color: #777;
+      font-size: 14px;
+    }
+
+    .release-tag {
+      display: inline-block;
+      color: #087a3d;
+      background: #e8f7ef;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    /* MEDIA KIT */
+
+    .media-kit {
+      margin-top: 70px;
+      background: #087a3d;
+      color: white;
+      border-radius: 20px;
+      padding: 50px;
+      text-align: center;
+    }
+
+    .media-kit h2 {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .media-kit p {
+      max-width: 700px;
+      margin: 0 auto 30px;
+      color: #e4f5eb;
+    }
+
+    .kit-grid {
+      max-width: 850px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .kit-item {
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.2);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .kit-item strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .kit-item span {
+      font-size: 13px;
+      color: #dcefe4;
+    }
+
+    /* CONTACT */
+
+    .press-contact {
+      margin-top: 70px;
+      background: #111;
+      color: white;
+      border-radius: 20px;
+      padding: 50px;
+      text-align: center;
+    }
+
+    .press-contact h2 {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .press-contact p {
+      color: #ccc;
+      max-width: 700px;
+      margin: 0 auto 25px;
+    }
+
+    .contact-details {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .contact-details a {
+      background: #087a3d;
+      color: white;
+      padding: 13px 22px;
+      border-radius: 7px;
+      font-weight: 700;
+    }
+
+    .contact-details a:hover {
+      background: #0a964b;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #050505;
+      color: white;
+      padding: 50px 6% 25px;
+    }
+
+    .footer-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    .footer-brand h2 {
+      color: #35c875;
+      margin-bottom: 10px;
+    }
+
+    .footer-brand p {
+      color: #bbb;
+      font-size: 14px;
+      max-width: 450px;
+    }
+
+    .footer-column h3 {
+      margin-bottom: 15px;
+      font-size: 17px;
+    }
+
+    .footer-column a {
+      display: block;
+      color: #bbb;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .footer-column a:hover {
+      color: #35c875;
+    }
+
+    .copyright {
+      max-width: 1200px;
+      margin: 35px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid #222;
+      text-align: center;
+      color: #888;
+      font-size: 13px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 950px) {
+
+      .press-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .featured {
+        grid-template-columns: 1fr;
+      }
+
+      .kit-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+
+      header {
+        padding: 14px 5%;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #087a3d;
+        flex-direction: column;
+        padding: 15px 5%;
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      nav a {
+        width: 100%;
+        text-align: center;
+      }
+
+      .hero {
+        min-height: 360px;
+      }
+
+      main {
+        padding: 55px 5%;
+      }
+
+      .press-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .featured {
+        padding: 20px;
+      }
+
+      .featured-image img {
+        height: 320px;
+      }
+
+      .release {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .release .press-btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .media-kit,
+      .press-contact {
+        padding: 35px 20px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="nav-container">
+
+      <a href="index.html" class="logo">
+        VICTOR OMALE OJOGBANE
+        <span>
+          House of Representatives Candidate • Idah Federal Constituency
+        </span>
+      </a>
+
+      <button
+        class="menu-btn"
+        onclick="toggleMenu()"
+        aria-label="Open navigation">
+        ☰
+      </button>
+
+      <nav id="mainNav">
+
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="agenda.html">7-Point Agenda</a>
+        <a href="mission.html">Mission & Vision</a>
+        <a href="news.html">News</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="media.html">Media</a>
+        <a href="resources.html">Resources</a>
+        <a href="downloads.html">Downloads</a>
+        <a href="press.html" class="active">Press</a>
+        <a href="contact.html">Contact</a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <span class="badge">
+        Press Centre
+      </span>
+
+      <h1>Media & Press</h1>
+
+      <p>
+        Public information, press materials, statements,
+        media resources and contact information for journalists
+        and media organisations.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- MAIN -->
+
+  <main>
+
+    <div class="section-title">
+
+      <h2>Press Resources</h2>
+
+      <p>
+        This centre provides a convenient location for
+        accessing publicly available information and media
+        materials.
+      </p>
+
+    </div>
+
+
+    <!-- PRESS CARDS -->
+
+    <div class="press-grid">
+
+      <div class="press-card">
+
+        <div class="press-icon">
+          📰
+        </div>
+
+        <h3>Press Releases</h3>
+
+        <p>
+          Access published press releases and official
+          public statements when available.
+        </p>
+
+        <a href="news.html" class="press-btn">
+          View News →
+        </a>
+
+      </div>
+
+
+      <div class="press-card">
+
+        <div class="press-icon">
+          📸
+        </div>
+
+        <h3>Press Photos</h3>
+
+        <p>
+          Browse photographs and visual materials available
+          for public media reference.
+        </p>
+
+        <a href="gallery.html" class="press-btn">
+          Open Gallery →
+        </a>
+
+      </div>
+
+
+      <div class="press-card">
+
+        <div class="press-icon">
+          🎥
+        </div>
+
+        <h3>Video & Media</h3>
+
+        <p>
+          View available videos and multimedia materials
+          published through the website.
+        </p>
+
+        <a href="media.html" class="press-btn">
+          Open Media →
+        </a>
+
+      </div>
+
+
+      <div class="press-card">
+
+        <div class="press-icon">
+          📋
+        </div>
+
+        <h3>Development Agenda</h3>
+
+        <p>
+          Review the published seven-point development
+          agenda and stated priorities.
+        </p>
+
+        <a href="agenda.html" class="press-btn">
+          View Agenda →
+        </a>
+
+      </div>
+
+
+      <div class="press-card">
+
+        <div class="press-icon">
+          👤
+        </div>
+
+        <h3>Candidate Information</h3>
+
+        <p>
+          View publicly available candidate information
+          and profile details.
+        </p>
+
+        <a href="about.html" class="press-btn">
+          View Profile →
+        </a>
+
+      </div>
+
+
+      <div class="press-card">
+
+        <div class="press-icon">
+          📞
+        </div>
+
+        <h3>Media Enquiries</h3>
+
+        <p>
+          Contact the office for general media enquiries
+          and information requests.
+        </p>
+
+        <a href="contact.html" class="press-btn">
+          Contact →
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- FEATURED -->
+
+    <section class="featured">
+
+      <div class="featured-image">
+
+        <img
+          src="https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg"
+          alt="Victor Omale Ojogbane">
+
+      </div>
+
+
+      <div class="featured-content">
+
+        <span class="label">
+          Media Information
+        </span>
+
+        <h2>
+          Victor Omale Ojogbane
+        </h2>
+
+        <p>
+          House of Representatives Candidate for
+          Idah Federal Constituency, Kogi State, Nigeria.
+        </p>
+
+        <p>
+          This page serves as a central point for journalists,
+          media organisations and members of the public seeking
+          publicly available information.
+        </p>
+
+        <a href="about.html" class="press-btn">
+          View Candidate Profile →
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- PRESS RELEASES -->
+
+    <section class="releases">
+
+      <div class="section-title">
+
+        <h2>Latest Press Materials</h2>
+
+        <p>
+          Published materials can be listed here as they
+          become available.
+        </p>
+
+      </div>
+
+
+      <div class="release-list">
+
+        <article class="release">
+
+          <div class="release-info">
+
+            <span class="release-tag">
+              PUBLIC INFORMATION
+            </span>
+
+            <h3>
+              7-Point Development Agenda
+            </h3>
+
+            <p>
+              Information covering the published development
+              priorities for the constituency.
+            </p>
+
+          </div>
+
+          <a href="agenda.html" class="press-btn">
+            Read →
+          </a>
+
+        </article>
+
+
+        <article class="release">
+
+          <div class="release-info">
+
+            <span class="release-tag">
+              PUBLIC INFORMATION
+            </span>
+
+            <h3>
+              Mission & Vision
+            </h3>
+
+            <p>
+              Published mission, vision and development
+              focus of the campaign website.
+            </p>
+
+          </div>
+
+          <a href="mission.html" class="press-btn">
+            Read →
+          </a>
+
+        </article>
+
+
+        <article class="release">
+
+          <div class="release-info">
+
+            <span class="release-tag">
+              MEDIA
+            </span>
+
+            <h3>
+              Media Centre
+            </h3>
+
+            <p>
+              Access available videos and other multimedia
+              materials.
+            </p>
+
+          </div>
+
+          <a href="media.html" class="press-btn">
+            View →
+          </a>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- MEDIA KIT -->
+
+    <section class="media-kit">
+
+      <h2>Media Kit</h2>
+
+      <p>
+        A dedicated media kit can contain approved photographs,
+        biographies, logos, fact sheets and other materials
+        intended for media reference.
+      </p>
+
+
+      <div class="kit-grid">
+
+        <div class="kit-item">
+
+          <strong>Photographs</strong>
+
+          <span>
+            Available through the Gallery
+          </span>
+
+        </div>
+
+
+        <div class="kit-item">
+
+          <strong>Candidate Profile</strong>
+
+          <span>
+            Available through About
+          </span>
+
+        </div>
+
+
+        <div class="kit-item">
+
+          <strong>Development Agenda</strong>
+
+          <span>
+            Available through Agenda
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PRESS CONTACT -->
+
+    <section class="press-contact">
+
+      <h2>Press & Media Enquiries</h2>
+
+      <p>
+        For general media enquiries or requests for publicly
+        available information, please use the contact details
+        below.
+      </p>
+
+
+      <div class="contact-details">
+
+        <a href="tel:+2348036131193">
+          📞 +234 803 613 1193
+        </a>
+
+        <a href="contact.html">
+          Contact Page →
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+
+        <h2>
+          Victor Omale Ojogbane
+        </h2>
+
+        <p>
+          House of Representatives Candidate,
+          Idah Federal Constituency, Kogi State, Nigeria.
+        </p>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h3>Quick Links</h3>
+
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="agenda.html">7-Point Agenda</a>
+        <a href="mission.html">Mission & Vision</a>
+        <a href="press.html">Press</a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h3>Media</h3>
+
+        <a href="news.html">News</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="media.html">Media Centre</a>
+        <a href="downloads.html">Downloads</a>
+        <a href="contact.html">Contact</a>
+
+      </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+      © 2026 Victor Omale Ojogbane.
+      All rights reserved.
+
+    </div>
+
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
+
+  <script>
+
+    function toggleMenu() {
+
+      const nav = document.getElementById("mainNav");
+
+      nav.classList.toggle("show");
+
+    }
+
+
+    document.querySelectorAll("#mainNav a").forEach(link => {
+
+      link.addEventListener("click", function() {
+
+        document
+          .getElementById("mainNav")
+          .classList.remove("show");
+
+      });
+
+    });
+
+  </script>
+
+</body>
+</html>
