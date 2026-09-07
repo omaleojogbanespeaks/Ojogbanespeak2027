@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Governance & Accountability | Victor Omale Ojogbane</title>
+
+  <meta name="description"
+        content="Governance, accountability and effective representation information for Victor Omale Ojogbane.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      color: #222;
+      background: #f5f8f6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* HEADER */
+    header {
+      background: #064d2c;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+
+    .logo span {
+      display: block;
+      color: #d7f4df;
+      font-size: 12px;
+      font-weight: normal;
+      margin-top: 4px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    nav a {
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 8px 4px;
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #b9efca;
+    }
+
+    .menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 360px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 55px 20px;
+      color: white;
+
+      background:
+        linear-gradient(
+          rgba(0, 70, 38, 0.88),
+          rgba(0, 35, 20, 0.91)
+        ),
+        url("https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg")
+        center/cover no-repeat;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h1 {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #e2f5e8;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    /* MAIN */
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    .intro {
+      background: white;
+      padding: 35px;
+      border-radius: 15px;
+      box-shadow: 0 5px 22px rgba(0,0,0,0.06);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .intro h2 {
+      color: #064d2c;
+      font-size: 29px;
+      margin-bottom: 15px;
+    }
+
+    .intro p {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    /* CARDS */
+    .governance-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-bottom: 35px;
+    }
+
+    .card {
+      background: white;
+      padding: 28px;
+      border-radius: 14px;
+      border-top: 5px solid #087a43;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.1);
+    }
+
+    .icon {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      background: #e6f5eb;
+      color: #064d2c;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 25px;
+      margin-bottom: 17px;
+    }
+
+    .card h3 {
+      color: #064d2c;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: #555;
+    }
+
+    /* CONTENT SECTIONS */
+    .section {
+      background: white;
+      padding: 35px;
+      border-radius: 15px;
+      margin-bottom: 25px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    }
+
+    .section h2 {
+      color: #064d2c;
+      font-size: 27px;
+      margin-bottom: 15px;
+    }
+
+    .section h3 {
+      color: #087a43;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    .section p {
+      margin-bottom: 13px;
+    }
+
+    .section ul {
+      padding-left: 25px;
+    }
+
+    .section li {
+      margin-bottom: 9px;
+    }
+
+    /* PRINCIPLES */
+    .principles {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 25px;
+    }
+
+    .principle {
+      background: #f0f8f3;
+      border-left: 5px solid #087a43;
+      padding: 22px;
+      border-radius: 10px;
+    }
+
+    .principle h3 {
+      color: #064d2c;
+      margin-bottom: 7px;
+    }
+
+    /* HIGHLIGHT */
+    .highlight {
+      background: #064d2c;
+      color: white;
+      padding: 35px;
+      border-radius: 15px;
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .highlight h2 {
+      margin-bottom: 12px;
+      font-size: 29px;
+    }
+
+    .highlight p {
+      max-width: 800px;
+      margin: auto;
+      color: #e2f4e8;
+    }
+
+    /* CTA */
+    .cta {
+      text-align: center;
+      padding: 45px 25px;
+      margin-top: 30px;
+    }
+
+    .cta h2 {
+      color: #064d2c;
+      font-size: 29px;
+      margin-bottom: 10px;
+    }
+
+    .cta p {
+      max-width: 650px;
+      margin: 0 auto 22px;
+      color: #555;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #064d2c;
+      color: white;
+      padding: 13px 26px;
+      border-radius: 7px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #087a43;
+      transform: translateY(-2px);
+    }
+
+    /* FOOTER */
+    footer {
+      background: #111;
+      color: #ccc;
+      padding: 45px 20px 20px;
+      margin-top: 30px;
+    }
+
+    .footer-container {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 35px;
+    }
+
+    footer h3 {
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    footer p {
+      font-size: 14px;
+    }
+
+    footer ul {
+      list-style: none;
+    }
+
+    footer li {
+      margin-bottom: 8px;
+    }
+
+    footer a {
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    .copyright {
+      border-top: 1px solid #333;
+      margin-top: 30px;
+      padding-top: 18px;
+      text-align: center;
+      color: #999;
+      font-size: 13px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 900px) {
+
+      .menu-btn {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: #064d2c;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      nav a {
+        width: 100%;
+        padding: 12px 5px;
+        border-bottom: 1px solid rgba(255,255,255,0.12);
+      }
+
+      .governance-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .hero {
+        min-height: 300px;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .container {
+        padding: 40px 15px;
+      }
+
+      .intro,
+      .section {
+        padding: 25px 20px;
+      }
+
+      .governance-grid,
+      .principles {
+        grid-template-columns: 1fr;
+      }
+
+      .intro h2,
+      .section h2 {
+        font-size: 24px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+
+    <div class="nav-container">
+
+      <a href="index.html" class="logo">
+        VICTOR OMALE OJOGBANE
+        <span>House of Representatives Candidate</span>
+      </a>
+
+      <button
+        class="menu-btn"
+        onclick="toggleMenu()"
+        aria-label="Open navigation menu">
+        ☰
+      </button>
+
+      <nav id="mainNav">
+
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="agenda.html">7-Point Agenda</a>
+        <a href="mission.html">Mission & Vision</a>
+        <a href="governance.html" class="active">Governance</a>
+        <a href="news.html">News</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="media.html">Media</a>
+        <a href="resources.html">Resources</a>
+        <a href="downloads.html">Downloads</a>
+        <a href="press.html">Press</a>
+        <a href="contact.html">Contact</a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h1>Governance & Accountability</h1>
+
+      <p>
+        A focus on transparency, accessibility, responsible representation
+        and meaningful engagement with communities.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- MAIN CONTENT -->
+  <main class="container">
+
+
+    <section class="intro">
+
+      <h2>Good Governance & Effective Representation</h2>
+
+      <p>
+        Good governance requires openness, accountability, accessibility
+        and attention to the needs of the people. This page presents the
+        governance principles outlined for the Idah Federal Constituency.
+      </p>
+
+    </section>
+
+
+    <!-- GOVERNANCE CARDS -->
+    <section class="governance-grid">
+
+      <div class="card">
+
+        <div class="icon">✓</div>
+
+        <h3>Accountability</h3>
+
+        <p>
+          Promote responsible representation and clear communication
+          concerning constituency activities and interventions.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="icon">◉</div>
+
+        <h3>Accessibility</h3>
+
+        <p>
+          Maintain an open channel through which community concerns,
+          ideas and development priorities can be communicated.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="icon">▣</div>
+
+        <h3>Transparency</h3>
+
+        <p>
+          Encourage openness around constituency projects, initiatives
+          and development-related activities.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="icon">◎</div>
+
+        <h3>Community Engagement</h3>
+
+        <p>
+          Encourage regular interaction with communities and stakeholders
+          concerning local development needs.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="icon">⚖</div>
+
+        <h3>Effective Representation</h3>
+
+        <p>
+          Present community concerns and development priorities through
+          appropriate legislative and institutional channels.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="icon">∞</div>
+
+        <h3>Inclusive Development</h3>
+
+        <p>
+          Promote an approach that recognizes the interests and needs of
+          communities, families, young people and vulnerable groups.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ACCOUNTABILITY -->
+    <section class="section">
+
+      <h2>Accountability</h2>
+
+      <p>
+        Accountability is an important part of responsible public
+        representation. Information concerning constituency initiatives
+        should be communicated as clearly as possible.
+      </p>
+
+      <ul>
+
+        <li>Encourage transparency in constituency interventions.</li>
+
+        <li>Provide accessible information about relevant activities.</li>
+
+        <li>Listen to community concerns and development priorities.</li>
+
+        <li>Maintain responsible communication with constituents.</li>
+
+        <li>Promote responsible use of public resources and opportunities.</li>
+
+      </ul>
+
+    </section>
+
+
+    <!-- COMMUNITY ENGAGEMENT -->
+    <section class="section">
+
+      <h2>Community Engagement</h2>
+
+      <p>
+        Effective representation requires communication between
+        communities and their representatives.
+      </p>
+
+      <p>
+        Community engagement can provide an avenue for residents,
+        traditional institutions, community organizations, professionals,
+        women, young people and other stakeholders to communicate
+        development needs.
+      </p>
+
+      <div class="principles">
+
+        <div class="principle">
+
+          <h3>Listening</h3>
+
+          <p>
+            Pay attention to issues raised by communities and stakeholders.
+          </p>
+
+        </div>
+
+
+        <div class="principle">
+
+          <h3>Dialogue</h3>
+
+          <p>
+            Encourage constructive discussions around development priorities.
+          </p>
+
+        </div>
+
+
+        <div class="principle">
+
+          <h3>Feedback</h3>
+
+          <p>
+            Create opportunities for communities to communicate concerns
+            and observations.
+          </p>
+
+        </div>
+
+
+        <div class="principle">
+
+          <h3>Follow-Up</h3>
+
+          <p>
+            Follow relevant issues through appropriate government and
+            institutional channels.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- REPRESENTATION -->
+    <section class="section">
+
+      <h2>Effective Representation</h2>
+
+      <p>
+        Representation involves communicating the interests and concerns
+        of constituents through the appropriate legislative and
+        institutional processes.
+      </p>
+
+      <h3>Key Areas</h3>
+
+      <ul>
+
+        <li>Community development concerns.</li>
+
+        <li>Infrastructure needs.</li>
+
+        <li>Education and human capital development.</li>
+
+        <li>Healthcare and social development.</li>
+
+        <li>Agriculture and rural economic development.</li>
+
+        <li>Youth and women empowerment.</li>
+
+        <li>Peace, unity and community development.</li>
+
+      </ul>
+
+    </section>
+
+
+    <!-- TRANSPARENCY -->
+    <section class="section">
+
+      <h2>Transparency</h2>
+
+      <p>
+        Transparency helps communities understand how development
+        priorities are identified and communicated.
+      </p>
+
+      <p>
+        The website provides dedicated sections for development priorities,
+        news, media, resources and other public information.
+      </p>
+
+    </section>
+
+
+    <!-- PRINCIPLES -->
+    <section class="highlight">
+
+      <h2>Governance Principles</h2>
+
+      <p>
+        Accountability • Transparency • Accessibility • Community
+        Engagement • Responsible Representation • Inclusive Development
+      </p>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="cta">
+
+      <h2>Explore the Development Agenda</h2>
+
+      <p>
+        Learn more about the seven development priorities presented on
+        this website.
+      </p>
+
+      <a href="agenda.html" class="btn">
+        View 7-Point Agenda
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-container">
+
+      <div>
+
+        <h3>Victor Omale Ojogbane</h3>
+
+        <p>
+          House of Representatives Candidate for
+          Idah Federal Constituency.
+        </p>
+
+        <p style="margin-top:10px;">
+          Unale, Ibaji Local Government Area,
+          Kogi State, Nigeria.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>Quick Links</h3>
+
+        <ul>
+
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="agenda.html">7-Point Agenda</a></li>
+          <li><a href="mission.html">Mission & Vision</a></li>
+          <li><a href="governance.html">Governance</a></li>
+          <li><a href="news.html">News</a></li>
+
+        </ul>
+
+      </div>
+
+
+      <div>
+
+        <h3>Information</h3>
+
+        <ul>
+
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="downloads.html">Downloads</a></li>
+          <li><a href="press.html">Press Centre</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+      © 2026 Victor Omale Ojogbane. All Rights Reserved.
+
+    </div>
+
+  </footer>
+
+
+  <!-- MOBILE MENU -->
+  <script>
+
+    function toggleMenu() {
+
+      const nav = document.getElementById("mainNav");
+
+      nav.classList.toggle("show");
+
+    }
+
+
+    document.querySelectorAll("#mainNav a").forEach(function(link) {
+
+      link.addEventListener("click", function() {
+
+        document.getElementById("mainNav").classList.remove("show");
+
+      });
+
+    });
+
+  </script>
+
+</body>
+</html>
