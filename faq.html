@@ -1,0 +1,509 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>FAQ | Victor Omale Ojogbane</title><meta name="description" content="Frequently Asked Questions about Victor Omale Ojogbane and his agenda for the Idah/Igalamela/Ofu/Ibaji Federal Constituency."><style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f7f5;
+    color:#222;
+    line-height:1.6;
+}
+
+/* HEADER */
+header{
+    background:#0b5d2a;
+    color:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 15px rgba(0,0,0,.15);
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    padding:15px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:21px;
+    font-weight:800;
+    letter-spacing:.5px;
+}
+
+.logo span{
+    display:block;
+    font-size:12px;
+    font-weight:400;
+    opacity:.9;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:18px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ffd700;
+}
+
+.menu-btn{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* HERO */
+.hero{
+    min-height:430px;
+    background:
+    linear-gradient(rgba(0,65,28,.86),rgba(0,65,28,.86)),
+    url("https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:60px 20px;
+    color:white;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.hero h1{
+    font-size:48px;
+    line-height:1.15;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:20px;
+    max-width:700px;
+    margin:auto;
+}
+
+.badge{
+    display:inline-block;
+    background:#ffd700;
+    color:#111;
+    padding:8px 18px;
+    border-radius:30px;
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+/* CONTENT */
+.container{
+    max-width:1050px;
+    margin:auto;
+    padding:70px 20px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title h2{
+    font-size:35px;
+    color:#0b5d2a;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#666;
+    max-width:700px;
+    margin:auto;
+}
+
+/* FAQ */
+.faq-container{
+    max-width:900px;
+    margin:auto;
+}
+
+.faq-item{
+    background:white;
+    margin-bottom:16px;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 18px rgba(0,0,0,.07);
+    border-left:5px solid #0b5d2a;
+}
+
+.faq-item summary{
+    cursor:pointer;
+    padding:22px 25px;
+    font-size:18px;
+    font-weight:700;
+    color:#0b5d2a;
+    list-style:none;
+    position:relative;
+    padding-right:55px;
+}
+
+.faq-item summary::-webkit-details-marker{
+    display:none;
+}
+
+.faq-item summary::after{
+    content:"+";
+    position:absolute;
+    right:22px;
+    top:16px;
+    font-size:30px;
+    font-weight:400;
+    color:#0b5d2a;
+}
+
+.faq-item[open] summary::after{
+    content:"−";
+}
+
+.answer{
+    padding:0 25px 24px;
+    color:#555;
+    border-top:1px solid #eee;
+}
+
+.answer p{
+    padding-top:18px;
+}
+
+/* INFO BOX */
+.info-box{
+    margin-top:50px;
+    background:#0b5d2a;
+    color:white;
+    padding:40px;
+    border-radius:16px;
+    text-align:center;
+}
+
+.info-box h3{
+    font-size:28px;
+    margin-bottom:12px;
+}
+
+.info-box p{
+    max-width:700px;
+    margin:0 auto 20px;
+}
+
+.btn{
+    display:inline-block;
+    text-decoration:none;
+    padding:13px 25px;
+    border-radius:30px;
+    font-weight:700;
+    margin:5px;
+    transition:.3s;
+}
+
+.btn-yellow{
+    background:#ffd700;
+    color:#111;
+}
+
+.btn-yellow:hover{
+    background:white;
+}
+
+.btn-white{
+    background:white;
+    color:#0b5d2a;
+}
+
+.btn-white:hover{
+    background:#ffd700;
+    color:#111;
+}
+
+/* FOOTER */
+footer{
+    background:#111;
+    color:#ddd;
+    padding:50px 20px 20px;
+}
+
+.footer-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
+}
+
+footer h3{
+    color:#ffd700;
+    margin-bottom:15px;
+}
+
+footer ul{
+    list-style:none;
+}
+
+footer li{
+    margin-bottom:8px;
+}
+
+footer a{
+    color:#ddd;
+    text-decoration:none;
+}
+
+footer a:hover{
+    color:#ffd700;
+}
+
+.footer-bottom{
+    text-align:center;
+    border-top:1px solid #333;
+    margin-top:35px;
+    padding-top:20px;
+    font-size:13px;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+
+    .menu-btn{
+        display:block;
+    }
+
+    nav{
+        display:none;
+        position:absolute;
+        top:68px;
+        left:0;
+        width:100%;
+        background:#0b5d2a;
+    }
+
+    nav.active{
+        display:block;
+    }
+
+    nav ul{
+        flex-direction:column;
+        padding:20px;
+        gap:0;
+    }
+
+    nav li{
+        border-bottom:1px solid rgba(255,255,255,.15);
+    }
+
+    nav a{
+        display:block;
+        padding:14px 5px;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:500px){
+
+    .logo{
+        font-size:17px;
+    }
+
+    .hero{
+        min-height:380px;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .section-title h2{
+        font-size:28px;
+    }
+
+    .faq-item summary{
+        font-size:16px;
+    }
+
+    .info-box{
+        padding:30px 20px;
+    }
+}
+</style></head><body><header><div class="navbar"><div class="logo">
+VICTOR OMALE OJOGBANE
+<span>APC • House of Representatives Candidate</span>
+</div><div class="menu-btn" onclick="toggleMenu()">☰</div><nav id="navMenu">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="agenda.html">Agenda</a></li>
+<li><a href="mission.html">Mission</a></li>
+<li><a href="news.html">News</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="media.html">Media</a></li>
+<li><a href="partners.html">Partners</a></li>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav></div>
+</header><section class="hero"><div class="hero-content"><div class="badge">FREQUENTLY ASKED QUESTIONS</div><h1>Questions & Answers</h1><p>
+Learn more about Victor Omale Ojogbane, his representation,
+development priorities and his proposed agenda for the constituency.
+</p></div></section><section class="container"><div class="section-title"><h2>Frequently Asked Questions</h2><p>
+Below are some common questions about the candidate,
+his proposed agenda and ways to access more information.
+</p></div><div class="faq-container"><details class="faq-item"><summary>Who is Victor Omale Ojogbane?</summary><div class="answer">
+<p>
+Victor Omale Ojogbane is an APC candidate for the House of Representatives
+for the Idah/Igalamela/Ofu/Ibaji Federal Constituency.
+</p>
+</div></details><details class="faq-item"><summary>Which constituency does he seek to represent?</summary><div class="answer">
+<p>
+He seeks to represent the Idah/Igalamela/Ofu/Ibaji Federal Constituency
+in the House of Representatives.
+</p>
+</div></details><details class="faq-item"><summary>What are the major areas of his proposed agenda?</summary><div class="answer">
+<p>
+The seven-point agenda focuses on education and human capital development,
+youth empowerment and employment, agriculture and rural economic development,
+infrastructure and basic amenities, healthcare and social development,
+good governance and effective representation, as well as community
+development, security and unity.
+</p>
+</div></details><details class="faq-item"><summary>What does the education agenda focus on?</summary><div class="answer">
+<p>
+The proposed education priorities include scholarships and bursaries,
+educational materials, rehabilitation and equipping of schools,
+skills acquisition, vocational training, digital literacy and ICT
+opportunities.
+</p>
+</div></details><details class="faq-item"><summary>What is proposed for young people?</summary><div class="answer">
+<p>
+The agenda proposes practical empowerment programmes, entrepreneurship
+support, vocational training and partnerships that can create opportunities
+for employment, internships and small-business development.
+</p>
+</div></details><details class="faq-item"><summary>What is the agricultural development plan?</summary><div class="answer">
+<p>
+The proposed approach includes support for farmers and cooperatives,
+agricultural inputs and equipment, training, improved market access,
+rural roads, fisheries, livestock and agro-processing.
+</p>
+</div></details><details class="faq-item"><summary>What infrastructure priorities are proposed?</summary><div class="answer">
+<p>
+The agenda identifies roads, clean and reliable water, boreholes,
+rural electrification, renewable energy, drainage and other community
+infrastructure as key areas of attention.
+</p>
+</div></details><details class="faq-item"><summary>What healthcare improvements are proposed?</summary><div class="answer">
+<p>
+The healthcare agenda includes better-equipped primary healthcare centres,
+periodic medical outreach, maternal and child healthcare, essential
+medicines and support for vulnerable groups.
+</p>
+</div></details><details class="faq-item"><summary>How will citizens engage with the representative?</summary><div class="answer">
+<p>
+The proposed governance approach includes constituency engagement,
+town-hall meetings, accessibility and regular interaction with communities
+to better understand and follow up on community needs.
+</p>
+</div></details><details class="faq-item"><summary>What does the agenda say about accountability?</summary><div class="answer">
+<p>
+The agenda places emphasis on transparency in constituency projects and
+interventions, accessibility and properly presenting and following up
+community needs at the National Assembly.
+</p>
+</div></details><details class="faq-item"><summary>How can I contact the campaign office?</summary><div class="answer">
+<p>
+You can use the Contact page on this website or call
+<strong>+234 803 613 1193</strong> for enquiries.
+</p>
+</div></details><details class="faq-item"><summary>Where can I read the full seven-point agenda?</summary><div class="answer">
+<p>
+Visit the <a href="agenda.html" style="color:#0b5d2a;font-weight:bold;">
+7-Point Agenda</a> page for the complete development priorities.
+</p>
+</div></details></div><div class="info-box"><h3>Want More Information?</h3><p>
+Explore the candidate's profile, development priorities,
+media updates and gallery, or contact the team for further enquiries.
+</p><a href="about.html" class="btn btn-yellow">About Victor</a>
+
+<a href="contact.html" class="btn btn-white">Contact</a>
+
+</div></section><footer><div class="footer-grid"><div>
+<h3>Victor Omale Ojogbane</h3>
+<p>
+APC • House of Representatives Candidate
+</p>
+<p>
+Idah/Igalamela/Ofu/Ibaji Federal Constituency
+</p>
+</div><div><h3>Quick Links</h3><ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="agenda.html">7-Point Agenda</a></li>
+<li><a href="mission.html">Mission & Vision</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul></div><div><h3>Contact</h3><p>Phone: +234 803 613 1193</p><p>
+Idah Federal Constituency,<br>
+Kogi State, Nigeria
+</p></div></div><div class="footer-bottom"><p>
+© 2026 Victor Omale Ojogbane. All Rights Reserved.
+</p><p>
+<a href="privacy.html">Privacy Policy</a> |
+<a href="terms.html">Terms</a>
+</p></div></footer><script>
+
+function toggleMenu(){
+
+    document.getElementById("navMenu").classList.toggle("active");
+
+}
+
+document.querySelectorAll("nav a").forEach(function(link){
+
+    link.addEventListener("click", function(){
+
+        document.getElementById("navMenu").classList.remove("active");
+
+    });
+
+});
+
+</script></body>
+</html>
