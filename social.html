@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Social Media | Victor Omale Ojogbane</title>
+
+  <meta name="description" content="Social media and online channels for Victor Omale Ojogbane.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #f5f7f6;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #064d2c;
+      color: white;
+      padding: 15px 6%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 19px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 12px;
+      color: #d5efdf;
+      margin-top: 2px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 17px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #b9e8c8;
+    }
+
+    .menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    .hero {
+      min-height: 330px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 50px 20px;
+
+      background:
+        linear-gradient(rgba(0,70,40,.84), rgba(0,70,40,.84)),
+        url("https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg")
+        center/cover;
+    }
+
+    .hero h1 {
+      font-size: 44px;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 18px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 750px;
+      margin: 0 auto 45px;
+    }
+
+    .intro h2 {
+      color: #064d2c;
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .social-card {
+      background: white;
+      padding: 32px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,.08);
+      text-align: center;
+      transition: .3s;
+      border-top: 5px solid #064d2c;
+    }
+
+    .social-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,.12);
+    }
+
+    .icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: #e7f4ec;
+      color: #064d2c;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 18px;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .social-card h3 {
+      color: #064d2c;
+      font-size: 23px;
+      margin-bottom: 8px;
+    }
+
+    .social-card p {
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .social-btn {
+      display: inline-block;
+      padding: 11px 22px;
+      background: #064d2c;
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .social-btn:hover {
+      background: #111;
+    }
+
+    .placeholder {
+      background: #fff7df;
+      border-left: 4px solid #d39b00;
+      padding: 20px;
+      margin-top: 40px;
+      border-radius: 8px;
+      color: #555;
+    }
+
+    .placeholder strong {
+      color: #8a6500;
+    }
+
+    .contact-box {
+      margin-top: 45px;
+      background: #064d2c;
+      color: white;
+      padding: 35px;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .contact-box h2 {
+      margin-bottom: 10px;
+    }
+
+    .contact-box p {
+      margin-bottom: 20px;
+    }
+
+    .contact-btn {
+      display: inline-block;
+      background: white;
+      color: #064d2c;
+      padding: 12px 24px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 35px 20px;
+      margin-top: 70px;
+    }
+
+    footer h3 {
+      color: white;
+      margin-bottom: 8px;
+    }
+
+    footer p {
+      font-size: 14px;
+      margin: 5px 0;
+    }
+
+    footer a {
+      color: #b9e8c8;
+      text-decoration: none;
+    }
+
+    @media (max-width: 850px) {
+
+      .menu-btn {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #064d2c;
+        padding: 20px;
+      }
+
+      nav.active {
+        display: block;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .social-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 35px;
+      }
+    }
+
+    @media (max-width: 500px) {
+
+      .hero {
+        min-height: 270px;
+      }
+
+      .hero h1 {
+        font-size: 29px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .social-card {
+        padding: 25px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="nav">
+
+    <div class="logo">
+      VICTOR OMALE OJOGBANE
+      <span>House of Representatives Candidate</span>
+    </div>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <nav id="mainNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="agenda.html">Agenda</a></li>
+        <li><a href="mission.html">Mission & Vision</a></li>
+        <li><a href="governance.html">Governance</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+  </div>
+
+</header>
+
+
+<section class="hero">
+
+  <div>
+
+    <h1>Social Media</h1>
+
+    <p>
+      Online channels for accessing updates, media and
+      publicly available information.
+    </p>
+
+  </div>
+
+</section>
+
+
+<section class="container">
+
+  <div class="intro">
+
+    <h2>Connect Online</h2>
+
+    <p>
+      This page can be used to provide links to verified social
+      media accounts and official online channels.
+    </p>
+
+  </div>
+
+
+  <div class="social-grid">
+
+
+    <div class="social-card">
+
+      <div class="icon">f</div>
+
+      <h3>Facebook</h3>
+
+      <p>
+        Official Facebook page or verified public profile.
+      </p>
+
+      <!-- Replace # with the real Facebook URL -->
+      <a href="#" class="social-btn">
+        Visit Facebook
+      </a>
+
+    </div>
+
+
+    <div class="social-card">
+
+      <div class="icon">𝕏</div>
+
+      <h3>X / Twitter</h3>
+
+      <p>
+        Official X account for public updates and information.
+      </p>
+
+      <!-- Replace # with the real X URL -->
+      <a href="#" class="social-btn">
+        Visit X
+      </a>
+
+    </div>
+
+
+    <div class="social-card">
+
+      <div class="icon">▶</div>
+
+      <h3>YouTube</h3>
+
+      <p>
+        Video interviews, speeches, events and other media content.
+      </p>
+
+      <!-- Replace # with the real YouTube URL -->
+      <a href="#" class="social-btn">
+        Visit YouTube
+      </a>
+
+    </div>
+
+
+    <div class="social-card">
+
+      <div class="icon">◎</div>
+
+      <h3>Instagram</h3>
+
+      <p>
+        Photos, public activities and visual updates.
+      </p>
+
+      <!-- Replace # with the real Instagram URL -->
+      <a href="#" class="social-btn">
+        Visit Instagram
+      </a>
+
+    </div>
+
+
+  </div>
+
+
+  <div class="placeholder">
+
+    <strong>Website administrator:</strong>
+
+    Please replace the <b>#</b> links above with the verified
+    social-media URLs before publishing this page.
+
+    This prevents visitors from being directed to unofficial
+    or incorrect accounts.
+
+  </div>
+
+
+  <div class="contact-box">
+
+    <h2>Contact Information</h2>
+
+    <p>
+      For general enquiries, please use the contact page or
+      the publicly listed telephone number.
+    </p>
+
+    <a href="contact.html" class="contact-btn">
+      Contact Page
+    </a>
+
+  </div>
+
+</section>
+
+
+<footer>
+
+  <h3>VICTOR OMALE OJOGBANE</h3>
+
+  <p>
+    APC • House of Representatives Candidate
+  </p>
+
+  <p>
+    Idah Federal Constituency, Kogi State, Nigeria
+  </p>
+
+  <p>
+    Phone:
+    <a href="tel:+2348036131193">
+      +234 803 613 1193
+    </a>
+  </p>
+
+  <p style="margin-top:15px;">
+    © 2026 Victor Omale Ojogbane. All rights reserved.
+  </p>
+
+</footer>
+
+
+<script>
+
+  function toggleMenu() {
+    document
+      .getElementById("mainNav")
+      .classList
+      .toggle("active");
+  }
+
+</script>
+
+</body>
+</html>
