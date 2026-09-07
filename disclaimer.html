@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Disclaimer | Victor Omale Ojogbane</title>
+
+  <meta name="description"
+        content="Website disclaimer for Victor Omale Ojogbane, House of Representatives Candidate for Idah Federal Constituency.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      color: #222;
+      background: #f5f8f6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* HEADER */
+    header {
+      background: #064d2c;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+
+    .logo span {
+      display: block;
+      color: #d6f3df;
+      font-size: 12px;
+      font-weight: normal;
+      margin-top: 4px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    nav a {
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 8px 4px;
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #b9efca;
+    }
+
+    .menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 330px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 50px 20px;
+
+      background:
+        linear-gradient(
+          rgba(0, 64, 35, 0.88),
+          rgba(0, 35, 20, 0.90)
+        ),
+        url("https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg")
+        center/cover no-repeat;
+
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h1 {
+      font-size: 46px;
+      margin-bottom: 14px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #e2f5e8;
+    }
+
+    /* MAIN */
+    .container {
+      max-width: 1050px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    .notice {
+      background: #eaf7ee;
+      border: 1px solid #c9e8d2;
+      border-left: 6px solid #087a43;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 30px;
+    }
+
+    .notice strong {
+      color: #064d2c;
+    }
+
+    .section {
+      background: white;
+      padding: 32px;
+      margin-bottom: 25px;
+      border-radius: 14px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    }
+
+    .section h2 {
+      color: #064d2c;
+      font-size: 25px;
+      margin-bottom: 15px;
+    }
+
+    .section h3 {
+      color: #087a43;
+      font-size: 19px;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    .section p {
+      margin-bottom: 14px;
+    }
+
+    .section ul {
+      padding-left: 25px;
+      margin-bottom: 15px;
+    }
+
+    .section li {
+      margin-bottom: 8px;
+    }
+
+    /* CTA */
+    .cta {
+      background: #064d2c;
+      color: white;
+      padding: 50px 25px;
+      text-align: center;
+      border-radius: 15px;
+      margin-top: 35px;
+    }
+
+    .cta h2 {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .cta p {
+      max-width: 650px;
+      margin: 0 auto 25px;
+      color: #e4f4e9;
+    }
+
+    .btn {
+      display: inline-block;
+      background: white;
+      color: #064d2c;
+      padding: 13px 25px;
+      border-radius: 7px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #d9f4e0;
+      transform: translateY(-2px);
+    }
+
+    /* FOOTER */
+    footer {
+      background: #111;
+      color: #ccc;
+      padding: 45px 20px 20px;
+      margin-top: 50px;
+    }
+
+    .footer-container {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 35px;
+    }
+
+    footer h3 {
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    footer p {
+      font-size: 14px;
+    }
+
+    footer ul {
+      list-style: none;
+    }
+
+    footer li {
+      margin-bottom: 8px;
+    }
+
+    footer a {
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid #333;
+      padding-top: 18px;
+      margin-top: 30px;
+      font-size: 13px;
+      color: #999;
+    }
+
+    /* MOBILE */
+    @media (max-width: 900px) {
+
+      .menu-btn {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 70px;
+        background: #064d2c;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        gap: 0;
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      nav a {
+        width: 100%;
+        padding: 12px 5px;
+        border-bottom: 1px solid rgba(255,255,255,0.12);
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .footer-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 500px) {
+
+      .hero {
+        min-height: 280px;
+      }
+
+      .hero h1 {
+        font-size: 30px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .container {
+        padding: 40px 15px;
+      }
+
+      .section {
+        padding: 24px 20px;
+      }
+
+      .section h2 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+
+    <div class="nav-container">
+
+      <a href="index.html" class="logo">
+        VICTOR OMALE OJOGBANE
+        <span>House of Representatives Candidate</span>
+      </a>
+
+      <button
+        class="menu-btn"
+        onclick="toggleMenu()"
+        aria-label="Open navigation menu">
+        ☰
+      </button>
+
+      <nav id="mainNav">
+
+        <a href="index.html">Home</a>
+
+        <a href="about.html">About</a>
+
+        <a href="agenda.html">7-Point Agenda</a>
+
+        <a href="mission.html">Mission & Vision</a>
+
+        <a href="news.html">News</a>
+
+        <a href="gallery.html">Gallery</a>
+
+        <a href="media.html">Media</a>
+
+        <a href="resources.html">Resources</a>
+
+        <a href="downloads.html">Downloads</a>
+
+        <a href="press.html">Press</a>
+
+        <a href="contact.html">Contact</a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h1>Website Disclaimer</h1>
+
+      <p>
+        Important information about the content and use of this website.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTENT -->
+  <main class="container">
+
+    <div class="notice">
+
+      <strong>Important:</strong>
+
+      This website is intended to provide general information about
+      Victor Omale Ojogbane, his public profile, development priorities,
+      media materials and related information presented on this platform.
+
+    </div>
+
+
+    <section class="section">
+
+      <h2>1. General Information</h2>
+
+      <p>
+        The information contained on this website is provided for general
+        informational purposes.
+      </p>
+
+      <p>
+        While reasonable efforts may be made to keep information accurate
+        and current, information may change over time and some content may
+        be updated, corrected or replaced.
+      </p>
+
+    </section>
+
+
+    <section class="section">
+
+      <h2>2. Development Priorities</h2>
+
+      <p>
+        Information presented under the 7-Point Agenda, Mission & Vision,
+        and related development pages represents the priorities and
+        positions presented on this website.
+      </p>
+
+      <p>
+        Visitors should refer to the relevant pages for the most current
+        version of the information published on this platform.
+      </p>
+
+    </section>
+
+
+    <section class="section">
+
+      <h2>3. Accuracy of Information</h2>
+
+      <p>
+        Every reasonable effort should be made to ensure that published
+        information is clear and accurate. However, no guarantee is made
+        that every item of information will always be complete, current or
+        free from error.
+      </p>
+
+      <p>
+        Information should therefore be considered in the context in which
+        it is presented.
+      </p>
+
+    </section>
+
+
+    <section class="section">
+
+      <h2>4. External Links</h2>
+
+      <p>
+        This website may contain links to external websites, social media
+        platforms, video services or other third-party resources.
+      </p>
+
+      <p>
+        External websites operate independently and may have their own
+        privacy policies, terms and conditions. Inclusion of an external
+        link does not necessarily mean that all content on that website is
+        controlled by this website.
+      </p>
+
+    </section>
+
+
+    <section class="section">
+
+      <h2>5. Media and Images</h2>
+
+      <p>
+        Photographs, videos and other media displayed on this website are
+        used to provide information and visual context.
+      </p>
+
+      <p>
+        Media content may be updated or removed as the website develops.
+        Where appropriate, captions and descriptions may be provided to
+        identify the subject or context of the material.
+      </p>
+
+    </section>
+
+
+    <section class="section">
+
+      <h2>6. Website Availability</h2>
+
+      <p>
+        We aim to keep this website available and functional. However,
+        temporary interruptions may occur because of maintenance,
+        technical problems, hosting issues, internet connectivity or other
+        circumstances outside the website's direct control.
+      </p>
+
+    </section>
+
+
+    <section class="section">
+
+      <h2>7. No Professional Advice</h2>
+
+      <p>
+        Information published on this website should not be interpreted as
+        legal, financial, medical or other professional advice.
+      </p>
+
+      <p>
+        Where professional advice is required, visitors should consult an
+        appropriately qualified professional.
+      </p>
+
+    </section>
+
+
+    <section class="section">
+
+      <h2>8. Contact and Corrections</h2>
+
+      <p>
+        If you identify information on this website that you believe is
+        inaccurate or requires clarification, you may contact us using the
+        details provided on the Contact page.
+      </p>
+
+      <p>
+        Information may be reviewed and corrected where appropriate.
+      </p>
+
+    </section>
+
+
+    <section class="section">
+
+      <h2>9. Privacy</h2>
+
+      <p>
+        Information concerning privacy and the handling of website-related
+        information is provided separately on the Privacy Policy page.
+      </p>
+
+      <p>
+        Please review the
+        <a
+          href="privacy.html"
+          style="color:#087a43;font-weight:bold;">
+          Privacy Policy
+        </a>
+        for more information.
+      </p>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="cta">
+
+      <h2>Have a Question?</h2>
+
+      <p>
+        If you need clarification about information published on this
+        website, please contact us directly.
+      </p>
+
+      <a href="contact.html" class="btn">
+        Contact Us
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-container">
+
+      <div>
+
+        <h3>Victor Omale Ojogbane</h3>
+
+        <p>
+          House of Representatives Candidate for
+          Idah Federal Constituency.
+        </p>
+
+        <p style="margin-top:10px;">
+          Unale, Ibaji Local Government Area,
+          Kogi State, Nigeria.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>Quick Links</h3>
+
+        <ul>
+
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+
+          <li>
+            <a href="about.html">About</a>
+          </li>
+
+          <li>
+            <a href="agenda.html">7-Point Agenda</a>
+          </li>
+
+          <li>
+            <a href="mission.html">Mission & Vision</a>
+          </li>
+
+          <li>
+            <a href="news.html">News</a>
+          </li>
+
+          <li>
+            <a href="gallery.html">Gallery</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div>
+
+        <h3>Website</h3>
+
+        <ul>
+
+          <li>
+            <a href="resources.html">Resources</a>
+          </li>
+
+          <li>
+            <a href="downloads.html">Downloads</a>
+          </li>
+
+          <li>
+            <a href="press.html">Press Centre</a>
+          </li>
+
+          <li>
+            <a href="faq.html">FAQ</a>
+          </li>
+
+          <li>
+            <a href="accessibility.html">Accessibility</a>
+          </li>
+
+          <li>
+            <a href="privacy.html">Privacy Policy</a>
+          </li>
+
+          <li>
+            <a href="terms.html">Terms</a>
+          </li>
+
+          <li>
+            <a href="disclaimer.html">Disclaimer</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+      © 2026 Victor Omale Ojogbane. All Rights Reserved.
+
+    </div>
+
+  </footer>
+
+
+  <!-- MOBILE MENU -->
+  <script>
+
+    function toggleMenu() {
+
+      const nav = document.getElementById("mainNav");
+
+      nav.classList.toggle("show");
+
+    }
+
+
+    document.querySelectorAll("#mainNav a").forEach(function(link) {
+
+      link.addEventListener("click", function() {
+
+        document.getElementById("mainNav").classList.remove("show");
+
+      });
+
+    });
+
+  </script>
+
+</body>
+</html>
