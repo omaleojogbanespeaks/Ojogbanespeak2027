@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Partners | Omale Victor Ojogbane</title>
+
+  <meta name="description"
+        content="Partners and collaboration opportunities for Omale Victor Ojogbane and community development initiatives in Idah Federal Constituency.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7f6;
+      color: #222;
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* NAVIGATION */
+    nav {
+      background: #064d2d;
+      color: white;
+      padding: 15px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 12px rgba(0,0,0,.15);
+    }
+
+    .logo {
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: .5px;
+    }
+
+    .logo span {
+      color: #f4c542;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      transition: .3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #f4c542;
+    }
+
+    .menu-btn {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      background:
+        linear-gradient(rgba(0,60,35,.88), rgba(0,60,35,.88)),
+        url("https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg")
+        center/cover no-repeat;
+
+      min-height: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 40px 20px;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      opacity: .95;
+    }
+
+    /* INTRO */
+    .intro {
+      text-align: center;
+      max-width: 850px;
+      margin: 60px auto 35px;
+      padding: 0 20px;
+    }
+
+    .intro h2 {
+      color: #064d2d;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .intro p {
+      color: #555;
+      font-size: 16px;
+    }
+
+    /* PARTNERS */
+    .partners-section {
+      width: 90%;
+      max-width: 1100px;
+      margin: 30px auto 70px;
+    }
+
+    .partners-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .partner-card {
+      background: white;
+      border-radius: 16px;
+      padding: 35px 25px;
+      text-align: center;
+      box-shadow: 0 8px 25px rgba(0,0,0,.08);
+      transition: .3s;
+      border-top: 5px solid #08783f;
+    }
+
+    .partner-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 14px 35px rgba(0,0,0,.12);
+    }
+
+    .partner-icon {
+      width: 75px;
+      height: 75px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      background: #eef7f1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 34px;
+    }
+
+    .partner-card h3 {
+      color: #064d2d;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .partner-card p {
+      color: #666;
+      font-size: 14px;
+    }
+
+    /* COLLABORATION */
+    .collaboration {
+      background: #064d2d;
+      color: white;
+      padding: 65px 20px;
+      text-align: center;
+    }
+
+    .collaboration-content {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .collaboration h2 {
+      color: #f4c542;
+      font-size: 34px;
+      margin-bottom: 15px;
+    }
+
+    .collaboration p {
+      margin-bottom: 25px;
+      font-size: 16px;
+    }
+
+    .collaboration-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 35px 0;
+    }
+
+    .collaboration-item {
+      background: rgba(255,255,255,.08);
+      padding: 22px;
+      border-radius: 12px;
+    }
+
+    .collaboration-item h3 {
+      color: #f4c542;
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .collaboration-item p {
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .partner-btn {
+      display: inline-block;
+      background: #f4c542;
+      color: #111;
+      padding: 14px 28px;
+      border-radius: 7px;
+      font-weight: bold;
+      transition: .3s;
+    }
+
+    .partner-btn:hover {
+      background: white;
+    }
+
+    /* CONTACT */
+    .contact-section {
+      width: 90%;
+      max-width: 900px;
+      margin: 60px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 18px;
+      box-shadow: 0 8px 30px rgba(0,0,0,.08);
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      color: #064d2d;
+      margin-bottom: 12px;
+      font-size: 30px;
+    }
+
+    .contact-section p {
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .contact-details {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 25px;
+    }
+
+    .contact-details a {
+      color: #08783f;
+      font-weight: bold;
+    }
+
+    .contact-details a:hover {
+      color: #064d2d;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #111;
+      color: #ddd;
+      padding: 40px 6% 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 30px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    footer h3 {
+      color: white;
+      margin-bottom: 14px;
+    }
+
+    footer p {
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    footer a {
+      display: block;
+      color: #ccc;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    footer a:hover {
+      color: #f4c542;
+    }
+
+    .copyright {
+      border-top: 1px solid #333;
+      margin-top: 30px;
+      padding-top: 18px;
+      text-align: center;
+      font-size: 13px;
+      color: #aaa;
+    }
+
+    /* MOBILE */
+    @media (max-width: 850px) {
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        background: #064d2d;
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .partners-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .collaboration-list {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 550px) {
+
+      .logo {
+        font-size: 15px;
+      }
+
+      .hero {
+        min-height: 280px;
+      }
+
+      .hero h1 {
+        font-size: 30px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .partners-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-section {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+
+    <div class="logo">
+      OMALE VICTOR <span>OJOGBANE</span>
+    </div>
+
+    <div class="menu-btn" onclick="toggleMenu()">
+      ☰
+    </div>
+
+    <div class="nav-links" id="navLinks">
+
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="agenda.html">Agenda</a>
+      <a href="mission.html">Mission</a>
+      <a href="news.html">News</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="media.html">Media</a>
+      <a href="partners.html" class="active">Partners</a>
+      <a href="contact.html">Contact</a>
+
+    </div>
+
+  </nav>
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h1>Partners</h1>
+
+      <p>
+        Building relationships and supporting collaboration for
+        community development and public engagement.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- INTRO -->
+  <section class="intro">
+
+    <h2>Working Together</h2>
+
+    <p>
+      Sustainable community development requires cooperation between
+      individuals, community organizations, professionals, civil society,
+      businesses and other stakeholders.
+    </p>
+
+  </section>
+
+
+  <!-- PARTNERS -->
+  <section class="partners-section">
+
+    <div class="partners-grid">
+
+      <!-- PARTNER 1 -->
+      <div class="partner-card">
+
+        <div class="partner-icon">
+          🤝
+        </div>
+
+        <h3>Community Organizations</h3>
+
+        <p>
+          Collaboration with community-based organizations and local
+          stakeholders on issues affecting communities.
+        </p>
+
+      </div>
+
+
+      <!-- PARTNER 2 -->
+      <div class="partner-card">
+
+        <div class="partner-icon">
+          🏛️
+        </div>
+
+        <h3>Public Institutions</h3>
+
+        <p>
+          Engagement with relevant public institutions and stakeholders
+          on development and representation.
+        </p>
+
+      </div>
+
+
+      <!-- PARTNER 3 -->
+      <div class="partner-card">
+
+        <div class="partner-icon">
+          🌍
+        </div>
+
+        <h3>Civil Society</h3>
+
+        <p>
+          Opportunities for constructive engagement with civil society
+          groups working on governance and community development.
+        </p>
+
+      </div>
+
+
+      <!-- PARTNER 4 -->
+      <div class="partner-card">
+
+        <div class="partner-icon">
+          👩‍💼
+        </div>
+
+        <h3>Women-Led Groups</h3>
+
+        <p>
+          Supporting dialogue and collaboration with women-led groups
+          and organizations involved in community initiatives.
+        </p>
+
+      </div>
+
+
+      <!-- PARTNER 5 -->
+      <div class="partner-card">
+
+        <div class="partner-icon">
+          👨‍🎓
+        </div>
+
+        <h3>Youth Organizations</h3>
+
+        <p>
+          Engagement with youth groups, young professionals and community
+          networks on constructive development initiatives.
+        </p>
+
+      </div>
+
+
+      <!-- PARTNER 6 -->
+      <div class="partner-card">
+
+        <div class="partner-icon">
+          💼
+        </div>
+
+        <h3>Private Sector</h3>
+
+        <p>
+          Exploring responsible partnerships with businesses and
+          professionals interested in community development.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- COLLABORATION -->
+  <section class="collaboration">
+
+    <div class="collaboration-content">
+
+      <h2>Areas for Collaboration</h2>
+
+      <p>
+        Partnerships may support constructive initiatives in areas
+        relevant to the communities of Idah Federal Constituency.
+      </p>
+
+
+      <div class="collaboration-list">
+
+        <div class="collaboration-item">
+
+          <h3>Education</h3>
+
+          <p>
+            Supporting educational opportunities, learning environments
+            and youth development.
+          </p>
+
+        </div>
+
+
+        <div class="collaboration-item">
+
+          <h3>Healthcare</h3>
+
+          <p>
+            Supporting conversations and initiatives around access to
+            healthcare and community wellbeing.
+          </p>
+
+        </div>
+
+
+        <div class="collaboration-item">
+
+          <h3>Infrastructure</h3>
+
+          <p>
+            Encouraging constructive attention to roads, water and
+            other community infrastructure.
+          </p>
+
+        </div>
+
+
+        <div class="collaboration-item">
+
+          <h3>Agriculture</h3>
+
+          <p>
+            Encouraging opportunities connected to agriculture,
+            livelihoods and local economic activity.
+          </p>
+
+        </div>
+
+
+        <div class="collaboration-item">
+
+          <h3>Women</h3>
+
+          <p>
+            Supporting opportunities for women to participate in
+            community and economic development.
+          </p>
+
+        </div>
+
+
+        <div class="collaboration-item">
+
+          <h3>Youth</h3>
+
+          <p>
+            Encouraging constructive youth participation, skills
+            development and entrepreneurship.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <a href="contact.html" class="partner-btn">
+        Discuss Partnership
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+  <section class="contact-section">
+
+    <h2>Partnership Enquiries</h2>
+
+    <p>
+      Organizations, professionals, community groups and other
+      stakeholders interested in discussing a potential partnership
+      can get in touch through the contact page.
+    </p>
+
+    <div class="contact-details">
+
+      <div>
+        📞
+        <a href="tel:+2348036131193">
+          +234 803 613 1193
+        </a>
+      </div>
+
+      <div>
+        📍 Idah Federal Constituency,
+        Kogi State, Nigeria
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-grid">
+
+      <div>
+
+        <h3>Omale Victor Ojogbane</h3>
+
+        <p>
+          APC House of Representatives Candidate
+          for Idah Federal Constituency.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>Quick Links</h3>
+
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="agenda.html">Agenda</a>
+        <a href="mission.html">Mission</a>
+        <a href="news.html">News</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="media.html">Media</a>
+        <a href="partners.html">Partners</a>
+        <a href="contact.html">Contact</a>
+
+      </div>
+
+
+      <div>
+
+        <h3>Legal</h3>
+
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+
+      </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+      © 2026 Omale Victor Ojogbane.
+      All Rights Reserved.
+
+    </div>
+
+  </footer>
+
+
+  <!-- MOBILE MENU -->
+  <script>
+
+    function toggleMenu() {
+
+      const navLinks = document.getElementById("navLinks");
+
+      navLinks.classList.toggle("show");
+
+    }
+
+  </script>
+
+</body>
+</html>
