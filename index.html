@@ -2,35 +2,92 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Victor Omale Ojogbane | Idah Federal Constituency</title>
+  <title>Victor Omale Ojogbane | House of Representatives Candidate</title>
 
-  <meta name="description" content="Victor Omale Ojogbane - House of Representatives Candidate for Idah Federal Constituency, Kogi State.">
+  <meta name="description"
+        content="Victor Omale Ojogbane — APC House of Representatives Candidate for Idah Federal Constituency, Kogi State.">
 
-  <!-- FAVICON -->
-  <link rel="icon" type="image/jpeg"
-        href="https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg">
+  <meta name="keywords"
+        content="Victor Omale Ojogbane, Idah Federal Constituency, Kogi State, APC, House of Representatives">
 
-  <!-- MOBILE BROWSER THEME -->
+  <meta name="author" content="Victor Omale Ojogbane">
+
+  <!-- Theme -->
   <meta name="theme-color" content="#087f23">
 
-  <!-- WEB APP MANIFEST -->
+  <!-- Favicon -->
+  <link rel="icon"
+        type="image/jpeg"
+        href="https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg">
+
+  <!-- Web App Manifest -->
   <link rel="manifest" href="manifest.json">
 
+
+  <!-- =========================
+       OPEN GRAPH
+       ========================= -->
+
+  <meta property="og:type" content="website">
+
+  <meta property="og:title"
+        content="Victor Omale Ojogbane | House of Representatives Candidate">
+
+  <meta property="og:description"
+        content="Victor Omale Ojogbane — APC House of Representatives Candidate for Idah Federal Constituency, Kogi State.">
+
+  <meta property="og:image"
+        content="https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg">
+
+  <meta property="og:image:alt"
+        content="Victor Omale Ojogbane">
+
+  <meta property="og:url"
+        content="">
+
+  <meta property="og:site_name"
+        content="Victor Omale Ojogbane">
+
+
+  <!-- =========================
+       TWITTER / X CARD
+       ========================= -->
+
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="twitter:title"
+        content="Victor Omale Ojogbane | House of Representatives Candidate">
+
+  <meta name="twitter:description"
+        content="Victor Omale Ojogbane — APC House of Representatives Candidate for Idah Federal Constituency, Kogi State.">
+
+  <meta name="twitter:image"
+        content="https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg">
+
+  <meta name="twitter:image:alt"
+        content="Victor Omale Ojogbane">
+
+
   <style>
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+    }
+
+    html {
       scroll-behavior: smooth;
     }
 
     body {
       font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: #111111;
       line-height: 1.6;
-      color: #222;
-      background: #fff;
     }
 
     a {
@@ -43,300 +100,313 @@
       display: block;
     }
 
-    /* HEADER */
+    .container {
+      width: 92%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+
+    /* =========================
+       HEADER
+       ========================= */
+
     header {
       background: #087f23;
-      color: #fff;
+      color: white;
       position: sticky;
       top: 0;
       z-index: 1000;
       box-shadow: 0 2px 10px rgba(0,0,0,0.15);
     }
 
-    .navbar {
-      max-width: 1200px;
-      margin: auto;
-      padding: 14px 20px;
+    .nav-container {
+      min-height: 75px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 20px;
     }
 
     .logo {
       font-size: 20px;
-      font-weight: 800;
-      letter-spacing: .5px;
+      font-weight: bold;
+      line-height: 1.2;
     }
 
     .logo span {
       display: block;
-      font-size: 11px;
-      font-weight: 400;
-      color: #d9ffd9;
-      margin-top: 2px;
+      font-size: 12px;
+      font-weight: normal;
+      margin-top: 4px;
+      opacity: 0.9;
     }
 
-    .nav-links {
+    nav ul {
+      list-style: none;
       display: flex;
-      gap: 18px;
       align-items: center;
+      gap: 20px;
     }
 
-    .nav-links a {
+    nav a {
+      color: white;
       font-size: 14px;
-      font-weight: 600;
-      padding: 8px 4px;
-      transition: .3s;
+      font-weight: bold;
+      transition: 0.3s;
     }
 
-    .nav-links a:hover {
-      color: #d7ffdc;
+    nav a:hover {
+      color: #d8ffd8;
     }
 
     .menu-btn {
       display: none;
-      background: transparent;
       border: none;
-      color: #fff;
-      font-size: 30px;
+      background: transparent;
+      color: white;
+      font-size: 28px;
       cursor: pointer;
     }
 
-    /* HERO */
+
+    /* =========================
+       HERO
+       ========================= */
+
     .hero {
       min-height: 650px;
       display: flex;
       align-items: center;
       background:
-        linear-gradient(rgba(0,80,20,.78), rgba(0,0,0,.65)),
+        linear-gradient(rgba(0,0,0,0.68), rgba(0,0,0,0.68)),
         url("https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg")
         center/cover no-repeat;
-      color: #fff;
+      color: white;
     }
 
     .hero-content {
-      max-width: 1200px;
-      width: 100%;
-      margin: auto;
-      padding: 70px 20px;
-      display: grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 50px;
-      align-items: center;
+      max-width: 760px;
+      padding: 80px 0;
     }
 
-    .hero-text h1 {
-      font-size: clamp(40px, 6vw, 72px);
+    .badge {
+      display: inline-block;
+      background: #087f23;
+      padding: 9px 18px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 6vw, 72px);
       line-height: 1.05;
       margin-bottom: 20px;
     }
 
-    .hero-text h1 span {
-      color: #d9ffdf;
+    .hero h1 span {
+      color: #8df59e;
     }
 
-    .hero-text h2 {
-      font-size: 23px;
-      margin-bottom: 15px;
-      font-weight: 500;
-    }
-
-    .hero-text p {
-      font-size: 17px;
+    .hero p {
+      font-size: 19px;
       max-width: 680px;
-      color: #f0fff2;
-      margin-bottom: 28px;
-    }
-
-    .party-badge {
-      display: inline-block;
-      background: #fff;
-      color: #087f23;
-      padding: 8px 16px;
-      border-radius: 30px;
-      font-weight: 800;
-      margin-bottom: 22px;
+      margin-bottom: 30px;
     }
 
     .hero-buttons {
       display: flex;
-      gap: 12px;
+      gap: 14px;
       flex-wrap: wrap;
     }
 
     .btn {
       display: inline-block;
-      padding: 13px 22px;
+      padding: 13px 23px;
       border-radius: 6px;
-      font-weight: 700;
-      transition: .3s;
+      font-weight: bold;
+      transition: 0.3s;
     }
 
     .btn-primary {
-      background: #fff;
-      color: #087f23;
+      background: #087f23;
+      color: white;
     }
 
     .btn-primary:hover {
-      background: #e8ffe9;
+      background: #055c19;
     }
 
-    .btn-outline {
-      border: 2px solid #fff;
-      color: #fff;
-    }
-
-    .btn-outline:hover {
-      background: #fff;
+    .btn-light {
+      background: white;
       color: #087f23;
     }
 
-    .hero-image {
-      display: flex;
-      justify-content: center;
+    .btn-light:hover {
+      background: #e8e8e8;
     }
 
-    .hero-image img {
-      width: 360px;
-      height: 460px;
-      object-fit: cover;
-      border-radius: 18px;
-      border: 6px solid rgba(255,255,255,.85);
-      box-shadow: 0 15px 40px rgba(0,0,0,.4);
+
+    /* =========================
+       INTRO STRIP
+       ========================= */
+
+    .intro-strip {
+      background: #111111;
+      color: white;
+      padding: 25px 0;
     }
 
-    /* GENERAL */
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 70px 20px;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 45px;
-    }
-
-    .section-title h2 {
-      color: #087f23;
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-
-    .section-title p {
-      max-width: 700px;
-      margin: auto;
-      color: #666;
-    }
-
-    /* INTRO */
-    .intro {
-      background: #f5faf6;
+    .intro-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
       text-align: center;
     }
 
-    .intro-text {
-      max-width: 900px;
-      margin: auto;
-      font-size: 18px;
-      color: #444;
+    .intro-item h3 {
+      color: #8df59e;
+      font-size: 14px;
+      margin-bottom: 5px;
+      text-transform: uppercase;
     }
 
-    /* ABOUT */
+    .intro-item p {
+      font-size: 15px;
+    }
+
+
+    /* =========================
+       GENERAL SECTION
+       ========================= */
+
+    section {
+      padding: 80px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 50px;
+    }
+
+    .section-heading h2 {
+      font-size: 38px;
+      margin-bottom: 12px;
+      color: #111111;
+    }
+
+    .section-heading p {
+      color: #555555;
+    }
+
+
+    /* =========================
+       ABOUT
+       ========================= */
+
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 50px;
+      gap: 55px;
       align-items: center;
+    }
+
+    .about-image {
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
     }
 
     .about-image img {
       width: 100%;
-      max-width: 500px;
-      margin: auto;
-      border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.15);
+      min-height: 450px;
+      object-fit: cover;
     }
 
-    .about-text h3 {
-      font-size: 30px;
-      color: #087f23;
-      margin-bottom: 15px;
+    .about-text h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
     }
 
     .about-text p {
-      color: #555;
-      margin-bottom: 15px;
+      color: #555555;
+      margin-bottom: 18px;
     }
 
-    .info-box {
-      margin-top: 20px;
-      padding: 18px;
-      background: #f4f8f4;
-      border-left: 5px solid #087f23;
-      border-radius: 5px;
+    .about-list {
+      list-style: none;
+      margin: 25px 0;
     }
 
-    .info-box strong {
+    .about-list li {
+      margin-bottom: 12px;
+      padding-left: 25px;
+      position: relative;
+    }
+
+    .about-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
       color: #087f23;
+      font-weight: bold;
     }
 
-    /* PRIORITIES */
+
+    /* =========================
+       PRIORITIES
+       ========================= */
+
     .priorities {
-      background: #f6f6f6;
+      background: #f5f7f5;
     }
 
-    .cards {
+    .priority-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 22px;
     }
 
-    .card {
-      background: #fff;
-      padding: 28px;
-      border-radius: 10px;
-      box-shadow: 0 5px 20px rgba(0,0,0,.08);
-      transition: .3s;
-      border-top: 4px solid #087f23;
+    .priority-card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      border-top: 5px solid #087f23;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.07);
     }
 
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card-number {
-      width: 42px;
-      height: 42px;
-      background: #087f23;
-      color: #fff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      margin-bottom: 15px;
-    }
-
-    .card h3 {
+    .priority-number {
+      font-size: 30px;
+      font-weight: bold;
       color: #087f23;
       margin-bottom: 10px;
     }
 
-    .card p {
-      color: #666;
+    .priority-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .priority-card p {
+      color: #666666;
       font-size: 15px;
     }
 
-    /* MISSION STRIP */
+
+    /* =========================
+       MISSION STRIP
+       ========================= */
+
     .mission-strip {
       background: #087f23;
-      color: #fff;
+      color: white;
       text-align: center;
     }
 
     .mission-strip h2 {
-      font-size: 34px;
+      font-size: 36px;
       margin-bottom: 15px;
     }
 
@@ -346,18 +416,22 @@
       font-size: 18px;
     }
 
-    /* AGENDA */
+
+    /* =========================
+       AGENDA
+       ========================= */
+
     .agenda-preview {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 20px;
+      gap: 25px;
     }
 
     .agenda-item {
-      padding: 22px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      background: #fff;
+      padding: 25px;
+      border: 1px solid #dddddd;
+      border-radius: 10px;
+      background: white;
     }
 
     .agenda-item h3 {
@@ -365,35 +439,53 @@
       margin-bottom: 8px;
     }
 
-    /* GALLERY */
+    .agenda-item p {
+      color: #555555;
+    }
+
+    .center-button {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+
+    /* =========================
+       GALLERY
+       ========================= */
+
     .gallery {
-      background: #f6f6f6;
+      background: #f5f7f5;
     }
 
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 15px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
     }
 
-    .gallery-grid a {
+    .gallery-card {
       overflow: hidden;
-      border-radius: 8px;
-      background: #fff;
+      border-radius: 12px;
+      background: white;
+      box-shadow: 0 7px 20px rgba(0,0,0,0.08);
     }
 
-    .gallery-grid img {
+    .gallery-card img {
       width: 100%;
-      height: 220px;
+      height: 270px;
       object-fit: cover;
-      transition: .4s;
+      transition: transform 0.4s;
     }
 
-    .gallery-grid img:hover {
+    .gallery-card:hover img {
       transform: scale(1.05);
     }
 
-    /* NEWS */
+
+    /* =========================
+       NEWS
+       ========================= */
+
     .news-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -401,382 +493,339 @@
     }
 
     .news-card {
-      background: #fff;
-      border-radius: 10px;
+      border: 1px solid #dddddd;
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 5px 18px rgba(0,0,0,.08);
+      background: white;
     }
 
     .news-card img {
       width: 100%;
-      height: 210px;
+      height: 220px;
       object-fit: cover;
     }
 
     .news-content {
-      padding: 22px;
+      padding: 25px;
     }
 
     .news-content small {
       color: #087f23;
-      font-weight: 700;
+      font-weight: bold;
     }
 
     .news-content h3 {
-      margin: 8px 0;
+      margin: 10px 0;
     }
 
     .news-content p {
-      color: #666;
-      font-size: 14px;
-    }
-
-    /* CONTACT */
-    .contact-section {
-      background: #f5faf6;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 35px;
-    }
-
-    .contact-box {
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 5px 20px rgba(0,0,0,.07);
-    }
-
-    .contact-box h3 {
-      color: #087f23;
+      color: #666666;
       margin-bottom: 15px;
     }
 
-    .contact-item {
-      padding: 12px 0;
-      border-bottom: 1px solid #eee;
-    }
 
-    .contact-item strong {
-      display: block;
-      color: #333;
-    }
+    /* =========================
+       CONTACT CTA
+       ========================= */
 
-    .contact-item a {
-      color: #087f23;
-      font-weight: 600;
-    }
-
-    /* CTA */
-    .cta {
-      background: #111;
-      color: #fff;
+    .contact-cta {
+      background: #111111;
+      color: white;
       text-align: center;
     }
 
-    .cta h2 {
-      font-size: 35px;
-      margin-bottom: 12px;
+    .contact-cta h2 {
+      font-size: 38px;
+      margin-bottom: 15px;
     }
 
-    .cta p {
-      max-width: 750px;
+    .contact-cta p {
+      max-width: 700px;
       margin: 0 auto 25px;
-      color: #ddd;
+      color: #dddddd;
     }
 
-    /* FOOTER */
+
+    /* =========================
+       FOOTER
+       ========================= */
+
     footer {
-      background: #061b0a;
-      color: #fff;
+      background: #050505;
+      color: white;
+      padding: 50px 0 20px;
     }
 
     .footer-grid {
-      max-width: 1200px;
-      margin: auto;
-      padding: 55px 20px 30px;
       display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr;
+      grid-template-columns: 1.4fr 1fr 1fr;
       gap: 40px;
+      margin-bottom: 35px;
     }
 
-    .footer-col h3 {
-      color: #8cff9c;
+    footer h3 {
       margin-bottom: 15px;
+      color: #8df59e;
     }
 
-    .footer-col p {
-      color: #c8d4ca;
+    footer p,
+    footer li {
+      color: #bbbbbb;
       font-size: 14px;
     }
 
-    .footer-links {
+    footer ul {
       list-style: none;
     }
 
-    .footer-links li {
+    footer li {
       margin-bottom: 8px;
     }
 
-    .footer-links a {
-      color: #d5dfd7;
-      font-size: 14px;
-    }
-
-    .footer-links a:hover {
-      color: #8cff9c;
+    footer a:hover {
+      color: white;
     }
 
     .copyright {
-      border-top: 1px solid rgba(255,255,255,.1);
+      border-top: 1px solid #333333;
+      padding-top: 20px;
       text-align: center;
-      padding: 18px 20px;
-      color: #aeb9b0;
+      color: #888888;
       font-size: 13px;
     }
 
-    /* MOBILE */
+
+    /* =========================
+       MOBILE
+       ========================= */
+
     @media (max-width: 900px) {
+
+      nav ul {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: #087f23;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 25px;
+        gap: 18px;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
       .menu-btn {
         display: block;
       }
 
-      .nav-links {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: #087f23;
-        display: none;
-        flex-direction: column;
-        align-items: stretch;
-        padding: 15px 20px 25px;
-      }
-
-      .nav-links.active {
-        display: flex;
-      }
-
-      .nav-links a {
-        padding: 12px 5px;
-        border-bottom: 1px solid rgba(255,255,255,.12);
-      }
-
-      .hero-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-
-      .hero-buttons {
-        justify-content: center;
-      }
-
-      .hero-image {
-        order: -1;
-      }
-
-      .hero-image img {
-        width: 280px;
-        height: 350px;
-      }
-
-      .about-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .cards,
+      .intro-grid,
+      .priority-grid,
+      .gallery-grid,
       .news-grid {
         grid-template-columns: 1fr 1fr;
       }
 
-      .gallery-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .navbar {
-        padding: 12px 15px;
-      }
-
-      .logo {
-        font-size: 17px;
-      }
-
-      .hero {
-        min-height: auto;
-      }
-
-      .hero-content {
-        padding: 55px 18px;
-      }
-
-      .hero-text h1 {
-        font-size: 42px;
-      }
-
-      .hero-text h2 {
-        font-size: 19px;
-      }
-
-      .container {
-        padding: 55px 18px;
-      }
-
-      .section-title h2 {
-        font-size: 29px;
-      }
-
-      .cards,
-      .news-grid,
+      .about-grid,
       .agenda-preview,
-      .gallery-grid,
       .footer-grid {
         grid-template-columns: 1fr;
       }
 
-      .gallery-grid img {
-        height: 260px;
+    }
+
+
+    @media (max-width: 600px) {
+
+      section {
+        padding: 60px 0;
       }
 
-      .cta h2 {
-        font-size: 28px;
+      .hero {
+        min-height: 600px;
       }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .intro-grid,
+      .priority-grid,
+      .gallery-grid,
+      .news-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-heading h2,
+      .about-text h2,
+      .mission-strip h2,
+      .contact-cta h2 {
+        font-size: 30px;
+      }
+
+      .about-image img {
+        min-height: 350px;
+      }
+
     }
+
   </style>
 </head>
 
+
 <body>
 
-<!-- HEADER -->
-<header>
-  <nav class="navbar">
 
-    <a href="index.html" class="logo">
-      VICTOR OMALE OJOGBANE
-      <span>Idah Federal Constituency</span>
-    </a>
+  <!-- =========================
+       HEADER
+       ========================= -->
 
-    <button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">
-      ☰
-    </button>
+  <header>
 
-    <div class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="agenda.html">Agenda</a>
-      <a href="mission.html">Mission & Vision</a>
-      <a href="governance.html">Governance</a>
-      <a href="news.html">News</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="media.html">Media</a>
-      <a href="resources.html">Resources</a>
-      <a href="contact.html">Contact</a>
+    <div class="container nav-container">
+
+      <a href="index.html" class="logo">
+        VICTOR OMALE OJOGBANE
+        <span>House of Representatives Candidate</span>
+      </a>
+
+      <button class="menu-btn"
+              onclick="toggleMenu()"
+              aria-label="Open navigation menu">
+        ☰
+      </button>
+
+      <nav>
+        <ul id="navMenu">
+
+          <li><a href="index.html">Home</a></li>
+
+          <li><a href="about.html">About</a></li>
+
+          <li><a href="agenda.html">7-Point Agenda</a></li>
+
+          <li><a href="mission.html">Mission & Vision</a></li>
+
+          <li><a href="governance.html">Governance</a></li>
+
+          <li><a href="news.html">News</a></li>
+
+          <li><a href="gallery.html">Gallery</a></li>
+
+          <li><a href="media.html">Media</a></li>
+
+          <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+      </nav>
+
     </div>
 
-  </nav>
-</header>
+  </header>
 
 
-<!-- HERO -->
-<section class="hero">
+  <!-- =========================
+       HERO
+       ========================= -->
 
-  <div class="hero-content">
+  <section class="hero">
 
-    <div class="hero-text">
+    <div class="container">
 
-      <span class="party-badge">APC</span>
+      <div class="hero-content">
 
-      <h1>
-        Victor Omale
-        <span>Ojogbane</span>
-      </h1>
+        <div class="badge">
+          APC • HOUSE OF REPRESENTATIVES
+        </div>
 
-      <h2>House of Representatives Candidate</h2>
+        <h1>
+          Victor Omale <span>Ojogbane</span>
+        </h1>
 
-      <p>
-        Idah Federal Constituency, Kogi State, Nigeria.
-        A development-focused platform centred on education,
-        empowerment, agriculture, infrastructure, healthcare,
-        accountability and inclusive community development.
-      </p>
+        <p>
+          House of Representatives Candidate for
+          Idah Federal Constituency, Kogi State.
+        </p>
 
-      <div class="hero-buttons">
-        <a href="about.html" class="btn btn-primary">
-          About Victor
-        </a>
+        <div class="hero-buttons">
 
-        <a href="agenda.html" class="btn btn-outline">
-          7-Point Agenda
-        </a>
+          <a href="about.html"
+             class="btn btn-primary">
+            About the Candidate
+          </a>
+
+          <a href="agenda.html"
+             class="btn btn-light">
+            View 7-Point Agenda
+          </a>
+
+        </div>
+
       </div>
 
     </div>
 
-    <div class="hero-image">
-      <img
-        src="https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg"
-        alt="Victor Omale Ojogbane">
+  </section>
+
+
+  <!-- =========================
+       INTRO STRIP
+       ========================= -->
+
+  <div class="intro-strip">
+
+    <div class="container intro-grid">
+
+      <div class="intro-item">
+        <h3>Position</h3>
+        <p>House of Representatives Candidate</p>
+      </div>
+
+      <div class="intro-item">
+        <h3>Constituency</h3>
+        <p>Idah Federal Constituency</p>
+      </div>
+
+      <div class="intro-item">
+        <h3>Location</h3>
+        <p>Kogi State, Nigeria</p>
+      </div>
+
     </div>
 
   </div>
 
-</section>
 
+  <!-- =========================
+       ABOUT
+       ========================= -->
 
-<!-- INTRO -->
-<section class="intro">
-  <div class="container">
+  <section>
 
-    <div class="section-title">
-      <h2>A New Direction</h2>
-    </div>
-
-    <p class="intro-text">
-      Victor Omale Ojogbane's development agenda places emphasis on
-      practical community development, human capital development,
-      economic opportunity, infrastructure, healthcare and
-      accountable representation.
-    </p>
-
-  </div>
-</section>
-
-
-<!-- ABOUT -->
-<section>
-  <div class="container">
-
-    <div class="section-title">
-      <h2>About Victor Omale Ojogbane</h2>
-      <p>
-        Background information and constituency focus.
-      </p>
-    </div>
-
-    <div class="about-grid">
+    <div class="container about-grid">
 
       <div class="about-image">
+
         <img
           src="https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg"
           alt="Victor Omale Ojogbane">
+
       </div>
 
       <div class="about-text">
 
-        <h3>House of Representatives Candidate</h3>
+        <h2>About Victor Omale Ojogbane</h2>
 
         <p>
-          Victor Omale Ojogbane is an APC candidate for the
-          House of Representatives representing the Idah Federal
-          Constituency.
+          Victor Omale Ojogbane is an APC House of Representatives
+          Candidate for Idah Federal Constituency, Kogi State.
         </p>
 
         <p>
@@ -784,536 +833,596 @@
           Kogi State.
         </p>
 
-        <p>
-          His stated development priorities cover education,
-          youth empowerment, agriculture, infrastructure,
-          healthcare, good governance and community development.
-        </p>
+        <ul class="about-list">
 
-        <div class="info-box">
-          <strong>Constituency:</strong><br>
-          Idah Federal Constituency, Kogi State, Nigeria.
-        </div>
+          <li>Education and human capital development</li>
 
-      </div>
+          <li>Youth empowerment and employment</li>
 
-    </div>
+          <li>Agriculture and rural economic development</li>
 
-  </div>
-</section>
+          <li>Infrastructure and basic amenities</li>
 
+          <li>Healthcare and social development</li>
 
-<!-- MISSION STRIP -->
-<section class="mission-strip">
+          <li>Good governance and accountability</li>
 
-  <div class="container">
+        </ul>
 
-    <h2>Service, Accountability & Development</h2>
-
-    <p>
-      Representation should focus on accessibility,
-      accountability, responsible leadership and measurable
-      community development.
-    </p>
-
-  </div>
-
-</section>
-
-
-<!-- PRIORITIES -->
-<section class="priorities">
-
-  <div class="container">
-
-    <div class="section-title">
-      <h2>Development Priorities</h2>
-      <p>
-        Seven key areas outlined in the development agenda.
-      </p>
-    </div>
-
-    <div class="cards">
-
-      <div class="card">
-        <div class="card-number">1</div>
-        <h3>Education & Human Capital</h3>
-        <p>
-          Scholarships, educational materials, school improvement,
-          skills acquisition, digital literacy and opportunities
-          for young people.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="card-number">2</div>
-        <h3>Youth Empowerment</h3>
-        <p>
-          Entrepreneurship, vocational training, start-up support,
-          internships and employment opportunities.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="card-number">3</div>
-        <h3>Agriculture & Fisheries</h3>
-        <p>
-          Support for farmers, fishermen, cooperatives, modern
-          production, agro-processing and market access.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="card-number">4</div>
-        <h3>Infrastructure</h3>
-        <p>
-          Roads, clean water, electricity, drainage and other
-          basic amenities that support communities.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="card-number">5</div>
-        <h3>Healthcare</h3>
-        <p>
-          Better-equipped primary healthcare, medical outreach,
-          maternal and child healthcare and essential services.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="card-number">6</div>
-        <h3>Good Governance</h3>
-        <p>
-          Accessibility, transparency, constituency engagement,
-          accountability and effective representation.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="card-number">7</div>
-        <h3>Community & Unity</h3>
-        <p>
-          Peace, unity, community participation and cooperation
-          with traditional, religious and community stakeholders.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- AGENDA PREVIEW -->
-<section>
-
-  <div class="container">
-
-    <div class="section-title">
-      <h2>7-Point Agenda</h2>
-      <p>
-        Key areas of development outlined for the constituency.
-      </p>
-    </div>
-
-    <div class="agenda-preview">
-
-      <div class="agenda-item">
-        <h3>Education & Human Capital Development</h3>
-        <p>
-          Supporting learning, skills, ICT and opportunities
-          for students and young people.
-        </p>
-      </div>
-
-      <div class="agenda-item">
-        <h3>Youth Empowerment & Employment</h3>
-        <p>
-          Encouraging entrepreneurship, vocational skills and
-          employment opportunities.
-        </p>
-      </div>
-
-      <div class="agenda-item">
-        <h3>Agriculture, Fisheries & Rural Economy</h3>
-        <p>
-          Strengthening agricultural productivity, processing
-          and market access.
-        </p>
-      </div>
-
-      <div class="agenda-item">
-        <h3>Infrastructure & Basic Amenities</h3>
-        <p>
-          Focusing on roads, water, electricity and community
-          infrastructure.
-        </p>
-      </div>
-
-      <div class="agenda-item">
-        <h3>Healthcare & Social Development</h3>
-        <p>
-          Supporting primary healthcare and vulnerable groups.
-        </p>
-      </div>
-
-      <div class="agenda-item">
-        <h3>Good Governance & Representation</h3>
-        <p>
-          Promoting accountability, accessibility and effective
-          constituency engagement.
-        </p>
-      </div>
-
-    </div>
-
-    <div style="text-align:center; margin-top:30px;">
-      <a href="agenda.html" class="btn"
-         style="background:#087f23;color:#fff;">
-        View Full 7-Point Agenda
-      </a>
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- GALLERY -->
-<section class="gallery">
-
-  <div class="container">
-
-    <div class="section-title">
-      <h2>Gallery</h2>
-      <p>
-        Selected photographs and media from the website gallery.
-      </p>
-    </div>
-
-    <div class="gallery-grid">
-
-      <a href="gallery.html">
-        <img
-          src="https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg"
-          alt="Victor Omale Ojogbane">
-      </a>
-
-      <a href="gallery.html">
-        <img
-          src="https://i.ibb.co/1G8nW4Sh/IMG-20260829-WA0222-1.jpg"
-          alt="Community engagement">
-      </a>
-
-      <a href="gallery.html">
-        <img
-          src="https://i.ibb.co/RpxbD2ht/IMG-20260829-WA0179.jpg"
-          alt="Community development">
-      </a>
-
-      <a href="gallery.html">
-        <img
-          src="https://i.ibb.co/WvBF51HX/IMG-20260829-WA0265.jpg"
-          alt="Community activity">
-      </a>
-
-    </div>
-
-    <div style="text-align:center; margin-top:30px;">
-      <a href="gallery.html" class="btn"
-         style="background:#087f23;color:#fff;">
-        View Full Gallery
-      </a>
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- NEWS -->
-<section>
-
-  <div class="container">
-
-    <div class="section-title">
-      <h2>News & Updates</h2>
-      <p>
-        Latest information and public updates.
-      </p>
-    </div>
-
-    <div class="news-grid">
-
-      <article class="news-card">
-
-        <img
-          src="https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg"
-          alt="Victor Omale Ojogbane">
-
-        <div class="news-content">
-          <small>PUBLIC INFORMATION</small>
-          <h3>Development Agenda</h3>
-          <p>
-            Read the seven development areas outlined for the
-            Idah Federal Constituency.
-          </p>
-
-          <br>
-
-          <a href="agenda.html"
-             style="color:#087f23;font-weight:bold;">
-            Read Agenda →
-          </a>
-        </div>
-
-      </article>
-
-
-      <article class="news-card">
-
-        <img
-          src="https://i.ibb.co/RpxbD2ht/IMG-20260829-WA0179.jpg"
-          alt="Community development">
-
-        <div class="news-content">
-          <small>DEVELOPMENT</small>
-          <h3>Mission & Vision</h3>
-          <p>
-            Explore the development priorities covering
-            communities across the constituency.
-          </p>
-
-          <br>
-
-          <a href="mission.html"
-             style="color:#087f23;font-weight:bold;">
-            Learn More →
-          </a>
-        </div>
-
-      </article>
-
-
-      <article class="news-card">
-
-        <img
-          src="https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg"
-          alt="Victor Omale Ojogbane">
-
-        <div class="news-content">
-          <small>INFORMATION</small>
-          <h3>Stay Updated</h3>
-          <p>
-            Visit the news and announcements pages for
-            published updates.
-          </p>
-
-          <br>
-
-          <a href="news.html"
-             style="color:#087f23;font-weight:bold;">
-            View News →
-          </a>
-        </div>
-
-      </article>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- CONTACT -->
-<section class="contact-section">
-
-  <div class="container">
-
-    <div class="section-title">
-      <h2>Contact</h2>
-      <p>
-        For enquiries and general information.
-      </p>
-    </div>
-
-    <div class="contact-grid">
-
-      <div class="contact-box">
-
-        <h3>Candidate Information</h3>
-
-        <div class="contact-item">
-          <strong>Name</strong>
-          Victor Omale Ojogbane
-        </div>
-
-        <div class="contact-item">
-          <strong>Position</strong>
-          House of Representatives Candidate
-        </div>
-
-        <div class="contact-item">
-          <strong>Party</strong>
-          APC
-        </div>
-
-        <div class="contact-item">
-          <strong>Constituency</strong>
-          Idah Federal Constituency, Kogi State
-        </div>
-
-        <div class="contact-item">
-          <strong>Origin</strong>
-          Unale, Ibaji Local Government Area, Kogi State
-        </div>
-
-      </div>
-
-
-      <div class="contact-box">
-
-        <h3>Get In Touch</h3>
-
-        <div class="contact-item">
-          <strong>Phone</strong>
-          <a href="tel:+2348036131193">
-            +234 803 613 1193
-          </a>
-        </div>
-
-        <div class="contact-item">
-          <strong>Location</strong>
-          Idah Federal Constituency,
-          Kogi State, Nigeria
-        </div>
-
-        <br>
-
-        <a href="contact.html"
-           class="btn"
-           style="background:#087f23;color:#fff;">
-          Contact Page
+        <a href="about.html"
+           class="btn btn-primary">
+          Read More
         </a>
 
       </div>
 
     </div>
 
-  </div>
-
-</section>
+  </section>
 
 
-<!-- CTA -->
-<section class="cta">
+  <!-- =========================
+       PRIORITIES
+       ========================= -->
 
-  <div class="container">
+  <section class="priorities">
 
-    <h2>Explore the Development Agenda</h2>
+    <div class="container">
 
-    <p>
-      Read the full seven-point agenda and the stated priorities
-      covering education, empowerment, agriculture, infrastructure,
-      healthcare, governance and community development.
-    </p>
+      <div class="section-heading">
 
-    <a href="agenda.html" class="btn btn-primary">
-      View 7-Point Agenda
-    </a>
+        <h2>Key Development Priorities</h2>
 
-  </div>
+        <p>
+          Areas identified for attention under the proposed
+          development agenda.
+        </p>
 
-</section>
+      </div>
 
 
-<!-- FOOTER -->
-<footer>
+      <div class="priority-grid">
 
-  <div class="footer-grid">
+        <div class="priority-card">
 
-    <div class="footer-col">
+          <div class="priority-number">01</div>
 
-      <h3>Victor Omale Ojogbane</h3>
+          <h3>Education</h3>
+
+          <p>
+            Supporting education, skills acquisition,
+            digital literacy and human capital development.
+          </p>
+
+        </div>
+
+
+        <div class="priority-card">
+
+          <div class="priority-number">02</div>
+
+          <h3>Youth Empowerment</h3>
+
+          <p>
+            Promoting entrepreneurship, vocational skills,
+            employment opportunities and access to support.
+          </p>
+
+        </div>
+
+
+        <div class="priority-card">
+
+          <div class="priority-number">03</div>
+
+          <h3>Agriculture</h3>
+
+          <p>
+            Supporting farmers, fisheries, livestock,
+            agro-processing and rural economic development.
+          </p>
+
+        </div>
+
+
+        <div class="priority-card">
+
+          <div class="priority-number">04</div>
+
+          <h3>Infrastructure</h3>
+
+          <p>
+            Roads, clean water, electricity, drainage
+            and other basic community infrastructure.
+          </p>
+
+        </div>
+
+
+        <div class="priority-card">
+
+          <div class="priority-number">05</div>
+
+          <h3>Healthcare</h3>
+
+          <p>
+            Strengthening primary healthcare and supporting
+            maternal, child and community health initiatives.
+          </p>
+
+        </div>
+
+
+        <div class="priority-card">
+
+          <div class="priority-number">06</div>
+
+          <h3>Good Governance</h3>
+
+          <p>
+            Accountability, transparency, accessibility
+            and effective representation.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       MISSION STRIP
+       ========================= -->
+
+  <section class="mission-strip">
+
+    <div class="container">
+
+      <h2>
+        Service, Accountability & Inclusive Development
+      </h2>
 
       <p>
-        House of Representatives Candidate for
-        Idah Federal Constituency, Kogi State.
+        A proposed approach to representation centred on
+        community engagement, development priorities,
+        accountability and inclusive participation.
       </p>
 
-      <br>
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       AGENDA PREVIEW
+       ========================= -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <h2>7-Point Development Agenda</h2>
+
+        <p>
+          Explore the seven priority areas outlined for
+          Idah Federal Constituency.
+        </p>
+
+      </div>
+
+
+      <div class="agenda-preview">
+
+        <div class="agenda-item">
+
+          <h3>01. Education & Human Capital</h3>
+
+          <p>
+            Scholarships, educational materials,
+            school improvement, vocational training
+            and digital literacy.
+          </p>
+
+        </div>
+
+
+        <div class="agenda-item">
+
+          <h3>02. Youth Empowerment & Employment</h3>
+
+          <p>
+            Entrepreneurship, vocational programmes,
+            internships and employment opportunities.
+          </p>
+
+        </div>
+
+
+        <div class="agenda-item">
+
+          <h3>03. Agriculture & Rural Economy</h3>
+
+          <p>
+            Farming, fisheries, livestock, agricultural
+            inputs, market access and agro-processing.
+          </p>
+
+        </div>
+
+
+        <div class="agenda-item">
+
+          <h3>04. Infrastructure & Basic Amenities</h3>
+
+          <p>
+            Roads, water, electricity, drainage and
+            other community infrastructure.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="center-button">
+
+        <a href="agenda.html"
+           class="btn btn-primary">
+          View Full 7-Point Agenda
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       GALLERY
+       ========================= -->
+
+  <section class="gallery">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <h2>Gallery</h2>
+
+        <p>
+          Selected photographs and media from activities
+          and engagements.
+        </p>
+
+      </div>
+
+
+      <div class="gallery-grid">
+
+        <a href="gallery.html"
+           class="gallery-card">
+
+          <img
+            src="https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg"
+            alt="Victor Omale Ojogbane">
+
+        </a>
+
+
+        <a href="gallery.html"
+           class="gallery-card">
+
+          <img
+            src="https://i.ibb.co/RpxbD2ht/IMG-20260829-WA0179.jpg"
+            alt="Community activity">
+
+        </a>
+
+
+        <a href="gallery.html"
+           class="gallery-card">
+
+          <img
+            src="https://i.ibb.co/1G8nW4Sh/IMG-20260829-WA0222-1.jpg"
+            alt="Community engagement">
+
+        </a>
+
+      </div>
+
+
+      <div class="center-button">
+
+        <a href="gallery.html"
+           class="btn btn-primary">
+          View Full Gallery
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       NEWS
+       ========================= -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <h2>Latest News & Updates</h2>
+
+        <p>
+          News, announcements and information relating
+          to activities and development priorities.
+        </p>
+
+      </div>
+
+
+      <div class="news-grid">
+
+        <article class="news-card">
+
+          <img
+            src="https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg"
+            alt="Victor Omale Ojogbane">
+
+          <div class="news-content">
+
+            <small>FEATURED</small>
+
+            <h3>
+              Victor Omale Ojogbane
+            </h3>
+
+            <p>
+              Information about the candidate and the
+              proposed development agenda.
+            </p>
+
+            <a href="about.html"
+               class="btn btn-primary">
+              Read More
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <article class="news-card">
+
+          <img
+            src="https://i.ibb.co/RpxbD2ht/IMG-20260829-WA0179.jpg"
+            alt="Community development">
+
+          <div class="news-content">
+
+            <small>DEVELOPMENT</small>
+
+            <h3>
+              Development Priorities
+            </h3>
+
+            <p>
+              Explore the key areas identified in the
+              development agenda.
+            </p>
+
+            <a href="agenda.html"
+               class="btn btn-primary">
+              View Agenda
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <article class="news-card">
+
+          <img
+            src="https://i.ibb.co/1G8nW4Sh/IMG-20260829-WA0222-1.jpg"
+            alt="Community engagement">
+
+          <div class="news-content">
+
+            <small>MEDIA</small>
+
+            <h3>
+              Media & Gallery
+            </h3>
+
+            <p>
+              View available photographs and media
+              resources.
+            </p>
+
+            <a href="media.html"
+               class="btn btn-primary">
+              Media Centre
+            </a>
+
+          </div>
+
+        </article>
+
+      </div>
+
+
+      <div class="center-button">
+
+        <a href="news.html"
+           class="btn btn-primary">
+          View All News
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CONTACT CTA
+       ========================= -->
+
+  <section class="contact-cta">
+
+    <div class="container">
+
+      <h2>
+        Contact the Campaign Office
+      </h2>
 
       <p>
-        APC
+        For enquiries, information and communication
+        relating to Victor Omale Ojogbane and the
+        proposed development agenda.
       </p>
 
-    </div>
-
-
-    <div class="footer-col">
-
-      <h3>Quick Links</h3>
-
-      <ul class="footer-links">
-
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="agenda.html">7-Point Agenda</a></li>
-        <li><a href="mission.html">Mission & Vision</a></li>
-        <li><a href="governance.html">Governance</a></li>
-        <li><a href="news.html">News</a></li>
-
-      </ul>
+      <a href="contact.html"
+         class="btn btn-primary">
+        Contact Us
+      </a>
 
     </div>
 
+  </section>
 
-    <div class="footer-col">
 
-      <h3>More</h3>
+  <!-- =========================
+       FOOTER
+       ========================= -->
 
-      <ul class="footer-links">
+  <footer>
 
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="media.html">Media</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="privacy.html">Privacy Policy</a></li>
+    <div class="container">
 
-      </ul>
+      <div class="footer-grid">
+
+        <div>
+
+          <h3>
+            Victor Omale Ojogbane
+          </h3>
+
+          <p>
+            APC House of Representatives Candidate
+            for Idah Federal Constituency, Kogi State.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h3>Quick Links</h3>
+
+          <ul>
+
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="agenda.html">7-Point Agenda</a></li>
+
+            <li><a href="mission.html">Mission & Vision</a></li>
+
+            <li><a href="governance.html">Governance</a></li>
+
+            <li><a href="news.html">News</a></li>
+
+            <li><a href="gallery.html">Gallery</a></li>
+
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <h3>Contact</h3>
+
+          <ul>
+
+            <li>
+              +234 803 613 1193
+            </li>
+
+            <li>
+              Idah Federal Constituency
+            </li>
+
+            <li>
+              Kogi State, Nigeria
+            </li>
+
+            <li>
+              <a href="contact.html">
+                Contact Page
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+
+      <div class="copyright">
+
+        © 2026 Victor Omale Ojogbane.
+        All rights reserved.
+
+      </div>
 
     </div>
 
-  </div>
+  </footer>
 
 
-  <div class="copyright">
+  <!-- =========================
+       MOBILE MENU SCRIPT
+       ========================= -->
 
-    © 2026 Victor Omale Ojogbane.
-    All rights reserved.
+  <script>
 
-  </div>
+    function toggleMenu() {
 
-</footer>
+      const menu = document.getElementById("navMenu");
+
+      menu.classList.toggle("active");
+
+    }
 
 
-<!-- MOBILE MENU SCRIPT -->
-<script>
-  function toggleMenu() {
-    const nav = document.getElementById("navLinks");
-    nav.classList.toggle("active");
-  }
+    document.querySelectorAll("#navMenu a").forEach(function(link) {
 
-  document.querySelectorAll(".nav-links a").forEach(function(link) {
-    link.addEventListener("click", function() {
-      document.getElementById("navLinks").classList.remove("active");
+      link.addEventListener("click", function() {
+
+        document
+          .getElementById("navMenu")
+          .classList.remove("active");
+
+      });
+
     });
-  });
-</script>
+
+  </script>
+
 
 </body>
 </html>
