@@ -1,0 +1,556 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Resources | Victor Omale Ojogbane</title><meta name="description" content="Resources and public information from Victor Omale Ojogbane for the Idah/Igalamela/Ofu/Ibaji Federal Constituency."><style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f7f5;
+    color:#222;
+    line-height:1.6;
+}
+
+/* HEADER */
+header{
+    background:#0b5d2a;
+    color:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 15px rgba(0,0,0,.15);
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    padding:15px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:21px;
+    font-weight:800;
+    letter-spacing:.5px;
+}
+
+.logo span{
+    display:block;
+    font-size:12px;
+    font-weight:400;
+    opacity:.9;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:17px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ffd700;
+}
+
+.menu-btn{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* HERO */
+.hero{
+    min-height:420px;
+    background:
+    linear-gradient(rgba(0,65,28,.86),rgba(0,65,28,.86)),
+    url("https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    padding:60px 20px;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.badge{
+    display:inline-block;
+    background:#ffd700;
+    color:#111;
+    padding:8px 20px;
+    border-radius:30px;
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:48px;
+    line-height:1.15;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:19px;
+    max-width:720px;
+    margin:auto;
+}
+
+/* MAIN */
+.container{
+    max-width:1150px;
+    margin:auto;
+    padding:70px 20px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title h2{
+    color:#0b5d2a;
+    font-size:35px;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    max-width:720px;
+    margin:auto;
+    color:#666;
+}
+
+/* RESOURCE GRID */
+.resource-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.resource-card{
+    background:white;
+    padding:30px 25px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.07);
+    border-top:5px solid #0b5d2a;
+    transition:.3s;
+    display:flex;
+    flex-direction:column;
+}
+
+.resource-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+.icon{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#e9f4ed;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    margin-bottom:18px;
+}
+
+.resource-card h3{
+    color:#0b5d2a;
+    font-size:21px;
+    margin-bottom:10px;
+}
+
+.resource-card p{
+    color:#666;
+    margin-bottom:22px;
+    flex-grow:1;
+}
+
+.resource-btn{
+    display:inline-block;
+    text-decoration:none;
+    background:#0b5d2a;
+    color:white;
+    padding:11px 18px;
+    border-radius:25px;
+    text-align:center;
+    font-weight:700;
+    transition:.3s;
+}
+
+.resource-btn:hover{
+    background:#ffd700;
+    color:#111;
+}
+
+/* FEATURED RESOURCE */
+.featured{
+    margin-top:60px;
+    background:#0b5d2a;
+    color:white;
+    border-radius:18px;
+    padding:45px;
+    display:grid;
+    grid-template-columns:1.4fr 1fr;
+    gap:35px;
+    align-items:center;
+}
+
+.featured h2{
+    font-size:31px;
+    margin-bottom:15px;
+}
+
+.featured p{
+    color:#e7eee9;
+}
+
+.featured-image img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    border-radius:14px;
+}
+
+.btn{
+    display:inline-block;
+    text-decoration:none;
+    padding:12px 24px;
+    border-radius:30px;
+    font-weight:700;
+    margin-top:20px;
+}
+
+.btn-yellow{
+    background:#ffd700;
+    color:#111;
+}
+
+.btn-yellow:hover{
+    background:white;
+}
+
+/* INFORMATION */
+.info-section{
+    margin-top:60px;
+}
+
+.info-box{
+    background:white;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.06);
+}
+
+.info-box h3{
+    color:#0b5d2a;
+    margin-bottom:12px;
+    font-size:24px;
+}
+
+.info-box ul{
+    padding-left:22px;
+}
+
+.info-box li{
+    margin-bottom:10px;
+}
+
+/* CONTACT */
+.contact-box{
+    margin-top:50px;
+    background:#f0f6f2;
+    border-left:6px solid #0b5d2a;
+    padding:30px;
+    border-radius:10px;
+}
+
+.contact-box h3{
+    color:#0b5d2a;
+    margin-bottom:10px;
+}
+
+.contact-box a{
+    color:#0b5d2a;
+    font-weight:bold;
+}
+
+/* FOOTER */
+footer{
+    background:#111;
+    color:#ddd;
+    padding:50px 20px 20px;
+}
+
+.footer-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
+}
+
+footer h3{
+    color:#ffd700;
+    margin-bottom:15px;
+}
+
+footer ul{
+    list-style:none;
+}
+
+footer li{
+    margin-bottom:8px;
+}
+
+footer a{
+    color:#ddd;
+    text-decoration:none;
+}
+
+footer a:hover{
+    color:#ffd700;
+}
+
+.footer-bottom{
+    border-top:1px solid #333;
+    margin-top:35px;
+    padding-top:20px;
+    text-align:center;
+    font-size:13px;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+
+    .menu-btn{
+        display:block;
+    }
+
+    nav{
+        display:none;
+        position:absolute;
+        top:68px;
+        left:0;
+        width:100%;
+        background:#0b5d2a;
+    }
+
+    nav.active{
+        display:block;
+    }
+
+    nav ul{
+        flex-direction:column;
+        padding:20px;
+        gap:0;
+    }
+
+    nav li{
+        border-bottom:1px solid rgba(255,255,255,.15);
+    }
+
+    nav a{
+        display:block;
+        padding:14px 5px;
+    }
+
+    .resource-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .featured{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    .resource-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        min-height:370px;
+    }
+
+    .hero h1{
+        font-size:31px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .section-title h2{
+        font-size:28px;
+    }
+
+    .featured{
+        padding:30px 20px;
+    }
+
+    .featured h2{
+        font-size:25px;
+    }
+
+    .featured-image img{
+        height:220px;
+    }
+}
+</style></head><body><!-- HEADER --><header><div class="navbar"><div class="logo">
+VICTOR OMALE OJOGBANE
+<span>APC • House of Representatives Candidate</span>
+</div><div class="menu-btn" onclick="toggleMenu()">☰</div><nav id="navMenu"><ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="agenda.html">Agenda</a></li>
+<li><a href="mission.html">Mission</a></li>
+<li><a href="news.html">News</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="media.html">Media</a></li>
+<li><a href="partners.html">Partners</a></li>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="resources.html">Resources</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul></nav></div>
+</header><!-- HERO --><section class="hero"><div class="hero-content"><div class="badge">PUBLIC RESOURCES</div><h1>Resources Centre</h1><p>
+Access information, documents, development priorities and other
+public materials relating to Victor Omale Ojogbane and the constituency.
+</p></div></section><!-- RESOURCES --><section class="container"><div class="section-title"><h2>Useful Resources</h2><p>
+This section provides a central place for important public information
+and materials. Documents can be added here as they become available.
+</p></div><div class="resource-grid"><!-- AGENDA --><div class="resource-card"><div class="icon">📋</div><h3>7-Point Agenda</h3><p>
+Read the complete seven-point development agenda covering education,
+youth empowerment, agriculture, infrastructure, healthcare,
+governance and community development.
+</p><a href="agenda.html" class="resource-btn">
+View Agenda
+</a></div><!-- MISSION --><div class="resource-card"><div class="icon">🎯</div><h3>Mission & Vision</h3><p>
+Explore the development priorities and proposed areas of focus
+for communities within the constituency.
+</p><a href="mission.html" class="resource-btn">
+View Mission
+</a></div><!-- ABOUT --><div class="resource-card"><div class="icon">👤</div><h3>Candidate Profile</h3><p>
+Learn more about Victor Omale Ojogbane, his constituency,
+political platform and public information available on this website.
+</p><a href="about.html" class="resource-btn">
+View Profile
+</a></div><!-- NEWS --><div class="resource-card"><div class="icon">📰</div><h3>News & Updates</h3><p>
+Read public updates, announcements and information published
+through the website's news section.
+</p><a href="news.html" class="resource-btn">
+View News
+</a></div><!-- MEDIA --><div class="resource-card"><div class="icon">🎥</div><h3>Media Centre</h3><p>
+Access available videos, media materials, interviews and other
+public communication resources.
+</p><a href="media.html" class="resource-btn">
+Visit Media Centre
+</a></div><!-- GALLERY --><div class="resource-card"><div class="icon">📷</div><h3>Photo Gallery</h3><p>
+Browse photographs and public images from activities and
+community engagements featured on this website.
+</p><a href="gallery.html" class="resource-btn">
+Open Gallery
+</a></div><!-- FAQ --><div class="resource-card"><div class="icon">❓</div><h3>Frequently Asked Questions</h3><p>
+Find answers to common questions about the candidate,
+agenda and constituency information.
+</p><a href="faq.html" class="resource-btn">
+Read FAQ
+</a></div><!-- PARTNERS --><div class="resource-card"><div class="icon">🤝</div><h3>Partnership Information</h3><p>
+Learn about areas where community organisations, institutions,
+civil society and other stakeholders may engage.
+</p><a href="partners.html" class="resource-btn">
+View Partners
+</a></div><!-- CONTACT --><div class="resource-card"><div class="icon">☎️</div><h3>Contact Information</h3><p>
+For enquiries, public information requests or other questions,
+visit the contact page.
+</p><a href="contact.html" class="resource-btn">
+Contact
+</a></div></div><!-- FEATURED --><div class="featured"><div><h2>Development Information</h2><p>
+The proposed agenda focuses on practical areas including education,
+youth development, agriculture, infrastructure, healthcare,
+accountability and community development.
+</p><a href="agenda.html" class="btn btn-yellow">
+Read the Full Agenda
+</a></div><div class="featured-image"><img
+src="https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg"
+alt="Victor Omale Ojogbane">
+
+</div></div><!-- DOCUMENTS --><div class="info-section"><div class="section-title"><h2>Documents & Downloads</h2><p>
+Official documents can be added to this section as PDF or other
+publicly accessible files become available.
+</p></div><div class="info-box"><h3>Available Document Categories</h3><ul><li>Seven-Point Development Agenda</li><li>Mission and Vision Statement</li><li>Constituency Development Information</li><li>Public Statements and Announcements</li><li>Community Development Materials</li><li>Media and Press Materials</li><li>Other Public Information Documents</li></ul></div></div><!-- CONTACT --><div class="contact-box"><h3>Need More Information?</h3><p>
+For enquiries concerning resources or public information,
+please use the website's contact page.
+</p><p style="margin-top:10px;">
+Phone:
+<a href="tel:+2348036131193">
++234 803 613 1193
+</a>
+</p><p>
+Location: Idah Federal Constituency, Kogi State, Nigeria
+</p></div></section><!-- FOOTER --><footer><div class="footer-grid"><div><h3>Victor Omale Ojogbane</h3><p>
+APC • House of Representatives Candidate
+</p><p>
+Idah/Igalamela/Ofu/Ibaji Federal Constituency
+</p></div><div><h3>Quick Links</h3><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="agenda.html">7-Point Agenda</a></li><li><a href="mission.html">Mission & Vision</a></li><li><a href="resources.html">Resources</a></li><li><a href="contact.html">Contact</a></li></ul></div><div><h3>Contact</h3><p>
+Phone: +234 803 613 1193
+</p><p>
+Idah Federal Constituency,<br>
+Kogi State, Nigeria
+</p></div></div><div class="footer-bottom"><p>
+© 2026 Victor Omale Ojogbane. All Rights Reserved.
+</p><p style="margin-top:8px;"><a href="privacy.html">Privacy Policy</a>
+  |  
+<a href="terms.html">Terms</a>
+
+</p></div></footer><script>
+
+function toggleMenu(){
+
+    document.getElementById("navMenu").classList.toggle("active");
+
+}
+
+document.querySelectorAll("nav a").forEach(function(link){
+
+    link.addEventListener("click", function(){
+
+        document.getElementById("navMenu").classList.remove("active");
+
+    });
+
+});
+
+</script></body>
+</html>
