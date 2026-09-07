@@ -1,0 +1,17 @@
+{
+  "name": "Victor Omale Ojogbane",
+  "short_name": "Victor Ojogbane",
+  "description": "Victor Omale Ojogbane - House of Representatives Candidate for Idah Federal Constituency, Kogi State.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#087f23",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "https://i.ibb.co/TqxxGpB9/IMG-20260902-WA0128.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
